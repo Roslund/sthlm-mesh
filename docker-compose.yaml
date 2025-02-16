@@ -3,9 +3,7 @@ version: "3.8"
 services:
 
   site:
-    image: docsy/docsy-example
-    build:
-      context: .
+    image: hugomods/hugo:exts
     command: server
     ports:
       - "1313:1313"
