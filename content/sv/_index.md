@@ -2,37 +2,44 @@
 title: STHLM-MESH
 ---
 
-{{< blocks/cover title="En Mesh community för Stockholm" image_anchor="top" height="200px" >}}
+{{< blocks/cover title="" image_anchor="top" height="med" >}}
 {{< /blocks/cover >}}
 
 
 {{% blocks/lead color="primary" %}}
-STHLM-MESH är ett community som vekar för ett stabilt Meshtastic-nätverk i Stockholm.
+STHLM-MESH är en informell gemenskap som vekar för ett stabilt Meshtastic-nätverk i Stockholm.
 {{% /blocks/lead %}}
 
-
 {{% blocks/section type="row" %}}
-
 {{% blocks/feature icon="fab fa-facebook" title="Facebook grupp" %}}
-[Meshtastic Sweden](https://www.facebook.com/groups/815331140404197)
-{{% /blocks/feature %}}
-
-{{% blocks/feature icon="fab fa-github" title="Contributions welcome!" %}}
-We do a [Pull Request](https://github.com/google/docsy-example/pulls)
-contributions workflow on **GitHub**. New users are always welcome!
+<a href="https://www.facebook.com/groups/815331140404197" target="_blank" rel="noopener noreferrer">Meshtastic Sweden</a>
+En facebookgrupp för Sverige.
 {{% /blocks/feature %}}
 
 {{% blocks/feature icon="fab fa-discord" title="Vi finns på Discord" %}}
-På den [officiella discord servern](https://discord.gg/meshtastic-867578229534359593) så hänger i kanal #Sweden
+Många av oss finns i kanal `#Sweden` på den officiella 
+<a href="https://discord.gg/meshtastic-867578229534359593" target="_blank" rel="noopener noreferrer">Meshtastic Discord</a> servern.
 {{% /blocks/feature %}}
 
+{{% blocks/feature icon="fa-solid fa-champagne-glasses" title="Låt träffas!" %}}
+Det är alltid trevligt att träffas och prata radio. Kolla in våra Meetups.
+{{< ref "meetups" >}}
+{{% /blocks/feature %}}
 {{% /blocks/section %}}
 
+{{% blocks/section %}}
+# Våra mål
+* Dela information så som riktlinjer och best practices för nya användare.
+* Inspirea andra genom att dela infomration och bilder.
+* Koordinera utbygganden av meshet.
+* Främja aktivitet i meshen.
 
+{{% /blocks/section %}}
 {{% blocks/section %}}
 Kom igång med meshtastic
 {.h1}
-Följ instruktionerna på den officiella hemsidan: https://meshtastic.org
+För att komma igång rekomenderar vi att följa instruktionerna på den officiella hemsidan: https://meshtastic.org.
+
 
 {{% alert title="Viktigt" color="success" %}}
 Vi använders oss av 868mhz på LongFast.
@@ -63,9 +70,3 @@ Rekommendereade inställningar
   {{< /card >}}
 {{< /cardpane >}}
 {{% /blocks/section %}}
-{{% blocks/section color="white" %}}
-## Senaste medelanden
-{{% iframe src="https://meshtastic.roslund.cloud/api/v1/text-messages/embed?gateway_id=3663385928" width="100%" style="min-height:55vh;overflow: hidden;" %}}
-{{% /blocks/section %}}
-
-

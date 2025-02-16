@@ -60,7 +60,7 @@ menu:
       weight: 40
       params:
         target: "_blank"
-
+      post: <sup><i class="ps-1 fa-solid fa-up-right-from-square fa-xs" aria-hidden="true"></i></sup>
 
 # Everything below this are Site Params
 params:
@@ -104,6 +104,9 @@ params:
   # Uncomment this if your GitHub repo does not have "main" as the default branch,
   # or specify a new value if you want to reference another branch in your GitHub links
   #github_branch: main
+
+  # https://www.docsy.dev/docs/adding-content/repository-links/#last-modified-page-metadata
+  GitInfo: true
 
   # Enable Lunr.js offline search
   offlineSearch: false
