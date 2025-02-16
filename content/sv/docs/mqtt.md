@@ -2,20 +2,20 @@
 title: MQTT
 weight: 80
 ---
-MQTT (Message Queuing Telemetry Transport) är ett protokoll för meddelandeöverföring som är vanligt att använa för IoT kommunikation. Det är designat för att vara effektivt, även i nätverk med låg bandbredd eller hög latens.
+MQTT (Message Queuing Telemetry Transport) är ett protokoll för meddelandeöverföring som ofta används för IoT-kommunikation. Det är designat för att vara effektivt, även i nätverk med låg bandbredd eller hög latens.
 
-Vi använder MQTT för att kunna analysera meshet. Detta gör vi genom att enbart ha _uplink_ igång. På så sätt kan man tillhandahålla information om meshet som går att analysera med andra verktyg.
+Vi använder MQTT för att kunna analysera meshet. Detta gör vi genom att enbart ha _uplink_ igång. På så sätt kan vi tillhandahålla information om meshet som går att analysera med andra verktyg.
 
-Meshtastic har stöd för att använda MQTT för att _brygga_ olika mesh-nätverk. 
-I Stockholm har vi redan ett stort mesh och MQTT trafik skulle snabbt överbeslast meshet. 
-Därför har vi _downlink_ avsängt samt `lora.ignore_mqtt`.
+Meshtastic har stöd för att använda MQTT för att _brygga_ olika mesh-nätverk.
+I Stockholm har vi redan ett stort mesh, och MQTT-trafik skulle snabbt överbelasta meshet.
+Därför har vi _downlink_ avstängt samt `lora.ignore_mqtt` aktiverat.
 
 {{% alert title="Uppmärksamma" color="warning" %}}
-För att andra ska få vidarebefodra dina medelanden till MQTT så måte du ha `lora.config_ok_to_mqtt` på.
+För att andra ska kunna vidarebefordra dina meddelanden till MQTT måste du ha `lora.config_ok_to_mqtt` aktiverat.
 {{% /alert %}}
 
-### MQTT konfiguration
-Vi rekomenderar att man uplinkar till Liam Cottle's mqtt broaker och karta.
+## MQTT Konfiguration
+Vi rekommenderar att man uplinkar till Liam Cottles MQTT-broker och karta.
 
 {{< card code=true lang="yml" >}}
 mqtt:
@@ -34,24 +34,27 @@ mqtt:
 {{< /card>}}
 
 {{% pageinfo %}}
-För att skicka information om andra noder i meshen måste _uplink_ slås på i kanalinställningarna.
+För att skicka information om andra noder i meshet måste _uplink_ slås på i kanalinställningarna.
 {{% /pageinfo %}}
 
 ### Map report
-Map report används för att skicka information om just din nod över mqtt. 
-Bland annat så skickar den `position`, `hårdvarumodell`, `firmware version`. 
-Även `Online nodes` (senaste 2 timmarna). Detta kan vara missvisande då default intervall för nodeinfo är 3 timmar, många skickar mycket mer sällan än så.
+Map report används för att skicka information om just din nod över MQTT.
+Bland annat skickas `position`, `hårdvarumodell`, `firmware version`. 
+Även `Online nodes` (senaste 2 timmarna) rapporteras. 
+Detta kan dock vara missvisande, eftersom standardintervallet för nodeinfo är 3 timmar och många skickar mycket mer sällan än så.
+
 
 ## MQTT Broakers
-Är man riktigt nördig så kan man hosta sin egen MQTT Broaker, detta kan vara använbart då Liam Cottles broaker enbart tillåter uppladdning av data. Så vill man anlysera data eller använda andra verktyg så kan man hosta sin egen broaker.
+Om man är riktigt nördig kan man hosta sin egen MQTT-broker. Detta kan vara användbart, eftersom Liam Cottles broker enbart tillåter uppladdning av data.
+Vill man analysera data eller använda andra verktyg kan man därför köra en egen broker.
 
-Det som brukar rekomenderas är att använda [mosquitto](https://mosquitto.org).
+Den rekommenderade mjukvaran för detta är [mosquitto](https://mosquitto.org).
 
 ### MQTT Bridge
 En Mosquitto Bridge gör det möjligt att koppla ihop två MQTT-servrar (brokers) så att meddelanden kan flöda mellan dem.
-I vårt fall använder vi det för att skicka vidare våra meddelanden så att de syns på LiamCottles karta.
+I vårt fall använder vi detta för att vidarebefordra våra meddelanden så att de syns på Liam Cottles karta.
 
-Detta görs denom att lägga till följande rader i din mosquitto-configurationsfil
+Detta görs genom att lägga till följande rader i din `mosquitto.conf`
 {{< card code=true >}}
 connection LiamCottle
 address mqtt.meshtastic.liamcottle.net
@@ -60,3 +63,7 @@ remote_username uplink
 try_private true
 topic # out 0 msh/ msh/
 {{< /card>}}
+
+## Verktyg 
+* https://github.com/tcivie/meshtastic-metrics-exporter
+* http://github.com/liamcottle/meshtastic-map
