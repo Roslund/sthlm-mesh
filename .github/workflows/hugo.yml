@@ -17,6 +17,16 @@ jobs:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
+      - name: Install Node.js  # ✅ Ensure Node.js is available
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'  # Use latest LTS version
+
+      - name: Install PostCSS and dependencies
+        run: |
+          npm install -g postcss postcss-cli autoprefixer
+          npm install
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:

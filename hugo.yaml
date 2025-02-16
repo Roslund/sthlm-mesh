@@ -138,11 +138,9 @@ params:
       enable: false
 
 module:
-  # Uncomment the next line to build and serve using local docsy clone declared in the named Hugo workspace:
-  # workspace: docsy.work
   hugoVersion:
     extended: true
-    min: 0.110.0
+    min: 0.119.0
   imports:
     - path: github.com/google/docsy
       disable: false
