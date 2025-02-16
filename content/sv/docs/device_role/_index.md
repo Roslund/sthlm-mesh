@@ -1,6 +1,6 @@
 ---
 title: Device Role
-weight: 3
+weight: 20
 ---
 
 Använd inte ROUTER eller REPEATER.

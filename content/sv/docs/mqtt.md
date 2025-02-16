@@ -1,13 +1,10 @@
 ---
 title: MQTT
-date: 2025-02-15
-weight: 3
+weight: 80
 ---
 MQTT (Message Queuing Telemetry Transport) är ett protokoll för meddelandeöverföring som är vanligt att använa för IoT kommunikation. Det är designat för att vara effektivt, även i nätverk med låg bandbredd eller hög latens.
 
-
 Vi använder MQTT för att kunna analysera meshet. Detta gör vi genom att enbart ha _uplink_ igång. På så sätt kan man tillhandahålla information om meshet som går att analysera med andra verktyg.
-
 
 Meshtastic har stöd för att använda MQTT för att _brygga_ olika mesh-nätverk. 
 I Stockholm har vi redan ett stort mesh och MQTT trafik skulle snabbt överbeslast meshet. 
@@ -43,4 +40,23 @@ För att skicka information om andra noder i meshen måste _uplink_ slås på i 
 ### Map report
 Map report används för att skicka information om just din nod över mqtt. 
 Bland annat så skickar den `position`, `hårdvarumodell`, `firmware version`. 
-Även `Online nodes` (senaste 2 timmarna). Detta kan vara missvisande då default intervall för nodeinfo är 3timmar, många skickar mycket mer sällan än så.
+Även `Online nodes` (senaste 2 timmarna). Detta kan vara missvisande då default intervall för nodeinfo är 3 timmar, många skickar mycket mer sällan än så.
+
+## MQTT Broakers
+Är man riktigt nördig så kan man hosta sin egen MQTT Broaker, detta kan vara använbart då Liam Cottles broaker enbart tillåter uppladdning av data. Så vill man anlysera data eller använda andra verktyg så kan man hosta sin egen broaker.
+
+Det som brukar rekomenderas är att använda [mosquitto](https://mosquitto.org).
+
+### MQTT Bridge
+En Mosquitto Bridge gör det möjligt att koppla ihop två MQTT-servrar (brokers) så att meddelanden kan flöda mellan dem.
+I vårt fall använder vi det för att skicka vidare våra meddelanden så att de syns på LiamCottles karta.
+
+Detta görs denom att lägga till följande rader i din mosquitto-configurationsfil
+{{< card code=true >}}
+connection LiamCottle
+address mqtt.meshtastic.liamcottle.net
+remote_password uplink
+remote_username uplink
+try_private true
+topic # out 0 msh/ msh/
+{{< /card>}}

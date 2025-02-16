@@ -1,4 +1,4 @@
-baseURL: https://sthlm-mesh.roslund.cloud
+baseURL: https://sthlm-mesh.se
 title: STHLM-MESH
 
 # cSpell:ignore goldmark github hugo readingtime docsy subdir lastmod pygments linenos catmullrom gu
