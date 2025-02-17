@@ -47,27 +47,30 @@ Vi använders oss av 868mhz på LongFast.
 
 
 {{% /blocks/section %}}
-{{% blocks/section %}}
-# Stockholms meshet går tungt
-Det har tillkommit många nya noder, och det är mycket aktivitet i meshet trots att det är vinter. 
-Men tyvärr så fungerar meshet sämre än i sommras. Det som påverkar meshet prestanda mest är mängden av trafik och hur man konfigurerar sin nod.
+{{% blocks/section color="info" %}}
+# Stockholms mesh går tungt  
+Det har tillkommit många nya noder, och det är mycket aktivitet i meshet trots att det är vinter.  
+Tyvärr fungerar dock meshet sämre än i somras. Den faktor som påverkar prestandan mest är mängden trafik och hur varje nod är konfigurerad.  
 
-### SÅ VAD KAN MAN GÖRA FÖR ATT HJÄLPA TILL?
+## **Vad kan man göra för att hjälpa till?**  
 
-#####  1. Uppdatera firmware
-Speciellt om man ligger under 2.5.0. Nyare firmware hanterar trafiken mycket bättre.
+### **1. Uppdatera firmware**  
+Speciellt om du har en version äldre än 2.5.0. Nyare firmware hanterar trafiken mycket bättre.  
 
-#####  2. Se till att din nod har rätt roll.
-Använd inte ROUTER eller REPEATER.
-Noder på ballkonger och villahustak bör vara satt till CLIENT
-Portabla noder och noder man har innomhus bör primärt vara CLIENT MUTE.
-Har man en setup med flera noder, till exempel en nod på hustaket och sen noder innomhus, så kan man experementera med ROUTER_LATE.
+### **2. Se till att din nod har rätt roll**  
+- **Använd inte** `ROUTER` eller `REPEATER`.  
+- Noder på **balkonger** och **villatak** bör vara inställda som `CLIENT`.  
+- **Portabla noder** och **inomhusnoder** bör primärt vara `CLIENT_MUTE`.  
+- **Om du har flera noder** (t.ex. en på hustaket och en inomhus) kan du experimentera med `ROUTER_LATE`.  
 
-#####  3. Skicka Nodeinfo och Telemetri mer sällan.
-Majoriteten av trafiken i meshen är nodeinfo, telemetri och position. Under 1% av alla paket är text-medelanden.
-Nodeinfo behöver inte skickas oftare än var 3:e timme. En statisk nod som inte flyttar sig behöver inte skicka ut sin position särskilt ofta, jag kör med var 12:e timme.
-Gällande telemetri så fundera en extra gång varför du behöver skicka telemetri över meshen. OM man ska köra telemetri så skicka så sällan som möjligt, jag tänker att var 6:e timme är lagom
+### **3. Skicka Nodeinfo och Telemetri mer sällan**  
+Majoriteten av trafiken i meshet består av `nodeinfo`, `telemetri` och `position`. Mindre än 1% av alla paket är textmeddelanden.  
 
-#####  4. Bonus tips för er som har ROUTERs
-Sänk max hops. Har du en väl placerad router så bör den nå åt väldigt långt med bara ett hopp eller två. Din ROUTER bör direkt kunna nå en nod som har MQTT uplink igång, på så sätt kan du få den telemetri du behöver genom kartan: https://meshtastic.liamcottle.net/
+- **Nodeinfo** behöver inte skickas oftare än var **tredje timme**.  
+- **Statiska noder** som inte flyttar sig kan skicka sin position mer sällan, t.ex. var **12:e timme**.  
+- **Telemetri** – fundera på om du verkligen behöver skicka detta över meshet. Om du gör det, skicka så sällan som möjligt, t.ex. var **6:e timme**.  
+
+### **4. Bonus: Tips för er som har ROUTERs**  
+- **Sänk max hops** – en välplacerad router når långt med bara **ett eller två hopp**.  
+- Din ROUTER bör nå en nod med MQTT uplink, så att du kan få den telemetri du behöver via [kartan](https://meshtastic.liamcottle.net/)
 {{% /blocks/section %}}
