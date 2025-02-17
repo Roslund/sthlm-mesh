@@ -22,5 +22,16 @@ Might want to allow editing
 /* Change the color of the doc rightside sidebar links */
 .td-sidebar-toc a { color: grey !important; }
 
-/* Hide links to the las change commit*/
+/* 
+Hide links to the last change commit.
+Ugly workaround that leves to colon ":"
+*/
 .td-page-meta__lastmod a { display: none; }
+
+/* Formating of inline <code> blocks */
+code {
+    background-color: #f0f0f0;
+    color: #555555 !important;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
