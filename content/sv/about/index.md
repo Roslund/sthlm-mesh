@@ -1,6 +1,6 @@
 ---
 title: Om STHLM-MESH
-linkTitle: About
+linkTitle: Om
 menu: {main: {weight: 10}}
 ---
 {{% blocks/cover title="Om STHLM-MESH" image_anchor="top" height="min" %}}
