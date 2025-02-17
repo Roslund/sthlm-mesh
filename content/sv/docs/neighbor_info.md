@@ -2,7 +2,7 @@
 title: Neighbor Info
 weight: 90
 ---
-[Neighbor Info modulen](https://meshtastic.org/docs/configuration/module/neighbor-info/) ssamlar information om en nods grannar som den har direktkontakt med (0-hopp). Denna information kan sedan skickas över MQTT eller LoRa.
+[Neighbor Info modulen](https://meshtastic.org/docs/configuration/module/neighbor-info/) samlar information om en nods grannar som den har direktkontakt med (0-hopp). Denna information kan sedan skickas över MQTT eller LoRa.
 
 Informationen kan sedan visualiseras på karttjänster. Liam Cottles karta visar information om varje förbindelse. Utöver SNR visas även en terränggraf från HeyWhatsThat.com.
 
