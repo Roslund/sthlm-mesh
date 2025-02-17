@@ -48,25 +48,26 @@ Vi använders oss av 868mhz på LongFast.
 
 {{% /blocks/section %}}
 {{% blocks/section %}}
-Rekommendereade inställningar
-{.h1}
-{{< cardpane >}}
-  {{< card header="Device" >}}
-    Preset: Long Range - Fast
-    Device Role: *Client Mute* eller *Client*
-    Ignore MQTT: True
-    OK to MQTT: True
-    Max Hops: 5
-  {{< /card >}}
-  {{< card header="Nodinfo och Telemetri" >}}
-    Node Info Broadcast Interval: Three Hours
-    Position Broadcast Interval: Twelve Hours
-    Device Metrics: Six Hours
-    Sensor Metrics: Six Hours
-    Power Metrics: Six Hours
-  {{< /card >}}
-  {{< card header="MQTT" >}}
-    asdf
-  {{< /card >}}
-{{< /cardpane >}}
+# Stockholms meshet går tungt
+Det har tillkommit många nya noder, och det är mycket aktivitet i meshet trots att det är vinter. 
+Men tyvärr så fungerar meshet sämre än i sommras. Det som påverkar meshet prestanda mest är mängden av trafik och hur man konfigurerar sin nod.
+
+### SÅ VAD KAN MAN GÖRA FÖR ATT HJÄLPA TILL?
+
+#####  1. Uppdatera firmware
+Speciellt om man ligger under 2.5.0. Nyare firmware hanterar trafiken mycket bättre.
+
+#####  2. Se till att din nod har rätt roll.
+Använd inte ROUTER eller REPEATER.
+Noder på ballkonger och villahustak bör vara satt till CLIENT
+Portabla noder och noder man har innomhus bör primärt vara CLIENT MUTE.
+Har man en setup med flera noder, till exempel en nod på hustaket och sen noder innomhus, så kan man experementera med ROUTER_LATE.
+
+#####  3. Skicka Nodeinfo och Telemetri mer sällan.
+Majoriteten av trafiken i meshen är nodeinfo, telemetri och position. Under 1% av alla paket är text-medelanden.
+Nodeinfo behöver inte skickas oftare än var 3:e timme. En statisk nod som inte flyttar sig behöver inte skicka ut sin position särskilt ofta, jag kör med var 12:e timme.
+Gällande telemetri så fundera en extra gång varför du behöver skicka telemetri över meshen. OM man ska köra telemetri så skicka så sällan som möjligt, jag tänker att var 6:e timme är lagom
+
+#####  4. Bonus tips för er som har ROUTERs
+Sänk max hops. Har du en väl placerad router så bör den nå åt väldigt långt med bara ett hopp eller två. Din ROUTER bör direkt kunna nå en nod som har MQTT uplink igång, på så sätt kan du få den telemetri du behöver genom kartan: https://meshtastic.liamcottle.net/
 {{% /blocks/section %}}
