@@ -11,7 +11,7 @@ Sidan är hostad genom _GitHub Pages_ och en GitHub Action uppdaterar sidan vid 
 ## Bidra till projektet
 Vi välkomnar om man vill dela med sig av tips & triks, best practises eller guider.
 Sidans inntehåll finns i mappen `content`. Innehållet är i markdown och borde vara relativt tillgängligt att uppdatera.
-Själva dokumentationen finns under `content/sv/docks/`, det är primärt där vi önskar förslag på innehåll.
+Själva dokumentationen finns under `content/sv/docs/`, det är primärt där vi önskar förslag på innehåll.
 
 
 ## Lokal utvekling i en container
