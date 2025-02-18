@@ -1,7 +1,19 @@
 ---
-title: ROUTER
-weight: 30
+title: Enhetsroll
+weight: 20
 ---
+En enhetsroll i Meshtastic definierar enhetens primära funktion inom nätverket. Varje roll är anpassad för specifika användningsområden och hjälper till att effektivt hantera nätverket och enhetens beteende.
+
+Att välja rätt roll är avgörande för ett välfungerande meshnätverk. Om enheten har fel roll märks det ofta inte för en själv, men det kan påverka prestandan för hela nätverket.
+
+
+## Client Mute
+Portabla noder och noder man har innomhus bör primärt vara CLIENT MUTE.
+
+## Client
+Noder på ballkonger och villahustak bör vara satt till CLIENT
+
+## Router
 ROUTER-rollen är designad för enheter som främst ska vidarebefordra meddelanden till andra enheter på meshet. Denna roll är **ENDAST** lämplig för stationära enheter placerade på extremt strategiska platser.
 
 Routrar vidarebefordrar meddelanden från andra enheter direkt, medan andra noder väntar en liten stund innan de sänder. Om en ROUTER är strategikt placera så kan den utöka räckvidden och pålitligheten för meshnätverket. 
@@ -28,7 +40,7 @@ För att kringgå denna begränsning måste man ta bort spärren i koden och sj�
 {{% /alert %}}
 
 
-# Repeater
+## Repeater
 REPEATER-rollen fungerar liknande ROUTER-rollen, men går ett steg längre genom att enbart vidarebefodra den medelanden den tar emot. Den skickar inte ut några paket om sig själv, tex. nod-info.
 
 Dett är en mycket effektiv roll. Men vi rekomenderar istället att man använder ROUTER med optimerade inställningar för att det ska synas att den bidrar till meshet.

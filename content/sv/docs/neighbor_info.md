@@ -4,12 +4,13 @@ weight: 90
 ---
 [Neighbor Info modulen](https://meshtastic.org/docs/configuration/module/neighbor-info/) samlar information om en nods grannar som den har direktkontakt med (0-hopp). Denna information kan sedan skickas över MQTT eller LoRa.
 
-Informationen kan sedan visualiseras på karttjänster. Liam Cottles karta visar information om varje förbindelse. Utöver SNR visas även en terränggraf från HeyWhatsThat.com.
+Informationen kan sedan visualiseras på karttjänster. Liam Cottles karta visar information om varje förbindelse. Utöver SNR visas även en terränggraf från [HeyWhatsThat.com](HeyWhatsThat.com).
 
-![](/docs/neighbors.png)
+
+{{< figure src="/docs/neighbors.png" alt="Description" width="400px" height="300px" >}}
 
 ## Neighbor Info Konfiguration
-Neighbor Info bör endast konfigureras på statiska noder, helst de som har kontakt med många andra noder.
+Neighbor Info bör **endast** konfigureras på **statiska noder**, helst de som har kontakt med många andra noder.
 För portabla noder som flyttar sig blir Neighbor Info missvisande.
 
 ### För noder med MQTT
