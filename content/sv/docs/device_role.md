@@ -21,25 +21,25 @@ Därför är det viktigt att `CLIENT`-noder i större meshnätverk placeras väl
 
 För de som har flera enheter på samma plats rekommenderas att **max en** enhet sätts som `CLIENT` medan resten får rollen CLIENT_MUTE för att minska onödig trafik och optimera nätverkets prestanda.
 
-I Stockholm bör portabla noder och noder man har innomhus primärt vara `CLIENT MUTE`.
+I Stockholm bör portabla noder och noder man har inomhus primärt vara `CLIENT MUTE`.
 
 ## Router
 `ROUTER`-rollen är designad för enheter som främst ska vidarebefordra meddelanden till andra enheter på meshet. Denna roll är **ENDAST** lämplig för stationära enheter placerade på extremt strategiska platser.
 
-Routrar vidarebefordrar meddelanden från andra enheter direkt, medan andra noder väntar en liten stund innan de sänder. Om en ROUTER är strategikt placera så kan den utöka räckvidden och pålitligheten för meshnätverket. 
+Routrar vidarebefordrar meddelanden från andra enheter direkt, medan andra noder väntar en liten stund innan de sänder. Om en ROUTER är strategiskt placera så kan den utöka räckvidden och pålitligheten för meshnätverket. 
 
 Routrar vidarebefordrar alltid, medan andra roller kan välja att inte vidarebefordra om de hör en granne vidarebefordra först.
 
-För att optimera prestandan i nätet och minska risken för kollisioner bör enheter med roll `ROUTER` placeras att **så få noder som möjligt kan nå mer än en `ROUTER` samtidigt**. Detta då om ett medelanden når flera routrar, så kommer de alla vidarebefodra meddelande sammtidigt och störa ut varandra.
+För att optimera prestandan i nätet och minska risken för kollisioner bör enheter med roll `ROUTER` placeras att **så få noder som möjligt kan nå mer än en `ROUTER` samtidigt**. Detta då om ett meddelanden når flera routrar, så kommer de alla vidarebefordra meddelande samtidigt och störa ut varandra.
 
 {{% alert title="Tips" color="primary" %}}
 Sänk `max_hops`. En välplacerad router når långt med bara **ett eller två hopp**. Din router bör nå en nod med MQTT uplink, så att du kan få den telemetri du behöver via [kartan](https://meshtastic.liamcottle.net/)
 {{% /alert %}}
 
-### Rekomenderade intervaller
+### Rekommenderade intervaller
 | Typ           | Intervall|
 |---------------|----------|
-| Nodeinfo      | 6h       |
+| Node Info      | 6h       |
 | Position      | 12h      |
 | Telemetry     | 6h       |
 | Power         | 6h       |
@@ -52,9 +52,9 @@ För att kringgå denna begränsning måste man ta bort spärren i koden och sj�
 {{% /alert %}}
 
 ## Router Late
-`ROUTER_LATE`-rollen är lik `ROTER`, den vidarebefodrar alla meddelanden, men den gör det under samma tidsfönser som `CLIENT` noder. Detta kan vara mycket använbart i områden där man når ut till meshen, men har svårt att ta emot alla medelanden. 
+`ROUTER_LATE`-rollen är lik `ROUTER`, den vidarebefordrar alla meddelanden, men den gör det under samma tidsfönster som `CLIENT` noder. Detta kan vara mycket användbart i områden där man når ut till meshen, men har svårt att ta emot alla meddelanden. 
 
 ## Repeater
-REPEATER-rollen fungerar liknande ROUTER-rollen, men går ett steg längre genom att enbart vidarebefodra den medelanden den tar emot. Den skickar inte ut några paket om sig själv, tex. nod-info.
+REPEATER-rollen fungerar liknande ROUTER-rollen, men går ett steg längre genom att enbart vidarebefordra den meddelanden den tar emot. Den skickar inte ut några paket om sig själv, tex. nod-info.
 
-Dett är en mycket effektiv roll. Men vi rekomenderar istället att man använder ROUTER med optimerade inställningar för att det ska synas att den bidrar till meshet.
+Detta är en mycket effektiv roll. Men vi rekommenderar istället att man använder ROUTER med optimerade inställningar för att det ska synas att den bidrar till meshet.

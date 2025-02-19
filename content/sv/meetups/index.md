@@ -10,7 +10,7 @@ A sample site using the Docsy Hugo theme.
 
 {{% blocks/section  %}}
 ## Kommande Meetups
-Just nu känner vi inte till några plannerade meetups. Säg till om du plannerar något så kan vi informera om det här.
+Just nu känner vi inte till några planerade meetups. Säg till om du planerar något så kan vi informera om det här.
 {{% /blocks/section %}}
 
 {{% blocks/section  %}}

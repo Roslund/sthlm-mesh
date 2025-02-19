@@ -22,7 +22,7 @@ STHLM-MESH är en informell gemenskap som vekar för ett stabilt Meshtastic-nät
 {{% blocks/section type="row" color="secondary" %}}
 {{% blocks/feature icon="fab fa-facebook" title="Facebook grupp" %}}
 <a href="https://www.facebook.com/groups/815331140404197" target="_blank" rel="noopener noreferrer">Meshtastic Sweden</a>
-En facebookgrupp för Sverige.
+En Facebookgrupp för Sverige.
 {{% /blocks/feature %}}
 
 {{% blocks/feature icon="fab fa-discord" title="Vi finns på Discord" %}}
@@ -39,19 +39,19 @@ Det är alltid trevligt att träffas och prata radio. Kolla in våra Meetups.
 {{% blocks/section color="info" %}}
 # Våra mål
 * <h4>Dela information så som riktlinjer och best practices för nya användare.</h4>
-* <h4>Inspirea andra genom att dela infomration och bilder.</h4>
-* <h4>Koordinera utbygganden av meshet.</h4>
+* <h4>Inspirera andra genom att dela information och bilder.</h4>
+* <h4>Koordinera utbyggnaden av meshet.</h4>
 * <h4>Främja aktivitet i meshet.</h4>
 
 {{% /blocks/section %}}
 {{% blocks/section color="primary"  %}}
 Kom igång med Meshtastic
 {.h1}
-För att komma igång rekomenderar vi att följa instruktionerna på den officiella hemsidan: https://meshtastic.org.
+För att komma igång rekommenderar vi att följa instruktionerna på den officiella hemsidan: https://meshtastic.org.
 
 
 {{% alert title="Viktigt" color="success" %}}
-Vi använders oss av 868mhz på preset Long Range - Fast.
+Vi använder oss av 868mhz på preset Long Range - Fast.
 {{% /alert %}}
 {{% /blocks/section %}}
 
@@ -75,7 +75,7 @@ Vi använders oss av 868mhz på preset Long Range - Fast.
                 <h3 class="card-header"><b>ROUTER</b></h3>
                 <img src="/router.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <p class="card-text">En nod placerad högt upp med fri sikt åt alla håll. Använder en optimerad och vältestad setup. Måste koordineras med överiga meshset.<p>
+                    <p class="card-text">En nod placerad högt upp med fri sikt åt alla håll. Använder en optimerad och väl-testad setup. Måste koordineras med övriga meshet.<p>
                     <a href="/docs/device_role/#router" class="btn btn-primary" style="color: #f9f9f9 !important;">Läs mer</a>
                 </div>
             </div>

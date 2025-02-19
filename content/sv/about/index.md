@@ -16,7 +16,7 @@ Projektet drivs av entusiaster som vill utforska möjligheterna med decentralise
 Denna webbplats är byggd med de statiska site-generatorn [Hugo](https://gohugo.io/) och använder [Docsy](https://www.docsy.dev/) som tema.
 {{% /blocks/feature %}}
 
-{{% blocks/feature icon="fa-solid fa-code-pull-request" title="Colaberation" %}}
+{{% blocks/feature icon="fa-solid fa-code-pull-request" title="Collaboration" %}}
 Källkoden för webbplatsen är öppen och tillgänglig på [GitHub](https://github.com/Roslund/sthlm-mesh), och vi uppmuntrar bidrag från communityt!
 {{% /blocks/feature %}}
 
@@ -39,7 +39,7 @@ Vi välkomnar bidrag i form av **pull requests**, förslag på förbättringar o
 Vill du bidra? Kolla in vårt [GitHub-repo](https://github.com/Roslund/sthlm-mesh) och skicka en pull request! 😃
 
 ### Så här bidrar du
-1. Utforka vårt GitHub-repo
+1. Utforska vårt GitHub-repo
 2. Gör dina ändringar i en ny branch
 3. Skicka en pull request
 4. Diskutera och förbättra ditt bidrag tillsammans med communityt
