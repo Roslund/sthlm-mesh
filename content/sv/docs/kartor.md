@@ -1,7 +1,6 @@
 ---
 title: Kartor
 weight: 80
-draft: true
 ---
 Det finns massvis med olika karttjänster, vi rekommenderar Liam Cottles karta:
 https://meshtastic.liamcottle.net/
