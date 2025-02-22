@@ -4,8 +4,7 @@ linkTitle: Meetups
 menu: {main: {weight: 12}}
 ---
 
-{{% blocks/cover title="About Goldydocs" image_anchor="top" height="min" %}}
-A sample site using the Docsy Hugo theme.
+{{% blocks/cover title="" image_anchor="top" height="min" %}}
 {{% /blocks/cover %}}
 
 {{% blocks/section  %}}
