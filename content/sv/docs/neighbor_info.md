@@ -7,7 +7,7 @@ weight: 90
 Informationen kan sedan visualiseras på karttjänster. Liam Cottles karta visar information om varje förbindelse. Utöver SNR visas även en terränggraf från [HeyWhatsThat.com](HeyWhatsThat.com).
 
 
-{{< figure src="/docs/neighbors.png" alt="Description" width="400px" height="300px" >}}
+{{< figure src="/images/docs/neighbors.png" width="400px" height="300px" >}}
 
 ## Neighbor Info Konfiguration
 Neighbor Info bör **endast** konfigureras på **statiska noder**, helst de som har kontakt med många andra noder.
