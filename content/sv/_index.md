@@ -21,8 +21,7 @@ STHLM-MESH är en informell gemenskap som vekar för ett stabilt Meshtastic-nät
 
 {{% blocks/section type="row" color="secondary" %}}
 {{% blocks/feature icon="fab fa-facebook" title="Facebook grupp" %}}
-<a href="https://www.facebook.com/groups/815331140404197" target="_blank" rel="noopener noreferrer">Meshtastic Sweden</a>
-En Facebookgrupp för Sverige.
+<a href="https://www.facebook.com/groups/815331140404197" target="_blank" rel="noopener noreferrer">Meshtastic Sweden</a> - en Facebookgrupp för Sverige. Det finns även flertalet [lokala grupper]({{<ref communities.md >}}).
 {{% /blocks/feature %}}
 
 {{% blocks/feature icon="fab fa-discord" title="Vi finns på Discord" %}}
@@ -31,8 +30,7 @@ Många av oss finns i kanal `#Sweden` på den officiella
 {{% /blocks/feature %}}
 
 {{% blocks/feature icon="fa-solid fa-champagne-glasses" title="Låt träffas!" %}}
-Det är alltid trevligt att träffas och prata radio. Kolla in våra Meetups.
-{{< ref "meetups" >}}
+Det är alltid trevligt att träffas och prata radio. Kolla in våra [Meetups]({{< ref meetups >}})
 {{% /blocks/feature %}}
 {{% /blocks/section %}}
 
