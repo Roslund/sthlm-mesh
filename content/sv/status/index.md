@@ -32,6 +32,6 @@ src="https://dash.roslund.cloud/render/d-solo/edqkge9mf7v28g/main-dashboard?orgI
 ## OM
 Denna sida använder [Meshtastic-metrics-exporter](https://github.com/tcivie/meshtastic-metrics-exporter) och en privat MQTT broker som samlar in data från ett par noder i Stockholm. 
 
-Graferna laddas från en separat server. Med hjälp av en Nginx så cacheas bilderna för att inte överbelasta Grafana instansen. 
+Graferna laddas från en separat server. Med hjälp av Nginx så cacheas bilderna för att inte överbelasta Grafana instansen. 
 Om graferna inte laddas så är det troligtvis för att vi har problem, eller så tror servern att du ansluter från ett annat land, då enbart ett fåtal länder är white-listade.
 {{% /blocks/section %}}
