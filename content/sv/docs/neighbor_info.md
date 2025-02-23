@@ -1,6 +1,6 @@
 ---
 title: Neighbor Info
-weight: 90
+weight: 70
 ---
 [Neighbor Info modulen](https://meshtastic.org/docs/configuration/module/neighbor-info/) samlar information om en nods grannar som den har direktkontakt med (0-hopp). Denna information kan sedan skickas över MQTT eller LoRa.
 

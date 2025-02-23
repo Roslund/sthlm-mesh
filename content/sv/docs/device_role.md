@@ -26,7 +26,7 @@ I Stockholm bör portabla noder och noder man har inomhus primärt vara `CLIENT 
 ## Router
 `ROUTER`-rollen är designad för enheter som främst ska vidarebefordra meddelanden till andra enheter på meshet. Denna roll är **ENDAST** lämplig för stationära enheter placerade på extremt strategiska platser.
 
-Routrar vidarebefordrar meddelanden från andra enheter direkt, medan andra noder väntar en liten stund innan de sänder. Om en ROUTER är strategiskt placera så kan den utöka räckvidden och pålitligheten för meshnätverket. 
+Routrar vidarebefordrar meddelanden från andra enheter direkt, medan andra noder väntar en liten stund innan de sänder. Om en ROUTER är strategiskt placerad så kan den utöka räckvidden och pålitligheten för meshnätverket. 
 
 Routrar vidarebefordrar alltid, medan andra roller kan välja att inte vidarebefordra om de hör en granne vidarebefordra först.
 
@@ -36,20 +36,6 @@ För att optimera prestandan i nätet och minska risken för kollisioner bör en
 Sänk `max_hops`. En välplacerad router når långt med bara **ett eller två hopp**. Din router bör nå en nod med MQTT uplink, så att du kan få den telemetri du behöver via [kartan](https://meshtastic.liamcottle.net/)
 {{% /alert %}}
 
-### Rekommenderade intervaller
-| Typ           | Intervall|
-|---------------|----------|
-| Node Info      | 6h       |
-| Position      | 12h      |
-| Telemetry     | 6h       |
-| Power         | 6h       |
-| Neighbor Info | 12h      |
-
-
-{{% alert title="Uppmärksamma" color="warning" %}}
-I senare versioner av firmware tillåts det inte att skicka Neighbor Info över standardkanaler, t.ex. LongFast.
-För att kringgå denna begränsning måste man ta bort spärren i koden och själv kompilera sin firmware.
-{{% /alert %}}
 
 ## Router Late
 `ROUTER_LATE`-rollen är lik `ROUTER`, den vidarebefordrar alla meddelanden, men den gör det under samma tidsfönster som `CLIENT` noder. Detta kan vara mycket användbart i områden där man når ut till meshen, men har svårt att ta emot alla meddelanden. 

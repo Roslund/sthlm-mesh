@@ -33,3 +33,7 @@ För uppdatering av nRF52840 används appen nRF Connect Device Manager på din s
 {{% alert title="Uppmärksamma" color="danger" %}}
 OTA-firmwareuppdateringar medför en ökad risk för misslyckande. Om uppdateringsprocessen misslyckas kommer din enhet att lämnas i ett icke-fungerande tillstånd och kräva fysisk åtkomst för åtgärd.
 {{% /alert %}}
+
+{{% alert title="Uppmärksamma" color="warning" %}}
+`ROUTER`-rollen aktiverar strömsparläge som standard (endast ESP32). Om du ska uppdatera en `ROUTER` via bluetooth rekommenderas det att använda remote-admin för att tillfälligt ändra roll, uppdatera och sedan återställa den när uppdateringen är klar.
+{{% /alert %}}

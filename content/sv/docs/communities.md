@@ -1,7 +1,7 @@
 ---
 title: Communities i Sverige
 linkTitle: Communities
-weight: 200
+weight: 120
 ---
 
 ## Facebook Grupper

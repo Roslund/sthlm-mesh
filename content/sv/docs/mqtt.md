@@ -1,6 +1,6 @@
 ---
 title: MQTT
-weight: 80
+weight: 50
 ---
 MQTT (Message Queuing Telemetry Transport) är ett protokoll för meddelandeöverföring som ofta används för IoT-kommunikation. Det är designat för att vara effektivt, även i nätverk med låg bandbredd eller hög latens.
 
