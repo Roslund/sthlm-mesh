@@ -1,6 +1,6 @@
 ---
-title: Andra communities i Sverige
-linkTitle: Andra communities
+title: Communities i Sverige
+linkTitle: Communities
 weight: 200
 ---
 
@@ -10,9 +10,9 @@ weight: 200
 - [Meshtastic Östergötland](https://www.facebook.com/groups/690392173081456/)
 
 
-
 ## Matrix
 - [Meshtastic in Sweden](https://matrix.to/#/#general-swe:meshnet.club)
+
 
 ## Webbsidor
 - [meshat.se](https://meshat.se)
