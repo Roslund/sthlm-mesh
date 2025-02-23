@@ -21,10 +21,15 @@ Bamse från Discord har satt ihop en lista och publicerat på [Github](https://g
 Vi rekommenderar att alltid be om tillstånd när man ska placera ut en solnod.
 En nod placerar gärna både diskret och oåtkomligt. Högt upp i en tall är en personlig favorit, på så sätt så behöver en utomstående vara väldigt motiverad för att inspektera eller stjäla noden. 
 
-{{% alert title="Uppmärksamma" color="warning" %}}
+{{% alert title="Uppmärksamma" color="danger" %}}
 Solnoder placerade i naturen eller på offentlig plats kan fånga uppmärksamhet av allmänheten, kommunen eller till och med polisen. Flertalet solnoder har försvunnit.
 {{% /alert %}}
 
 ## Uppdatering av solnod
-Både ESP32 och nRF52840 stöder uppdatering över bluetooth. Så det är viktigt även med bra bluetooth antenn. 
-Själv har jag haft varierande lycka med uppdateringar över bluetooth, jag misstänker att det är väldigt viktigt att ha bra bluetooth signal.
+Både ESP32 och nRF52840 stöder uppdateringar via Bluetooth, vilket gör en bra Bluetooth-antenn särskilt viktig. Min egen erfarenhet av Bluetooth-baserade uppdateringar har varit blandad, och jag misstänker att en stabil och stark Bluetooth-signal är avgörande för en pålitlig uppdateringsprocess.
+
+För uppdatering av nRF52840 används appen nRF Connect Device Manager på din smartphone. Den finns på både [App store](https://apps.apple.com/us/app/nrf-connect-device-manager/id1519423539) och [Google play store](https://play.google.com/store/apps/details?id=no.nordicsemi.android.nrfconnectdevicemanager&hl=en&gl=US).
+
+{{% alert title="Uppmärksamma" color="danger" %}}
+OTA-firmwareuppdateringar medför en ökad risk för misslyckande. Om uppdateringsprocessen misslyckas kommer din enhet att lämnas i ett icke-fungerande tillstånd och kräva fysisk åtkomst för åtgärd.
+{{% /alert %}}
