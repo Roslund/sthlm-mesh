@@ -12,7 +12,7 @@ menu: {main: {weight: 12}}
 Just nu känner vi inte till några planerade meetups. Säg till om du planerar något så kan vi informera om det här.
 {{% /blocks/section %}}
 
-{{% blocks/section  %}}
+{{% blocks/section color="info" %}}
 ## Tidigare meetups:
 {{< cardpane >}}
 {{< card >}}

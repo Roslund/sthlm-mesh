@@ -11,7 +11,7 @@ STHLM-MESH är ett community-drivet **open-source-projekt** som syftar till att 
 Projektet drivs av entusiaster som vill utforska möjligheterna med decentraliserad kommunikation och verka för ett välfungerande mesh för alla i Stockholm.
 {{% /blocks/section %}}
 
-{{% blocks/section type="row" %}}
+{{% blocks/section type="row" color="white" %}}
 {{% blocks/feature icon="fa-solid fa-gears" title="Backend" %}}
 Denna webbplats är byggd med de statiska site-generatorn [Hugo](https://gohugo.io/) och använder [Docsy](https://www.docsy.dev/) som tema.
 {{% /blocks/feature %}}

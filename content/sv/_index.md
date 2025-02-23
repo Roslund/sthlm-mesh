@@ -15,11 +15,11 @@ title: STHLM-MESH
 </section>
 
 
-{{% blocks/lead color="primary" %}}
+{{% blocks/lead color="meshtastic-green" %}}
 STHLM-MESH är en informell gemenskap som vekar för ett stabilt Meshtastic-nätverk i Stockholm.
 {{% /blocks/lead %}}
 
-{{% blocks/section type="row" color="secondary" %}}
+{{% blocks/section type="row" color="white" %}}
 {{% blocks/feature icon="fab fa-facebook" title="Facebook grupp" %}}
 <a href="https://www.facebook.com/groups/815331140404197" target="_blank" rel="noopener noreferrer">Meshtastic Sweden</a> - en Facebookgrupp för Sverige. Det finns även flertalet [lokala grupper]({{<ref communities.md >}}).
 {{% /blocks/feature %}}
