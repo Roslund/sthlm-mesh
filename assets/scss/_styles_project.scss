@@ -1,0 +1,72 @@
+/*
+
+This is where you can add your own custom SCSS styles, including overriding any of the styles in Docsy’s theme SCSS files.
+
+*/
+
+/* 
+Hide contribution links from the Docs section:
+https://www.docsy.dev/docs/adding-content/repository-links/#disabling-links
+Might want to allow editing 
+*/
+.td-page-meta__edit { display: none !important; }
+.td-page-meta__view { display: none !important; }
+.td-page-meta__child { display: none !important; }
+.td-page-meta__issue { display: none !important; }
+.td-page-meta__project-issue { display: none !important; }
+
+/* Change the color of the doc rightside sidebar links */
+.td-sidebar-toc a { color: grey !important; }
+
+/* 
+Hide links to the last change commit.
+Ugly workaround that leves to colon ":"
+*/
+.td-page-meta__lastmod a { display: none; }
+
+/* Formating of inline <code> blocks */
+code {
+    background-color: #f0f0f0;
+    color: #555555 !important;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+
+.td-box { 
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+}
+
+
+
+/* 
+    Lazy load images that can be slow or fail.
+*/
+.lazy-img-container {
+    position: relative;
+    width: 100%;
+    height: auto; /* Let the height adjust based on width */
+    background-color: #e0e0e0; /* Placeholder color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensures no overflow issues */
+    margin-bottom: 16px;
+}
+
+.lazy-img-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.lazy-img-container img.lazy {
+    opacity: 0;
+}
+
+.lazy-img-container img.loaded {
+    opacity: 1;
+}

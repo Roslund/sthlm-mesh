@@ -7,31 +7,3 @@ Add styles or override variables from the theme here.
 /* Color and Style */
 $primary: #30a552;
 $secondary: #f7f7f2;
-
-/* 
-Hide contribution links from the Docs section:
-https://www.docsy.dev/docs/adding-content/repository-links/#disabling-links
-Might want to allow editing 
-*/
-.td-page-meta__edit { display: none !important; }
-.td-page-meta__view { display: none !important; }
-.td-page-meta__child { display: none !important; }
-.td-page-meta__issue { display: none !important; }
-.td-page-meta__project-issue { display: none !important; }
-
-/* Change the color of the doc rightside sidebar links */
-.td-sidebar-toc a { color: grey !important; }
-
-/* 
-Hide links to the last change commit.
-Ugly workaround that leves to colon ":"
-*/
-.td-page-meta__lastmod a { display: none; }
-
-/* Formating of inline <code> blocks */
-code {
-    background-color: #f0f0f0;
-    color: #555555 !important;
-    padding: 2px 4px;
-    border-radius: 4px;
-}
