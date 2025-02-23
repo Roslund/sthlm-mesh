@@ -17,7 +17,7 @@ src="https://dash.roslund.cloud/render/d-solo/edqkge9mf7v28g/main-dashboard?orgI
 
 
 ## Batteri
-Visar den genomsnittliga batteri-nivån i meshet senaste 7 dagarna. Försöker exkludera noder som är inkopplade.
+Visar den genomsnittliga batteri-nivån i meshet senaste 7 dagarna. Grafen försöker exkludera noder som är inkopplade till en strömkälla och som således inte går på batter.
 {{< lazy-img max-width="774px" aspect-ratio="774/387"
 src="https://dash.roslund.cloud/render/d-solo/aedo2cbpvy800a/sthlm-mesh?orgId=1&from=now-7d&to=now&theme=light&panelId=2&width=1000&height=500&scale=1" >}}
 
