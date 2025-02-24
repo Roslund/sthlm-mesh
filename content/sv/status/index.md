@@ -10,21 +10,27 @@ Grafer och statistic specifikt för Stockholm's meshen.
 
 {{% blocks/section color="white"  %}}
 ## Kanalutnyttjande
-Den genomsnittliga kanalutnyttjandet i Stockholm under de senaste 3 dygnen. Observera att många noder slutar skicka telemetri vid hög belastning (över 25 %), vilket kan påverka grafens noggrannhet. Trots detta ger gränsvärdena i grafen en god indikation på nätverkets hälsa över tid.
+Den genomsnittliga kanalutnyttjandet i Stockholm under de senaste 4 dygnen. Observera att många noder slutar skicka telemetri vid hög belastning (över 25 %), vilket kan påverka grafens noggrannhet. Trots detta ger gränsvärdena i grafen en god indikation på nätverkets hälsa över tid.
 
 {{< lazy-img max-width="774px" aspect-ratio="774/387"
-src="https://dash.roslund.cloud/render/d-solo/edqkge9mf7v28g/main-dashboard?orgId=1&from=now-3d&to=now&theme=light&panelId=23&width=774&height=387&scale=1&tz=Europe%2FStockholm" >}}
+src="https://dash.roslund.cloud/render/d-solo/edqkge9mf7v28g/main-dashboard?orgId=1&from=now-4d&to=now&theme=light&panelId=23&width=774&height=387&scale=1&tz=Europe%2FStockholm" >}}
+
+## Text Meddelanden
+Antalet meddelande per timme senaste 7 dygnen.
+
+{{< lazy-img max-width="774px" aspect-ratio="774/387"
+src="https://dash.roslund.cloud/render/d-solo/aedo2cbpvy800a/sthlm-mesh?orgId=&from=now-7d&to=now&theme=light&panelId=4&width=1000&height=500&scale=1&tz=Europe%2FStockholm" >}}
 
 
 ## Batteri
-Visar den genomsnittliga batteri-nivån i meshet senaste 7 dagarna. Grafen försöker exkludera noder som är inkopplade till en strömkälla och som således inte går på batter.
+Visar den genomsnittliga batteri-nivån i meshet senaste 4 dygnen. Grafen försöker exkludera noder som är inkopplade till en strömkälla och som således inte går på batter.
 {{< lazy-img max-width="774px" aspect-ratio="774/387"
-src="https://dash.roslund.cloud/render/d-solo/aedo2cbpvy800a/sthlm-mesh?orgId=1&from=now-7d&to=now&theme=light&panelId=2&width=1000&height=500&scale=1&tz=Europe%2FStockholm" >}}
+src="https://dash.roslund.cloud/render/d-solo/aedo2cbpvy800a/sthlm-mesh?orgId=1&from=now-4d&to=now&theme=light&panelId=2&width=1000&height=500&scale=1&tz=Europe%2FStockholm" >}}
 
 
 ## Packet typer
 Fördelningen av olika pakettyper i nätverket under de senaste 12 timmarna. Diagrammet visar hur nätverket används, inklusive meddelanden, positionstelemetri och andra systempaket.
-{{< lazy-img max-width="500px" aspect-ratio="1/1"
+{{< lazy-img max-width="300px" aspect-ratio="1/1"
 src="https://dash.roslund.cloud/render/d-solo/edqkge9mf7v28g/main-dashboard?orgId=1&theme=light&panelId=5&width=500&height=500&scale=1&tz=Europe%2FStockholm" >}}
 {{% /blocks/section %}}
 
