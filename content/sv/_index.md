@@ -16,7 +16,7 @@ title: STHLM-MESH
 
 
 {{% blocks/lead color="meshtastic-green" %}}
-STHLM-MESH är en informell gemenskap som vekar för ett stabilt Meshtastic-nätverk i Stockholm.
+STHLM-MESH är en informell gemenskap som verkar för ett stabilt Meshtastic-nätverk i Stockholm.
 {{% /blocks/lead %}}
 
 {{% blocks/section type="row" color="white" %}}
