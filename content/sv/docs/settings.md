@@ -16,9 +16,16 @@ Här listas rekommenderade inställningar för Stockholm. Inställningarna heter
 | Ignore MQTT      | true        | Vidarebefordra inte meddelanden som kommer från MQTT |
 | OK to MQTT       | true        | Kan stängas av föra att inte synas på karttjänsterna [^2] |
 
-
 [^1]: Det kan vara skadligt för enheten att sända utan antenn.
 [^2]: Detta är enbart en vädjan, det finns inget kryptografiskt skydd. Flertalet tjänster ignorerar denna vädjan och publicerar din nod ändå. 
+
+### Max hops
+Max hops anger i hur många led noder ska vidarebefordra ditt meddelande. Max hops sätts när paket sänds, en nod som vidarebefordrar ett paket minskar _max hops_ med ett. Vad nodens som vidarebefordrar medelande har för max hopps påverkar inte.
+
+Det kan vara lockande att direkt välja max antal (7) som tillåts. Detta bör dock undvikas då det påverka stabiliteten i hela meshen. Istället rekommenderas man först och främst använda _trace route_ funktionen för att försöka avgöra vilken väg meddelanden tar genom meshen. Kom ihåg att detta inte är deterministiskt och meshen är under ständig förändring. Det brukar krävas ett tjugotal lyckade trace routs för att få ett hum om hur det funkar. Experimentera dig fram till _Max hops_ som funkar för dig. 
+
+För routrar rekommenderas det att ha ett lågt antal max hops. En välplacerad router bör nå långt med enbart ett hopp eller två. Du bör inte ha ett högre antal _max hops_ än vad som krävs för att köra remote admin om du planerar använda dig av det. 
+
 
 ## Device Configuration
 
