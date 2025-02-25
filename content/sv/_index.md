@@ -29,7 +29,7 @@ Många av oss finns i kanal `#Sweden` på den officiella
 <a href="https://discord.gg/meshtastic-867578229534359593" target="_blank" rel="noopener noreferrer">Meshtastic Discord</a> servern.
 {{% /blocks/feature %}}
 
-{{% blocks/feature icon="fa-solid fa-champagne-glasses" title="Låt träffas!" %}}
+{{% blocks/feature icon="fa-solid fa-champagne-glasses" title="Låt oss träffas!" %}}
 Det är alltid trevligt att träffas och prata radio. Kolla in våra [Meetups]({{< ref meetups >}})
 {{% /blocks/feature %}}
 {{% /blocks/section %}}
@@ -60,7 +60,7 @@ Vi använder oss av 868mhz på preset Long Range - Fast.
 <h1 id="val-av-enhetsroll">Val av enhetsroll<a class="td-heading-self-link" href="#val-av-enhetsroll" aria-label="Heading self-link"></a></h1>
 <p>En enhetsroll i Meshtastic definierar enhetens primära funktion inom nätverket. Varje roll är anpassad för specifika användningsområden och hjälper till att effektivt hantera nätverket och enhetens beteende.</p> 
 
-<p>Att välja rätt roll är avgörande för ett välfungerande meshnätverk. Om enheten har fel roll märks det ofta inte för en själv, men det kan påverka prestandan för hela nätverket. Valet av enhetsroll är också beroende av sin omgivning, det är stor skillnad i hur man väljer roll och inställningar i ett lite och ett stort meshnätverk.</p>
+<p>Att välja rätt roll är avgörande för ett välfungerande meshnätverk. Om enheten har fel roll märks det ofta inte för användaren själv, men det kan påverka hela nätverkets prestanda negativt. Valet av enhetsroll är också beroende av sin omgivning, det är stor skillnad i hur man väljer roll och inställningar i ett lite och ett stort meshnätverk.</p>
 
 <p>Här är de vanligaste rollerna och under vilka omständigheter de passar in i Stockholms mesh:</p>
 </div>

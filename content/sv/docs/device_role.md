@@ -1,10 +1,11 @@
 ---
-title: Enhetsroll
+title: Enhetsroller i Meshtastic
+linkTitle: Enhetsroll
 weight: 20
 ---
-En enhetsroll i Meshtastic definierar enhetens primära funktion inom nätverket. Varje roll är anpassad för specifika användningsområden och hjälper till att effektivt hantera nätverket och enhetens beteende.
+Enhetsrollen i Meshtastic avgör hur en nod fungerar inom nätverket. Varje roll är optimerad för specifika användningsområden och påverkar hur meshnätverket fungerar.
 
-Att välja rätt roll är avgörande för ett välfungerande meshnätverk. Om enheten har fel roll märks det ofta inte för en själv, men det kan påverka prestandan för hela nätverket.
+Att välja rätt roll är avgörande för ett välfungerande meshnätverk. Om en enhet har fel roll märks det sällan för användaren själv, men det kan försämra nätverkets prestanda.
 
 
 ## Client
@@ -14,7 +15,7 @@ En nod med rollen `CLIENT` deltar aktivt i meshnätverket och vidarebefordrar me
 
 I teorin innebär detta att noder längre bort oftast vidarebefordrar först. Men om en `CLIENT`-nod har dålig mottagning, exempelvis om den är placerad inomhus, kan den felaktigt sända vidare innan en mer optimalt placerad nod gör det. Detta kan leda till att nätverkets _hopp_ förbrukas snabbare, vilket begränsar räckvidden.
 
-Därför är det viktigt att `CLIENT`-noder i större meshnätverk placeras väl. **I Stockholm bör de noder som har enehtsroll client vara noder på balkonger och villahustak**.
+Därför är det viktigt att `CLIENT`-noder i större meshnätverk placeras väl. **I Stockholm bör de noder som har enhetsroll `CLIENT` vara noder placerade på balkonger och villahustak**.
 
 ## Client Mute
 `CLIENT_MUTE`-rollen liknar `CLIENT` men med en viktig skillnad – den vidarebefordrar eller routar inga meddelanden. Detta gör den idealisk för större meshnätverk med hög nätverkstrafik, där extra routing kan orsaka överbelastning.
@@ -26,11 +27,11 @@ I Stockholm bör portabla noder och noder man har inomhus primärt vara `CLIENT 
 ## Router
 `ROUTER`-rollen är designad för enheter som främst ska vidarebefordra meddelanden till andra enheter på meshet. Denna roll är **ENDAST** lämplig för stationära enheter placerade på extremt strategiska platser.
 
-Routrar vidarebefordrar meddelanden från andra enheter direkt, medan andra noder väntar en liten stund innan de sänder. Om en ROUTER är strategiskt placerad så kan den utöka räckvidden och pålitligheten för meshnätverket. 
+Routrar vidarebefordrar meddelanden från andra enheter direkt, medan andra noder väntar en liten stund innan de sänder. En strategiskt placerad ROUTER kan öka både räckvidden och stabiliteten i nätverket.
 
 Routrar vidarebefordrar alltid, medan andra roller kan välja att inte vidarebefordra om de hör en granne vidarebefordra först.
 
-För att optimera prestandan i nätet och minska risken för kollisioner bör enheter med roll `ROUTER` placeras att **så få noder som möjligt kan nå mer än en `ROUTER` samtidigt**. Detta då om ett meddelanden når flera routrar, så kommer de alla vidarebefordra meddelande samtidigt och störa ut varandra.
+För att optimera nätverkets prestanda och undvika kollisioner bör ROUTER-noder placeras så att **så få noder som möjligt når mer än en ROUTER samtidigt.** Detta då om ett meddelanden når flera routrar, så kommer de alla vidarebefordra meddelande samtidigt och störa ut varandra.
 
 {{% alert title="Tips" color="primary" %}}
 Sänk `max_hops`. En välplacerad router når långt med bara **ett eller två hopp**. Din router bör nå en nod med MQTT uplink, så att du kan få den telemetri du behöver via [kartan](https://meshtastic.liamcottle.net/)
@@ -43,4 +44,4 @@ Sänk `max_hops`. En välplacerad router når långt med bara **ett eller två h
 ## Repeater
 REPEATER-rollen fungerar liknande ROUTER-rollen, men går ett steg längre genom att enbart vidarebefordra den meddelanden den tar emot. Den skickar inte ut några paket om sig själv, tex. nod-info.
 
-Detta är en mycket effektiv roll. Men vi rekommenderar istället att man använder ROUTER med optimerade inställningar för att det ska synas att den bidrar till meshet.
+Detta är en mycket effektiv roll. Men vi rekommenderar istället att använda `ROUTER` med optimerade inställningar, så att noden syns och registreras som en aktiv del av meshnätverket.
