@@ -23,7 +23,7 @@ src="https://dash.roslund.cloud/render/d-solo/aedo2cbpvy800a/sthlm-mesh?orgId=&f
 
 
 ## Batteri
-Visar den genomsnittliga batteri-nivån i meshet senaste 4 dygnen. Grafen försöker exkludera noder som är inkopplade till en strömkälla och som således inte går på batter.
+Visar den genomsnittliga batteri-nivån i meshet senaste 4 dygnen. Grafen försöker exkludera noder som är inkopplade till en strömkälla och som således inte går på batteri.
 {{< lazy-img max-width="774px" aspect-ratio="774/387"
 src="https://dash.roslund.cloud/render/d-solo/aedo2cbpvy800a/sthlm-mesh?orgId=1&from=now-4d&to=now&theme=light&panelId=2&width=1000&height=500&scale=1&tz=Europe%2FStockholm" >}}
 
