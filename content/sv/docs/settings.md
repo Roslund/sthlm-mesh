@@ -29,33 +29,34 @@ För routrar rekommenderas det att ha ett lågt antal max hops. En välplacerad 
 
 ## Device Configuration
 
-| Inställning         | Värde                      | Beskrivning |
-|---------------------|----------------------------|-------------|
-| Role                | CLIENT_MUTE eller CLIENT   | För mer info, se [enhetsroll]({{% ref device_role.md %}}) |
-| Rebroadcast Mode    | ALL                        | Vidarebefordrar även krypterade meddelanden                |
-| Node Info Broadcast | 6h                         | Kommer ändå skicka Node info när det efterfrågas[^3]       |
+| Inställning         | Värde                          | Beskrivning |
+|---------------------|--------------------------------|-------------|
+| Role                | `CLIENT_MUTE` eller `CLIENT`   | För mer info, se [enhetsroll]({{% ref device_role.md %}}) |
+| Rebroadcast Mode    | ALL                            | Vidarebefordrar även krypterade meddelanden               |
+| NodeInfo Broadcast  | 6h (21600s)                    | Kommer ändå skicka Node info när det efterfrågas[^3]      |
+| POSIX Timezone      | `CET-1CEST,M3.5.0,M10.5.0/3`   | Tidszon för enhetsklocka och loggar                       |
 
-[^3]: Enheten kommer fortfarande att svara ad hoc på NodeInfo-meddelanden när det efterfrågas. 
+[^3]: Enheten kommer fortfarande att svara ad hoc på NodeInfo-meddelanden när det efterfrågas.
 När en enhet hör ett paket från en nod den ännu inte känner till, kommer den att skicka sin NodeInfo och automatiskt be om ett svar.
 
 ## Position
-| Inställning         | Värde | Beskrivning        |
-|---------------------|-------|--------------------|
-| Broadcast Interval  | 12h   | För statiska noder |
+| Inställning         | Värde          | Beskrivning        |
+|---------------------|----------------|--------------------|
+| Broadcast Interval  | 12h (43200s)   | För statiska noder |
 
 Position inställningar är luriga, för mer info se [position]({{% ref position.md %}})
 
 
 ## Telemetry
-| Inställning                    | Värde    | Beskrivning        |
-|--------------------------------|----------|--------------------|
-| Device Metrics Update Interval | 3h       | Battery Level, Voltage, Channel Utilization and Airtime |
-| Environment Telemetry Enabled  | false    | 
-| Environment Telemetry          | 6h       |
-| Power Metrics Enabled          | false    |
-| Power Metrics Interval         | 6h       |
-| Air Quality Enabled            | false    |
-| Air Quality Interval           | 6h       |
+| Inställning                    | Värde         | Beskrivning        |
+|--------------------------------|---------------|--------------------|
+| Device Metrics Update Interval | 3h (10800s)   | Battery Level, Voltage, Channel Utilization and Airtime |
+| Environment Telemetry Enabled  | false         |
+| Environment Telemetry          | 6h (21600s)   |
+| Power Metrics Enabled          | false         |
+| Power Metrics Interval         | 6h (21600s)   |
+| Air Quality Enabled            | false         |
+| Air Quality Interval           | 6h (21600s)   |
 
 
 Notera att batterinivå är inkluderad i Device Metrics. Power Metrics är enbart till för externa strömsensorer, så som: [MPPT Solar Battery Charger for IoT & Meshtastic](https://www.etsy.com/listing/1609406536/mppt-solar-battery-charger-for-iot)
@@ -64,11 +65,11 @@ Notera att batterinivå är inkluderad i Device Metrics. Power Metrics är enbar
 
 
 ## Neighbor Info
-| Inställning         | Värde    |
-|---------------------|----------|
-| Enabled             | True     |
-| Transmit over LoRa  | False    |
-| Update interval     | 1h       |
+| Inställning         | Värde        |
+|---------------------|--------------|
+| Enabled             | True         |
+| Transmit over LoRa  | False        |
+| Update interval     | 1h (3600s)   |
 
 Om en nod är är uppkopplad mot en MQTT server så kan man skicka neighbor info frekvent.
-Om man vill skicka neighbor info över LoRa så bör man inte skicka oftare än var 12:e timme. Dock så är detta begränsat i firmware. För mer detaljer se [Neighbor Info]({{% ref neighbor_info.md %}})
+Om man vill skicka neighbor info över LoRa så bör man inte skicka oftare än var 12:e timme (43200s). Dock så är detta begränsat i firmware. För mer detaljer se [Neighbor Info]({{% ref neighbor_info.md %}})
