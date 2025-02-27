@@ -5,7 +5,7 @@ menu: {main: {weight: 12}}
 draft: false
 ---
 {{% blocks/cover title="Mesh Status Metrics" image_anchor="top" height="min" %}}
-Grafer och statistic specifikt för Stockholm's meshen.
+Grafer och statistik specifikt för Stockholm's meshen.
 {{% /blocks/cover %}}
 
 {{% blocks/section color="white"  %}}
