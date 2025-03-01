@@ -30,8 +30,8 @@ src="https://dash.roslund.cloud/render/d-solo/aedo2cbpvy800a/sthlm-mesh?orgId=1&
 
 ## Packet typer
 Fördelningen av olika pakettyper i nätverket under de senaste 12 timmarna. Diagrammet visar hur nätverket används, inklusive meddelanden, positionstelemetri och andra systempaket.
-{{< lazy-img max-width="300px" aspect-ratio="1/1"
-src="https://dash.roslund.cloud/render/d-solo/edqkge9mf7v28g/main-dashboard?orgId=1&theme=light&panelId=5&width=500&height=500&scale=1&tz=Europe%2FStockholm" >}}
+{{< lazy-img max-width="774px" aspect-ratio="774/387"
+src="https://dash.roslund.cloud/render/d-solo/aedo2cbpvy800a/sthlm-mesh?orgId=1&theme=light&panelId=6&width=1000&height=500&scale=1&tz=Europe%2FStockholm" >}}
 {{% /blocks/section %}}
 
 {{% blocks/section color=info %}}
