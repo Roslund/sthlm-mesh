@@ -1,7 +1,7 @@
 ---
 title: Documentation
 linkTitle: Docs
-menu: {main: {weight: 20}}
+menu: {main: {weight: 70}}
 ---
 Syftet är att dokumentera information som är relevant för användare i Sverige, särskilt för större mesh-nätverk så som Stockholms.
 Vi ska __inte__ ersätta den officiella dokumentationen eller översätta den till svenska. 

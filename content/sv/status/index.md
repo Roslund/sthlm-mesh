@@ -1,7 +1,7 @@
 ---
 title: Mesh Status
 linkTitle: Status
-menu: {main: {weight: 12}}
+menu: {main: {weight: 60}}
 draft: false
 ---
 {{% blocks/cover title="Mesh Status Metrics" image_anchor="top" height="min" %}}
