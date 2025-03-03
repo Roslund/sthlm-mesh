@@ -56,11 +56,10 @@ markup:
 menu:
   main:
     - name: "Map"
-      url: "https://meshtastic.liamcottle.net/?lat=59.34338409949693&lng=378.0628967285156&zoom=10"
+      url: "https://map.sthlm-mesh.se/?lat=59.34338409949693&lng=378.0628967285156&zoom=10"
       weight: 40
       params:
         target: "_blank"
-      post: <sup><i class="ps-1 fa-solid fa-up-right-from-square fa-xs" aria-hidden="true"></i></sup>
 
 # Everything below this are Site Params
 params:
