@@ -3,11 +3,11 @@ title: STHLM-MESH
 ---
 <style>
 #td-cover-block-0 {
-  background-image: url(/background-map.png);
+  background-image: url(/featured-background-map.png);
 }
 @media only screen and (min-width: 1200px) {
   #td-cover-block-0 {
-    background-image: url(/background-map.png);
+    background-image: url(/featured-background-map.png);
   }
 }
 </style>
