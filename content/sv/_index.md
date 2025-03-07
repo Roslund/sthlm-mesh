@@ -42,15 +42,28 @@ Det är alltid trevligt att träffas och prata radio. Kolla in våra [Meetups]({
 * <h4>Främja aktivitet i meshet.</h4>
 
 {{% /blocks/section %}}
-{{% blocks/section color="primary"  %}}
+
+{{% blocks/lead color="meshtastic-green" %}}
 Kom igång med Meshtastic
 {.h1}
 För att komma igång rekommenderar vi att följa instruktionerna på den officiella hemsidan: https://meshtastic.org.
+{{% /blocks/lead %}}
 
+{{% blocks/section type="row" color="info" %}}
+{{% blocks/feature icon="fa-walkie-talkie" title="Införskaffa enhet" %}}
+Det finns enheter för olika frekvensband, i Sverige och inom EU är det **868Mhz** som används. Några populära enheter:
+WisMesh Pocket, seed studio T1000-E, LILYGO T-Deck Plus, Heltec LoRa 32, LILYGO® T-Beam.
+{{% /blocks/feature %}}
 
-{{% alert title="Viktigt" color="success" %}}
-Vi använder oss av 868mhz på preset Long Range - Fast.
-{{% /alert %}}
+{{% blocks/feature icon="fa-microchip" title="Flasha firmware" %}}
+När du fått din enhet behöver Meshtastic programvaran laddas på. Detta görs enklast via en dator: http://flasher.meshtastic.org/
+{{% /blocks/feature %}} 
+
+{{% blocks/feature icon="fab fa-app-store-ios" title="Konfigurera med appen" %}}
+För att konfigurera din en rekommenderas de officiella apparna för [iOS](https://apple.co/3Auysep) eller [Android](https://play.google.com/store/apps/details?id=com.geeksville.mesh&pli=1).
+I Stockholm använder vi oss av kanal-preset: **Long Range Fast**. Vidare har vi en sida för [rekommenderade inställningar]({{<ref settings>}}).
+{{% /blocks/feature %}}
+
 {{% /blocks/section %}}
 
 <!-- Det finns garanterat bättre sätt att göra detta på... --> 
@@ -70,11 +83,11 @@ Vi använder oss av 868mhz på preset Long Range - Fast.
     <div class="row g-4">
         <div class="col-lg-4">
             <div class="card" >
-                <h3 class="card-header"><b>ROUTER</b></h3>
-                <img src="/router.jpeg" class="card-img-top" alt="...">
+                <h3 class="card-header"><b>Client Mute</b></h3>
+                <img src="/client_mute.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <p class="card-text">En nod placerad högt upp med fri sikt åt alla håll. Använder en optimerad och väl-testad setup. Måste koordineras med övriga meshet.<p>
-                    <a href="/docs/device_role/#router" class="btn btn-primary" style="color: #f9f9f9 !important;">Läs mer</a>
+                    <p class="card-text">För portabla noder eller noder som används inomhus. <b>Notera</b>: En nod inställd på Client Mute kan fortfarande skicka och ta emot meddelanden.<p>
+                    <a href="/docs/device_role/#client-mute" class="btn btn-primary" style="color: #f9f9f9 !important;">Läs mer</a>
                 </div>
             </div>
         </div>
@@ -90,11 +103,11 @@ Vi använder oss av 868mhz på preset Long Range - Fast.
         </div>
         <div class="col-lg-4">
             <div class="card" >
-                <h3 class="card-header"><b>Client Mute</b></h3>
-                <img src="/client_mute.jpeg" class="card-img-top" alt="...">
+                <h3 class="card-header"><b>ROUTER</b></h3>
+                <img src="/router.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <p class="card-text">För portabla noder eller noder som används inomhus. <b>Notera</b>: En nod inställd på Client Mute kan fortfarande skicka och ta emot meddelanden.<p>
-                    <a href="/docs/device_role/#client-mute" class="btn btn-primary" style="color: #f9f9f9 !important;">Läs mer</a>
+                    <p class="card-text">En nod placerad högt upp med fri sikt åt alla håll. Använder en optimerad och väl-testad setup. Måste koordineras med övriga meshet.<p>
+                    <a href="/docs/device_role/#router" class="btn btn-primary" style="color: #f9f9f9 !important;">Läs mer</a>
                 </div>
             </div>
         </div>
