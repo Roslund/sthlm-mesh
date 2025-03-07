@@ -9,6 +9,18 @@ Grafer och statistik specifikt för Stockholm's meshen.
 {{% /blocks/cover %}}
 
 {{% blocks/section color="white"  %}}
+## Skapade paket per nod
+Grafen nedan visar vilka noder som har skickat flest paket under det senaste dygnet. Vidarebefordrade meddelanden och krypterade paket är inte medräknade.
+Datat i grafen är endast en uppskattning och bör inte ses som exakt. Graferna bygger på MQTT-data från ett begränsat antal noder.
+Eftersom vi har begränsad bandbredd är det viktigt att hålla nere trafiken. En sändningsvolym på max 50–100 paket per dygn är önskvärd.
+{{< lazy-img max-width="800px" aspect-ratio="1/1"
+src="https://dash.roslund.cloud/render/d-solo/aedo2cbpvy800a/sthlm-mesh?orgId=1&theme=light&panelId=7&width=1000&height=1000&scale=1" >}}
+
+## Packet typer
+Fördelningen av olika pakettyper i nätverket under de senaste dygnet. Diagrammet visar hur nätverket används, inklusive meddelanden, positionstelemetri och andra systempaket.
+{{< lazy-img max-width="774px" aspect-ratio="774/387"
+src="https://dash.roslund.cloud/render/d-solo/aedo2cbpvy800a/sthlm-mesh?orgId=1&theme=light&panelId=6&width=1000&height=500&scale=1" >}}
+
 ## Kanalutnyttjande
 Den genomsnittliga kanalutnyttjandet i Stockholm under de senaste 7 dygnen. Observera att många noder slutar skicka telemetri vid hög belastning (över 25 %), vilket kan påverka grafens noggrannhet. Trots detta ger gränsvärdena i grafen en god indikation på nätverkets hälsa över tid.
 
@@ -21,24 +33,11 @@ Antalet meddelande per timme senaste 7 dygnen.
 {{< lazy-img max-width="774px" aspect-ratio="774/387"
 src="https://dash.roslund.cloud/render/d-solo/aedo2cbpvy800a/sthlm-mesh?orgId=&from=now-7d&to=now&theme=light&panelId=4&width=1000&height=500&scale=1&tz=Europe%2FStockholm" >}}
 
-
 ## Batteri
 Visar den genomsnittliga batteri-nivån i meshet senaste 7 dygnen. Grafen försöker exkludera noder som är inkopplade till en strömkälla och som således inte går på batteri.
 {{< lazy-img max-width="774px" aspect-ratio="774/387"
 src="https://dash.roslund.cloud/render/d-solo/aedo2cbpvy800a/sthlm-mesh?orgId=1&from=now-7d&to=now&theme=light&panelId=2&width=1000&height=500&scale=1&tz=Europe%2FStockholm" >}}
 
-
-## Packet typer
-Fördelningen av olika pakettyper i nätverket under de senaste dygnet. Diagrammet visar hur nätverket används, inklusive meddelanden, positionstelemetri och andra systempaket.
-{{< lazy-img max-width="774px" aspect-ratio="774/387"
-src="https://dash.roslund.cloud/render/d-solo/aedo2cbpvy800a/sthlm-mesh?orgId=1&theme=light&panelId=6&width=1000&height=500&scale=1" >}}
-
-## Skapade paket per nod
-Grafen nedan visar vilka noder som har skickat flest paket under det senaste dygnet. Vidarebefordrade meddelanden och krypterade paket är inte medräknade.
-Datat i grafen är endast en uppskattning och bör inte ses som exakt. Graferna bygger på MQTT-data från ett begränsat antal noder.
-Eftersom vi har begränsad bandbredd är det viktigt att hålla nere trafiken. En sändningsvolym på max 50–100 paket per dygn är önskvärd.
-{{< lazy-img max-width="800px" aspect-ratio="1/1"
-src="https://dash.roslund.cloud/render/d-solo/aedo2cbpvy800a/sthlm-mesh?orgId=1&theme=light&panelId=7&width=1000&height=1000&scale=1" >}}
 
 {{% /blocks/section %}}
 
