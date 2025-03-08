@@ -9,6 +9,11 @@ Grafer och statistik specifikt för Stockholm's meshen.
 {{% /blocks/cover %}}
 
 {{% blocks/section color="white"  %}}
+
+{{% alert title="Uppmärksamma" color="warning" %}}
+Vi hade problem med datainsamlingen den 8/3 vilket påverkar graferna och statistiken.
+{{% /alert %}}
+
 ## Skapade paket per nod
 Grafen nedan visar vilka noder som har skickat flest paket under det senaste dygnet. Vidarebefordrade meddelanden och krypterade paket är inte medräknade.
 Datat i grafen är endast en uppskattning och bör inte ses som exakt. Graferna bygger på MQTT-data från ett begränsat antal noder.
