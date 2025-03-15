@@ -134,6 +134,10 @@ params:
     readingtime:
       enable: false
 
+services:
+  googleAnalytics:
+    id: G-4LJP3Y6HMZ
+
 module:
   hugoVersion:
     extended: true
