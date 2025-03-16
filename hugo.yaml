@@ -58,8 +58,6 @@ menu:
     - name: "Map"
       url: "https://map.sthlm-mesh.se/?lat=59.34338409949693&lng=378.0628967285156&zoom=10"
       weight: 80
-      params:
-        target: "_blank"
 
 # Everything below this are Site Params
 params:
@@ -135,6 +133,10 @@ params:
     # add "hide_readingtime: true" to the page's front matter
     readingtime:
       enable: false
+
+services:
+  googleAnalytics:
+    id: G-4LJP3Y6HMZ
 
 module:
   hugoVersion:

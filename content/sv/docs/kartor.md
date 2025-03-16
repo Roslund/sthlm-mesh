@@ -5,7 +5,8 @@ weight: 80
 Det finns massvis med olika karttjänster, vi rekommenderar Liam Cottles karta:
 https://meshtastic.liamcottle.net/
 
-  <a href="https://meshtastic.liamcottle.net/"><img src="/featured-background-map.png" width="50%"></a>
+
+<a href="https://meshtastic.liamcottle.net/"><img src="/featured-background-map.png" width="50%"></a>
 
 {{% alert title="Uppmärksamma" color="warning" %}}
 För att tillåta andra noder publicera din nod på kartan behöver `lora.config_ok_to_mqtt` vara aktiverat.
