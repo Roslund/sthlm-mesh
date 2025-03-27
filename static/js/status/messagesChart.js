@@ -7,7 +7,7 @@ ctx.fillStyle = 'gray';
 ctx.textAlign = 'center';
 ctx.fillText('Loading data...', canvas.width / 2, canvas.height / 2);
 
-fetch('http://127.0.0.1:8080/api/v1/messages-per-hour')
+fetch('https://map.sthlm-mesh.se/api/v1/messages-per-hour')
     .then(response => response.json())
     .then(data => {
         const labels = data.map(entry => entry.hour);
