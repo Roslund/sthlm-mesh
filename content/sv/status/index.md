@@ -27,7 +27,7 @@ src="https://dash.roslund.cloud/render/d-solo/aedo2cbpvy800a/sthlm-mesh?orgId=1&
 
 ## Hårdvarumodeller
 Antalet enheter av respektive hårdvarutyp som synts i meshet de senaste 30 dagarna.
-<div style="width: 100%;max-width: 1000px;">
+<div id="hardwareChartContainer" style="width: 100%;max-width: 1000px;">
     <canvas id="hardwareChart"></canvas>
 </div>
 
