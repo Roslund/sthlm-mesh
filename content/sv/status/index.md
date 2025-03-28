@@ -10,7 +10,7 @@ draft: false
 ## Text Meddelanden
 Antalet meddelande per timme senaste 7 dygnen.
 <div style="min-height: 300px;width: 100%;max-width: 1000px;">
-  <canvas id="messagesChart"></canvas>
+    <canvas id="messagesChart"></canvas>
 </div>
 
 ## Skapade paket per nod
@@ -24,6 +24,12 @@ src="https://dash.roslund.cloud/render/d-solo/aedo2cbpvy800a/sthlm-mesh?orgId=1&
 Fördelningen av olika pakettyper i nätverket under de senaste dygnet. Diagrammet visar hur nätverket används, inklusive meddelanden, positionstelemetri och andra systempaket.
 {{< lazy-img max-width="774px" aspect-ratio="774/387"
 src="https://dash.roslund.cloud/render/d-solo/aedo2cbpvy800a/sthlm-mesh?orgId=1&theme=light&panelId=6&width=1000&height=500&scale=1" >}}
+
+## Hårdvarumodeller
+Antalet enheter av respektive hårdvarutyp som synts i meshet de senaste 30 dagarna.
+<div style="width: 100%;max-width: 1000px;">
+    <canvas id="hardwareChart"></canvas>
+</div>
 
 ## Kanalutnyttjande
 Den genomsnittliga kanalutnyttjandet i Stockholm under de senaste 7 dygnen. Observera att många noder slutar skicka telemetri vid hög belastning (över 25 %), vilket kan påverka grafens noggrannhet. Trots detta ger gränsvärdena i grafen en god indikation på nätverkets hälsa över tid.
@@ -48,4 +54,5 @@ Om graferna inte laddas så är det troligtvis för att vi har problem, eller s�
 {{% /blocks/section %}}
 
 <script src="/js/status/messagesChart.js"></script>
+<script src="/js/status/hardwareChart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
