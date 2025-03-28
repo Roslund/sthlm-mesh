@@ -27,6 +27,9 @@ async function hardwareStatsGraph() {
         const counts = data.hardware_model_stats.map(item => item.count);
         const colors = labels.map(name => stringToColor(name));
 
+        // Adjust chart height based on number of items
+        const chartContainer = document.querySelector('#hardwareChartContainer');
+        chartContainer.style.height = `${labels.length * 25}px`;
 
 
         new Chart(ctx, {
@@ -41,6 +44,8 @@ async function hardwareStatsGraph() {
                 }]
             },
             options: {
+                responsive: true,
+                maintainAspectRatio: false,
                 barPercentage: 0.8,
                 indexAxis: 'y',
                 y: { ticks: { autoSkip: false, font: { size: 12 } } },
