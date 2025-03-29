@@ -21,7 +21,7 @@ STHLM-MESH är en informell gemenskap som verkar för ett stabilt Meshtastic-nä
 
 {{% blocks/section type="row" color="white" %}}
 {{% blocks/feature icon="fab fa-facebook" title="Facebook grupp" %}}
-<a href="https://www.facebook.com/groups/815331140404197" target="_blank" rel="noopener noreferrer">Meshtastic Sweden</a> - en Facebookgrupp för Sverige. Det finns även flertalet [lokala grupper]({{<ref communities.md >}}).
+<a href="https://www.facebook.com/groups/815331140404197" target="_blank" rel="noopener noreferrer">Meshtastic Sweden</a> - en Facebookgrupp för Sverige. Det finns även flertalet [lokala grupper]({{<ref communities.md>}}).
 {{% /blocks/feature %}}
 
 {{% blocks/feature icon="fab fa-discord" title="Vi finns på Discord" %}}
@@ -30,7 +30,7 @@ Många av oss finns i kanal `#Sweden` på den officiella
 {{% /blocks/feature %}}
 
 {{% blocks/feature icon="fa-solid fa-champagne-glasses" title="Låt oss träffas!" %}}
-Det är alltid trevligt att träffas och prata radio. Kolla in våra [Meetups]({{< ref meetups >}})
+Det är alltid trevligt att träffas och prata radio. Kolla in våra [Meetups]({{<ref meetups.md>}}).
 {{% /blocks/feature %}}
 {{% /blocks/section %}}
 
@@ -51,22 +51,26 @@ För att komma igång rekommenderar vi att följa instruktionerna på den offici
 
 {{% blocks/section type="row" color="info" %}}
 {{% blocks/feature icon="fa-walkie-talkie" title="Införskaffa enhet" %}}
-Det finns enheter för olika frekvensband, i Sverige och inom EU är det **868Mhz** som används. Några populära enheter:
-[WisMesh Pocket](), 
-[seeed studio T1000-E](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html), 
-[Heltec LoRa 32](https://heltec.org/project/wifi-lora-32-v3/), 
-[LILYGO T-Deck Plus](https://lilygo.cc/products/t-deck-plus-1), 
-[LILYGO T-Beam](https://lilygo.cc/products/t-beam).
+Det finns enheter för olika frekvensband, i Sverige och inom EU är det **868Mhz** som används. \
+Några populära enheter:
+<a href="https://store.rakwireless.com/products/wisblock-meshtastic-starter-kit?variant=43884034621638" target="_blank" rel="noopener noreferrer">RAK4631</a>, 
+<a href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html" target="_blank" rel="noopener noreferrer">Seeed Studio T1000-E</a>, 
+<a href="https://heltec.org/project/wifi-lora-32-v3/?attribute_pa_band=863-870mhz&attribute_need-plastic-shell=No" target="_blank" rel="noopener noreferrer">Heltec LoRa 32 v3</a>, 
+<a href="https://lilygo.cc/products/t-deck-plus-1?variant=44897766506677" target="_blank" rel="noopener noreferrer">LILYGO T-Deck Plus</a>, 
+<a href="https://lilygo.cc/products/t-beam?variant=44907400102069" target="_blank" rel="noopener noreferrer">LILYGO T-Beam</a>.\
+Mer information <a href="https://meshtastic.org/docs/hardware/devices" target="_blank" rel="noopener noreferrer">här</a>.
 {{% /blocks/feature %}}
 
 {{% blocks/feature icon="fa-microchip" title="Flasha firmware" %}}
-När du fått din enhet behöver Meshtastic programvaran laddas på. Detta görs enklast via en dator: http://flasher.meshtastic.org/.
+När du fått din enhet behöver Meshtastic programvaran laddas på. \
+Detta görs enklast via en dator: <a href="https://flasher.meshtastic.org" target="_blank" rel="noopener noreferrer">Flasher</a>. \
 Vi rekommenderar den senaste betan, men titta tillbaka regelbundet då utvecklingen går snabbt.
-{{% /blocks/feature %}} 
+{{% /blocks/feature %}}
 
 {{% blocks/feature icon="fab fa-app-store-ios" title="Konfigurera med appen" %}}
-För att konfigurera din en rekommenderas den officiella appen för [iOS](https://apple.co/3Auysep) eller [Android](https://play.google.com/store/apps/details?id=com.geeksville.mesh&pli=1).
-I Stockholm använder vi kanal-preseten **Long Fast**. För mer detaljer om enhetskonfiguration se vår sida: [rekommenderade inställningar]({{<ref settings>}}).
+För att konfigurera din en rekommenderas den officiella appen för <a href="https://apple.co/3Auysep" target="_blank" rel="noopener noreferrer">iOS</a> eller <a href="https://play.google.com/store/apps/details?id=com.geeksville.mesh" target="_blank" rel="noopener noreferrer">Android</a>. \
+I Stockholm använder vi kanal-preseten **Long Fast**. \
+För mer detaljer om enhetskonfiguration se vår sida: [Rekommenderade Inställningar]({{<ref settings>}}).
 {{% /blocks/feature %}}
 
 {{% /blocks/section %}}
