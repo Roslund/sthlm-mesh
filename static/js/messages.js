@@ -37,6 +37,9 @@ document.addEventListener("DOMContentLoaded", async function () {
                 new Map(data.text_messages.map(msg => [msg.packet_id, msg])).values()
             );
 
+            // Sort the messages, for some reason with multiple mqtt gateways they are unsorted.
+            state.messages.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+
             // fetch node info
             for(const message of state.messages){
                 await fetchNodeInfo(message.to);
