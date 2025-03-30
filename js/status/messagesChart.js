@@ -10,7 +10,7 @@ async function messagesStatsGraph() {
 
 
     try {
-        const response = await fetch('https://map.sthlm-mesh.se/api/v1/messages-per-hour')
+        const response = await fetch('https://map.sthlm-mesh.se/api/v1/stats/messages-per-hour')
         const data = await response.json();
         
         const labels = data.map(entry => entry.hour);
