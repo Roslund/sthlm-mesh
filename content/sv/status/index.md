@@ -44,7 +44,7 @@ Antalet enheter av respektive hårdvarutyp som synts i meshet de senaste 30 daga
 
 {{% blocks/section color=info %}}
 ## OM
-Majoriteten av graferna baseras på data från https://map.sthlm-mesh.se, där data samlas in från ett par noder i Stockholmsområdet. Data hämtas från API't, som vi dessutom har utökat med fler funktion för att möjliggöra mer analys. Visualisering sker genom biblioteket https://www.chartjs.org/.
+Majoriteten av graferna baseras på data från [map.sthlm-mesh.se](https://map.sthlm-mesh.se), där data samlas in från ett par noder i Stockholmsområdet. Data hämtas från API't, som vi dessutom har utökat med fler funktioner för att möjliggöra mer analys. Visualisering sker genom biblioteket [chartjs.org](https://www.chartjs.org/).
 
 Vissa av graferna är genererade av  [Meshtastic-metrics-exporter](https://github.com/tcivie/meshtastic-metrics-exporter) som är kopplad mot en annan privat MQTT broker. Graferna laddas från en separat server. Med hjälp av Nginx så cacheas bilderna för att inte överbelasta Grafana instansen. Dessa grafer jobbar vi på att ersätta med våra egna.
 {{% /blocks/section %}}
