@@ -4,7 +4,7 @@ services:
 
   site:
     image: hugomods/hugo:exts
-    command: server --buildDrafts
+    command: server --buildDrafts --poll 500ms
     ports:
       - "1313:1313"
     volumes:
