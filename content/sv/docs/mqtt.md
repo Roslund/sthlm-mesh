@@ -15,7 +15,7 @@ För att andra ska kunna vidarebefordra dina meddelanden till MQTT måste du ha 
 {{% /alert %}}
 
 ## MQTT Konfiguration
-Vi rekommenderar att man uplinkar till Liam Cottles MQTT-broker och karta.
+Vi rekommenderar att man uplinkar till Liam Cottle's MQTT-broker och karta.
 
 {{< card code=true lang="yml" >}}
 mqtt:
@@ -23,7 +23,7 @@ mqtt:
     mqtt.address: mqtt.meshtastic.liamcottle.net
     mqtt.username: uplink
     mqtt.password: uplink
-    mqtt.root: msh/EU_868
+    mqtt.root: msh/EU_868/SE/Stockholm
     mqtt.encryption_enabled: True
     mqtt.json_enabled: False
     mqtt.tls_enabled: False
@@ -44,11 +44,14 @@ Bland annat skickas `position`, `hårdvarumodell`, `firmware version`.
 Detta kan dock vara missvisande, eftersom standardintervallet för nodeinfo är 3 timmar och många skickar mycket mer sällan än så.
 
 
-## MQTT Broakers
+## MQTT Brokers
 Om man är riktigt nördig kan man hosta sin egen MQTT-broker. Detta kan vara användbart, eftersom Liam Cottles broker enbart tillåter uppladdning av data.
 Vill man analysera data eller använda andra verktyg kan man därför köra en egen broker.
 
 Den rekommenderade mjukvaran för detta är [mosquitto](https://mosquitto.org).
+
+### STHLM-MESH's Broker
+Vi hostar vår egen Mosquitto broker på `mqtt.sthlm-mesh.se`. Den är dock inte public, detta då vi enbart vill samla in data från Meshet i Stockholm. Genom att enbart samla in data från Stockholm kan vi använda andra verktyg för att analysera hur meshet mår.
 
 ### MQTT Bridge
 En Mosquitto Bridge gör det möjligt att koppla ihop två MQTT-servrar (brokers) så att meddelanden kan flöda mellan dem.
