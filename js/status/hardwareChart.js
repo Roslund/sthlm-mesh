@@ -28,7 +28,7 @@ async function hardwareStatsGraph() {
         const colors = labels.map(name => stringToColor(name));
 
         // Adjust chart height based on number of items
-        const chartContainer = document.querySelector('#hardwareChartContainer');
+        const chartContainer = document.getElementById('hardwareChartContainer');
         chartContainer.style.height = `${labels.length * 25}px`;
 
 
