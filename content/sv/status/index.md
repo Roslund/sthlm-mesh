@@ -49,7 +49,7 @@ Majoriteten av graferna baseras på data från [map.sthlm-mesh.se](https://map.s
 Vissa av graferna är genererade av  [Meshtastic-metrics-exporter](https://github.com/tcivie/meshtastic-metrics-exporter) som är kopplad mot en annan privat MQTT broker. Graferna laddas från en separat server. Med hjälp av Nginx så cacheas bilderna för att inte överbelasta Grafana instansen. Dessa grafer jobbar vi på att ersätta med våra egna.
 {{% /blocks/section %}}
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="/js/status/messagesChart.js"></script>
 <script src="/js/status/hardwareChart.js"></script>
 <script src="/js/status/position-precision-chart.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
