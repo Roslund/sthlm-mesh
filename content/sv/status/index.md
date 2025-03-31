@@ -25,34 +25,31 @@ Fördelningen av olika pakettyper i nätverket under de senaste dygnet. Diagramm
 {{< lazy-img max-width="774px" aspect-ratio="774/387"
 src="https://dash.roslund.cloud/render/d-solo/aedo2cbpvy800a/sthlm-mesh?orgId=1&theme=light&panelId=6&width=1000&height=500&scale=1" >}}
 
+## Position Precision
+Grafen visar position precision, eller noggrannhet, på de noder som rapporterat sin position de senaste 7 dagarna. 
+Vi ser gärna att man använder en noggrannhet på ±182m eller mer. Detta är dock inte möjligt att ställa in i iPhone Appen.
+För mer info se vår [dokumentation]({{<ref position.md>}}#position-precision).
+<div style="min-height: 300px;width: 100%;max-width: 1000px;">
+    <canvas id="positionPrecisionChart"></canvas>
+</div>
+
+
 ## Hårdvarumodeller
 Antalet enheter av respektive hårdvarutyp som synts i meshet de senaste 30 dagarna.
 <div id="hardwareChartContainer" style="width: 100%;max-width: 1000px;">
     <canvas id="hardwareChart"></canvas>
 </div>
 
-## Kanalutnyttjande
-Den genomsnittliga kanalutnyttjandet i Stockholm under de senaste 7 dygnen. Observera att många noder slutar skicka telemetri vid hög belastning (över 25 %), vilket kan påverka grafens noggrannhet. Trots detta ger gränsvärdena i grafen en god indikation på nätverkets hälsa över tid.
-
-{{< lazy-img max-width="774px" aspect-ratio="774/387"
-src="https://dash.roslund.cloud/render/d-solo/edqkge9mf7v28g/main-dashboard?orgId=1&from=now-7d&to=now&theme=light&panelId=23&width=774&height=387&scale=1&tz=Europe%2FStockholm" >}}
-
-## Batteri
-Visar den genomsnittliga batteri-nivån i meshet senaste 7 dygnen. Grafen försöker exkludera noder som är inkopplade till en strömkälla och som således inte går på batteri.
-{{< lazy-img max-width="774px" aspect-ratio="774/387"
-src="https://dash.roslund.cloud/render/d-solo/aedo2cbpvy800a/sthlm-mesh?orgId=1&from=now-7d&to=now&theme=light&panelId=2&width=1000&height=500&scale=1&tz=Europe%2FStockholm" >}}
-
-
 {{% /blocks/section %}}
 
 {{% blocks/section color=info %}}
 ## OM
-Denna sida använder [Meshtastic-metrics-exporter](https://github.com/tcivie/meshtastic-metrics-exporter) och en privat MQTT broker som samlar in data från ett par noder i Stockholm. 
+Majoriteten av graferna baseras på data från https://map.sthlm-mesh.se, där data samlas in från ett par noder i Stockholmsområdet. Data hämtas från API't, som vi dessutom har utökat med fler funktion för att möjliggöra mer analys. Visualisering sker genom biblioteket https://www.chartjs.org/.
 
-Graferna laddas från en separat server. Med hjälp av Nginx så cacheas bilderna för att inte överbelasta Grafana instansen. 
-Om graferna inte laddas så är det troligtvis för att vi har problem, eller så tror servern att du ansluter från ett annat land, då enbart ett fåtal länder är white-listade.
+Vissa av graferna är genererade av  [Meshtastic-metrics-exporter](https://github.com/tcivie/meshtastic-metrics-exporter) som är kopplad mot en annan privat MQTT broker. Graferna laddas från en separat server. Med hjälp av Nginx så cacheas bilderna för att inte överbelasta Grafana instansen. Dessa grafer jobbar vi på att ersätta med våra egna.
 {{% /blocks/section %}}
 
 <script src="/js/status/messagesChart.js"></script>
 <script src="/js/status/hardwareChart.js"></script>
+<script src="/js/status/position-precision-chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
