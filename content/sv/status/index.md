@@ -8,7 +8,7 @@ draft: false
 {{% blocks/section color="white"  %}}
 
 ## Text Meddelanden
-Antalet meddelande per timme senaste 7 dygnen.
+Antalet meddelanden per timme senaste 7 dygnen. Grafen visar meddelanden som skickats på LongFast kanalen, men även okrypterade meddelanden mellan noder. De meddelanden som skickas går att se [här]({{< ref messages >}}).
 <div style="min-height: 300px;width: 100%;max-width: 1000px;">
     <canvas id="messagesChart"></canvas>
 </div>
