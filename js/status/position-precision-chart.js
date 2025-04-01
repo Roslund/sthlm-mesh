@@ -62,7 +62,7 @@ async function positionPrecisionGraph() {
         const response = await fetch('https://map.sthlm-mesh.se/api/v1/stats/position-precision')
         const data = await response.json();
 
-        const sorted = data.sort((a, b) => a.position_precision < b.position_precision);
+        const sorted = data.sort((a, b) => b.position_precision - a.position_precision);
         
         const labels = sorted.map(entry => formatPositionPrecision(entry.position_precision));
         const counts = sorted.map(entry => entry.count);
