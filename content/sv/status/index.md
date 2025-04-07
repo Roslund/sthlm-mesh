@@ -25,7 +25,7 @@ Eftersom vi har begränsad bandbredd är det viktigt att hålla nere trafiken. E
 
 ## Position Precision
 Grafen visar position precision, eller noggrannhet, på de noder som rapporterat sin position de senaste 7 dagarna. 
-Vi ser gärna att man använder en noggrannhet på ±182m eller mer. Detta är dock inte möjligt att ställa in i iPhone Appen.
+Vi ser gärna att man använder en noggrannhet på ±182m eller noggrannare. Detta är dock inte möjligt att ställa in i iPhone Appen.
 För mer info se vår [dokumentation]({{<ref position.md>}}#position-precision).
 <div style="min-height: 300px;width: 100%;max-width: 1000px;">
     <canvas id="positionPrecisionChart"></canvas>
