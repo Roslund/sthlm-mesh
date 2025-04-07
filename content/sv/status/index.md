@@ -32,6 +32,13 @@ För mer info se vår [dokumentation]({{<ref position.md>}}#position-precision).
 </div>
 
 
+## Packet typer
+Fördelningen av olika pakettyper i nätverket under de senaste dygnet. Diagrammet visar hur nätverket används, inklusive meddelanden, positionstelemetri och andra systempaket.
+<div id="portnumDistributionContainer" style="width: 100%;max-width: 1000px;">
+    <canvas id="portnumDistribution"></canvas>
+</div>
+
+
 ## Hårdvarumodeller
 Antalet enheter av respektive hårdvarutyp som synts i meshet de senaste 30 dagarna.
 <div id="hardwareChartContainer" style="width: 100%;max-width: 1000px;">
@@ -39,18 +46,11 @@ Antalet enheter av respektive hårdvarutyp som synts i meshet de senaste 30 daga
 </div>
 
 
-## Packet typer
-Fördelningen av olika pakettyper i nätverket under de senaste dygnet. Diagrammet visar hur nätverket används, inklusive meddelanden, positionstelemetri och andra systempaket.
-{{< lazy-img max-width="774px" aspect-ratio="774/387"
-src="https://dash.roslund.cloud/render/d-solo/aedo2cbpvy800a/sthlm-mesh?orgId=1&theme=light&panelId=6&width=1000&height=500&scale=1" >}}
-
 {{% /blocks/section %}}
 
 {{% blocks/section color=info %}}
 ## OM
-Majoriteten av graferna baseras på data från [map.sthlm-mesh.se](https://map.sthlm-mesh.se), där data samlas in från ett par noder i Stockholmsområdet. Data hämtas från API't, som vi dessutom har utökat med fler funktioner för att möjliggöra mer analys. Visualisering sker genom biblioteket [chartjs.org](https://www.chartjs.org/).
-
-Vissa av graferna är genererade av  [Meshtastic-metrics-exporter](https://github.com/tcivie/meshtastic-metrics-exporter) som är kopplad mot en annan privat MQTT broker. Graferna laddas från en separat server. Med hjälp av Nginx så cacheas bilderna för att inte överbelasta Grafana instansen. Dessa grafer jobbar vi på att ersätta med våra egna.
+Graferna baseras på data från [map.sthlm-mesh.se](https://map.sthlm-mesh.se), där data samlas in från ett par noder i Stockholmsområdet. Data hämtas från API't, som vi dessutom har utökat med fler funktioner för att möjliggöra mer analys. Visualisering sker genom biblioteket [chartjs.org](https://www.chartjs.org/).
 {{% /blocks/section %}}
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -58,3 +58,4 @@ Vissa av graferna är genererade av  [Meshtastic-metrics-exporter](https://githu
 <script src="/js/status/most-active-nodes.js"></script>
 <script src="/js/status/hardwareChart.js"></script>
 <script src="/js/status/position-precision-chart.js"></script>
+<script src="/js/status/portnum-distribution-chart.js"></script>
