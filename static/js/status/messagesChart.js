@@ -39,7 +39,10 @@ async function messagesStatsGraph() {
                             autoSkip: false
                         }
                     },
-                    y: { beginAtZero: true }
+                    y: { 
+                        beginAtZero: true,
+                        max: 10,
+                    }
                 },
                 plugins: { legend: { display: false } },
             }

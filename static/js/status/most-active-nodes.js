@@ -44,7 +44,8 @@ async function mostActiveNodesGraph() {
                 scales: {
                     y: {
                         ticks: { autoSkip: false, font: { size: 12 } }
-                    }
+                    },
+                    x: { max: 300 },
                 },
                 plugins: {
                     legend: { display: false },
