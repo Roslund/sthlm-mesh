@@ -60,7 +60,7 @@ För mer info se vår [dokumentation]({{<ref position.md>}}#position-precision).
 Fördelningen av olika pakettyper i nätverket under de senaste dygnet. Diagrammet visar hur nätverket används, inklusive meddelanden, positionstelemetri och andra systempaket. Sökrutan till höger kan användas för att visa antalet paket av respektive typ för en given nod.
 
 <div class="d-flex justify-content-end m-0 p-0" style="max-width: 1000px">
-  <div class="dropdown" style="width: 33%;">
+  <div class="dropdown" style="width: 40%;min-width:400px;">
     <div class="input-group pe-3">
       <input id="nodeSearch" type="text" class="form-control" placeholder="Node Name" autocomplete="off">
       <button id="clearFilterBtn" class="btn btn-outline-info" type="button">✕</button>
