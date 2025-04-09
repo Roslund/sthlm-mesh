@@ -57,7 +57,17 @@ För mer info se vår [dokumentation]({{<ref position.md>}}#position-precision).
 
 
 ## Packet typer
-Fördelningen av olika pakettyper i nätverket under de senaste dygnet. Diagrammet visar hur nätverket används, inklusive meddelanden, positionstelemetri och andra systempaket.
+Fördelningen av olika pakettyper i nätverket under de senaste dygnet. Diagrammet visar hur nätverket används, inklusive meddelanden, positionstelemetri och andra systempaket. Sökrutan till höger kan användas för att visa antalet paket av respektive typ för en given nod.
+
+<div class="d-flex justify-content-end m-0 p-0" style="max-width: 1000px">
+  <div class="dropdown" style="width: 33%;">
+    <div class="input-group pe-3">
+      <input id="nodeSearch" type="text" class="form-control" placeholder="Node Name" autocomplete="off">
+      <button id="clearFilterBtn" class="btn btn-outline-info" type="button">✕</button>
+    </div>
+    <ul id="suggestions" class="dropdown-menu w-100" style="display: none; max-height: 300px; overflow-y: auto; position: absolute; z-index: 1000;"></ul>
+  </div>
+</div>
 <div id="portnumDistributionContainer" style="width: 100%;max-width: 1000px;">
     <canvas id="portnumDistribution"></canvas>
 </div>
