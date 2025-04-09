@@ -68,7 +68,7 @@ Fördelningen av olika pakettyper i nätverket under de senaste dygnet. Diagramm
     <ul id="suggestions" class="dropdown-menu w-100" style="display: none; max-height: 300px; overflow-y: auto; position: absolute; z-index: 1000;"></ul>
   </div>
 </div>
-<div id="portnumDistributionContainer" style="width: 100%;max-width: 1000px;">
+<div id="portnumDistributionContainer" style="min-height: 150px;width: 100%;max-width: 1000px;">
     <canvas id="portnumDistribution"></canvas>
 </div>
 
