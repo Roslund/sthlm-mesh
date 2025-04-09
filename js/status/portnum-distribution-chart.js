@@ -17,7 +17,7 @@ async function portnumDistributionChart() {
 
         // Optional: dynamically size the container
         const chartContainer = document.getElementById('portnumDistributionContainer');
-        chartContainer.style.height = `${labels.length * 25}px`;
+        chartContainer.style.height = `${labels.length * 35}px`;
 
         const backgroundColors = counts.map(count => {
             if (count < 500) return '#7EB26D';     // Green
