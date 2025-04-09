@@ -22,12 +22,18 @@ Eftersom vi har begränsad bandbredd är det viktigt att hålla nere trafiken. E
     <canvas id="mostActiveNodes"></canvas>
 </div>
 
+## Enhetsroll
+Antalet enheter av respektive Enhetsroll som synts i meshet de senaste 30 dagarna. I större mesh så som Stockholm bör i princip all noder vara `Client` eller `Client Mute`. Enbart ett fåtal `Router` eller `Repeater` behövs. Dessa måste vara placerade extremt strategiskt, till exempel högst upp i en skidbacke. `Router Client` är en avvecklad roll som inte finns längre, men i meshen lever det kvar några noder som inte blivit uppdaterade. För med info see vår [dokumentation]({{<ref device_role.md>}}).
+<div id="deviceRolesContainer" style="min-height: 200px;width: 100%;max-width: 1000px;">
+    <canvas id="deviceRoles"></canvas>
+</div>
+
 
 ## Position Precision
 Grafen visar position precision, eller noggrannhet, på de noder som rapporterat sin position de senaste 7 dagarna. 
 Vi ser gärna att man använder en noggrannhet på ±182m eller noggrannare. Detta är dock inte möjligt att ställa in i iPhone Appen.
 För mer info se vår [dokumentation]({{<ref position.md>}}#position-precision).
-<div style="min-height: 300px;width: 100%;max-width: 1000px;">
+<div id="positionPrecisionContainer" style="min-height: 200px;width: 100%;max-width: 1000px;">
     <canvas id="positionPrecisionChart"></canvas>
 </div>
 
@@ -59,3 +65,4 @@ Graferna baseras på data från [map.sthlm-mesh.se](https://map.sthlm-mesh.se), 
 <script src="/js/status/hardwareChart.js"></script>
 <script src="/js/status/position-precision-chart.js"></script>
 <script src="/js/status/portnum-distribution-chart.js"></script>
+<script src="/js/status/device-roles.js"></script>
