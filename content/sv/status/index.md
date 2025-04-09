@@ -11,15 +11,15 @@ draft: false
 <div class="container my-4 mx-0" style="max-width: 1000px;">
   <div class="row text-center px-0">
     <div class="col">
-      <h2 class="display-4 text-primary" id="count-1">–</h2>
+      <h2 class="display-4 text-primary fw-bold" id="count-1">–</h2>
       <p class="text-muted">Hörts idag</p>
     </div>
     <div class="col">
-      <h2 class="display-4 text-warning" id="count-7">–</h2>
+      <h2 class="display-4 text-warning fw-bold" id="count-7">–</h2>
       <p class="text-muted">Senaste 7 dagarna</p>
     </div>
     <div class="col">
-      <h2 class="display-4 text-success" id="count-30">–</h2>
+      <h2 class="display-4 text-success fw-bold" id="count-30">–</h2>
       <p class="text-muted">Senaste 30 dagarna</p>
     </div>
   </div>
