@@ -7,6 +7,24 @@ draft: false
 <br/>
 {{% blocks/section color="white"  %}}
 
+## Antal Enheter
+<div class="container my-4 mx-0" style="max-width: 1000px;">
+  <div class="row text-center px-0">
+    <div class="col">
+      <h2 class="display-4 text-primary" id="count-1">–</h2>
+      <p class="text-muted">Hörts idag</p>
+    </div>
+    <div class="col">
+      <h2 class="display-4 text-warning" id="count-7">–</h2>
+      <p class="text-muted">Senaste 7 dagarna</p>
+    </div>
+    <div class="col">
+      <h2 class="display-4 text-success" id="count-30">–</h2>
+      <p class="text-muted">Senaste 30 dagarna</p>
+    </div>
+  </div>
+</div>
+
 ## Text Meddelanden
 Antalet meddelanden per timme senaste 7 dygnen. Grafen visar meddelanden som skickats på LongFast kanalen, men även okrypterade meddelanden mellan noder. De meddelanden som skickas går att se [här]({{< ref messages >}}).
 <div style="min-height: 300px;width: 100%;max-width: 1000px;">
@@ -66,3 +84,4 @@ Graferna baseras på data från [map.sthlm-mesh.se](https://map.sthlm-mesh.se), 
 <script src="/js/status/position-precision-chart.js"></script>
 <script src="/js/status/portnum-distribution-chart.js"></script>
 <script src="/js/status/device-roles.js"></script>
+<script src="/js/status/nodes-seen.js"></script>
