@@ -67,6 +67,9 @@ async function positionPrecisionGraph() {
         const labels = sorted.map(entry => formatPositionPrecision(entry.position_precision));
         const counts = sorted.map(entry => entry.count);
 
+        const chartContainer = document.getElementById('positionPrecisionContainer');
+        chartContainer.style.height = `${labels.length *35}px`;
+
         new Chart(ctx, {
             type: 'bar',
             data: {
