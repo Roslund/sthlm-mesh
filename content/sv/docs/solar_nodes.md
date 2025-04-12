@@ -19,7 +19,7 @@ Detta har gjort WisBlock RAK4631 som det självklara valet när man bygger en so
 Bamse från Discord har satt ihop en lista och publicerat på [Github](https://github.com/TheBamse/Meshtastic-Solar-Nodes/blob/main/partslist_2025.md).
 
 ### Märkning
-Det är viktigt att märka din solnod så att det tydligt framgår vad det är samt kontaktuppgifter. Om polisen eller kommunen får upp ögonen för din nod är det viktigt att dom förstår vad det är. Skulle placeringen inte vara okej har du en chans att få tillbaka noden om den är märkt med kontaktuppgifter. Vill man vara _anonym_ kan man använda sig av en icke personlig mailadress som sedan vidarebefordrar inkommande epost till din privata.
+Det är viktigt att märka din solnod så att det tydligt framgår vad det är, samt kontaktuppgifter. Om polisen eller kommunen får upp ögonen för din nod är det viktigt att dom förstår vad det är. Skulle placeringen inte vara okej har du en chans att få tillbaka noden om den är märkt med kontaktuppgifter. Vill man vara _anonym_ kan man använda sig av en icke personlig mailadress som sedan vidarebefordrar inkommande epost till din privata.
 
 ## Placering av solnod
 Vi rekommenderar att alltid be om tillstånd innan du placerar ut en solnod.
