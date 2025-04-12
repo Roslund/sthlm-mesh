@@ -2,6 +2,8 @@
 title: Solnoder
 weight: 100
 ---
+{{< figure src="/images/docs/solar_nodes/IMG_86552.jpg" width="700px">}}
+
 Att bygga en solnod är både en rolig teknisk utmaning och ett effektivt sätt att förbättra täckningen i meshnätverket.
 Många platser som är optimala för att placera en nod saknar ofta strömförsörjning. Oavsett om det är på toppen av ett berg eller ett villatak.
 
@@ -16,11 +18,17 @@ Detta har gjort WisBlock RAK4631 som det självklara valet när man bygger en so
 ### Komponenter
 Bamse från Discord har satt ihop en lista och publicerat på [Github](https://github.com/TheBamse/Meshtastic-Solar-Nodes/blob/main/partslist_2025.md).
 
+### Märkning
+Det är viktigt att märka din solnod så att det tydligt framgår vad det är samt kontaktuppgifter. Om polisen eller kommunen får upp ögonen för din nod är det viktigt att dom förstår vad det är. Skulle placeringen inte vara okej har du en chans att få tillbaka noden om den är märkt med kontaktuppgifter. Vill man vara _anonym_ kan man använda sig av en icke personlig mailadress som sedan vidarebefordrar inkommande epost till din privata.
 
 ## Placering av solnod
 Vi rekommenderar att alltid be om tillstånd innan du placerar ut en solnod.
 En nod bör placeras både diskret och oåtkomligt.
 Att placera en nod högt upp i en tall är en personlig favorit – det gör den svåråtkomlig och minskar risken för stöld.
+
+Vid placering i träd är det viktigt att antennen kommer upp __över__ trädkronorna, detta genom att exempelvis montera noden på ett rör eller en pinne föra att sedan placeras i trädet.
+{{< figure src="/images/docs/solar_nodes/20250301_1506242.jpg" width="300px">}}
+
 
 {{% alert title="Varning" color="danger" %}}
 Solnoder placerade i naturen eller på offentlig plats kan fånga uppmärksamhet av allmänheten, kommunen eller till och med polisen. Flertalet solnoder har försvunnit.
