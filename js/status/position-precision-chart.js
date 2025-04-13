@@ -28,6 +28,36 @@ function getPositionPrecisionInMeters(positionPrecision) {
     return null;
 }
 
+function getPositionColor(positionPrecision) {
+    switch(positionPrecision){
+        case 2: return 'rgb(196, 36, 18)';
+        case 3: return 'rgb(196, 36, 18)';
+        case 4: return 'rgb(196, 36, 18)';
+        case 5: return 'rgb(196, 36, 18)';
+        case 6: return 'rgb(196, 36, 18)';
+        case 7: return 'rgb(196, 36, 18)';
+        case 8: return 'rgb(196, 36, 18)';
+        case 9: return 'rgb(196, 36, 18)';
+        case 10: return 'rgb(196, 36, 18)';
+        case 11: return 'rgb(196, 36, 18)'; // Android LOW_PRECISION
+        case 12: return 'rgb(196, 36, 18)';
+        case 13: return 'rgb(212, 74, 58)'; // Default +/- 3km
+        case 14: return 'rgb(242, 161, 67)';
+        case 15: return 'rgb(229, 189, 82)';
+        case 16: return 'rgb(195, 208, 98)'; // Android MED_PRECISION
+        case 17: return 'rgb(157, 195, 91)'; //182
+        case 18: return 'rgb(118, 182, 84)';
+        case 19: return 'rgb(79, 170, 77)'; //45
+        case 20: return 'rgb(41, 156, 70)';
+        case 21: return 'rgb(41, 156, 70)';
+        case 22: return 'rgb(41, 156, 70)';
+        case 23: return 'rgb(41, 156, 70)';
+        case 24: return 'rgb(41, 156, 70)';
+        case 32: return 'rgb(41, 156, 70)'; // Android HIGH_PRECISION
+    }
+    return 'rgb(200, 200, 200)';
+}
+
 function formatPositionPrecision(positionPrecision) {
 
     // get position precision in meters
@@ -66,6 +96,7 @@ async function positionPrecisionGraph() {
         
         const labels = sorted.map(entry => formatPositionPrecision(entry.position_precision));
         const counts = sorted.map(entry => entry.count);
+        const backgroundColors = sorted.map(entry => getPositionColor(entry.position_precision));
 
         const chartContainer = document.getElementById('positionPrecisionContainer');
         chartContainer.style.height = `${labels.length *35}px`;
@@ -77,20 +108,7 @@ async function positionPrecisionGraph() {
                 datasets: [{
                     label: 'Position Precision',
                     data: counts,
-                    // Vi borde nog inte hårdkoda färgerna på detta sätt då det kan tillkomma andra labels.
-                    // Men den dagen den sorgen... :)
-                    backgroundColor: [
-                        'rgb(41, 156, 70)',   // green
-                        'rgb(79, 170, 77)',
-                        'rgb(118, 182, 84)',
-                        'rgb(157, 195, 91)',
-                        'rgb(195, 208, 98)',  // yellow-ish
-                        'rgb(229, 189, 82)',
-                        'rgb(242, 161, 67)',
-                        'rgb(212, 74, 58)',
-                        'rgb(196, 36, 18)',   // red
-                        'rgb(200, 200, 200)'  // grey
-                      ]
+                    backgroundColor: backgroundColors,
                 }]
             },
             options: {
