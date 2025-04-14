@@ -89,14 +89,29 @@ async function positionPrecisionGraph() {
 
 
     try {
-        const response = await fetch('https://map.sthlm-mesh.se/api/v1/stats/position-precision')
-        const data = await response.json();
+        await fetchNodes();
+        const countsByPrecision = {};
 
-        const sorted = data.sort((a, b) => b.position_precision - a.position_precision);
-        
-        const labels = sorted.map(entry => formatPositionPrecision(entry.position_precision));
+        // Filter out nodes without position_precision
+        const nodesWithPoistion = nodes.filter(node => node.position_precision != null);
+
+        // Count how many nodes fall into each precision value
+        for (const node of nodesWithPoistion) {
+            const precision = node.position_precision
+            countsByPrecision[precision] = (countsByPrecision[precision] || 0) + 1;
+        }
+
+        // Convert to array of { precision, count }
+        const statsArray = Object.entries(countsByPrecision).map(([precision, count]) => ({
+            precision: parseInt(precision, 10),
+            count
+        }));
+
+        // Sort by precision descending
+        const sorted = statsArray.sort((a, b) => b.precision - a.precision);
+        const labels = sorted.map(entry => formatPositionPrecision(entry.precision));
         const counts = sorted.map(entry => entry.count);
-        const backgroundColors = sorted.map(entry => getPositionColor(entry.position_precision));
+        const backgroundColors = sorted.map(entry => getPositionColor(entry.precision));
 
         const chartContainer = document.getElementById('positionPrecisionContainer');
         chartContainer.style.height = `${labels.length *35}px`;
