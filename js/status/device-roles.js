@@ -9,14 +9,12 @@ async function deviceRolesChart() {
     ctx.fillText('Loading data...', canvas.width / 2, canvas.height / 2);
 
     try {
-        const response = await fetch('https://map.sthlm-mesh.se/api/v1/nodes/');
-        const data = await response.json();
-
+        await fetchNodes();
         const predefinedLabels = ['CLIENT', 'CLIENT_MUTE', 'CLIENT_HIDDEN', 'ROUTER_LATE', 'ROUTER', 'ROUTER_CLIENT'];
 
         // Count role occurrences
         const roleCounts = {};
-        data.nodes.forEach(node => {
+        nodes.forEach(node => {
           const role = node.role_name || "UNKNOWN";
           roleCounts[role] = (roleCounts[role] || 0) + 1;
         });
