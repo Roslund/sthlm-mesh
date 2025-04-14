@@ -88,6 +88,7 @@ Graferna baseras på data från [map.sthlm-mesh.se](https://map.sthlm-mesh.se), 
 {{% /blocks/section %}}
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/js/status/shared.js"></script>
 <script src="/js/status/messagesChart.js"></script>
 <script src="/js/status/most-active-nodes.js"></script>
 <script src="/js/status/hardwareChart.js"></script>

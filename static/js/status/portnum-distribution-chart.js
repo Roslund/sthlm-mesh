@@ -1,20 +1,14 @@
-let allNodes = [];
 let highlightedIndex = -1;
 let chartInstance;
 
 
-async function fetchNodes() {
-    const res = await fetch('https://map.sthlm-mesh.se/api/v1/nodes/');
-    const data = await res.json();
-    
-    const threshold = new Date();
-    threshold.setDate(threshold.getDate() - 1);
-    allNodes = data.nodes.filter(node => new Date(node.updated_at) >= threshold);
-}
-
 function filterSuggestions(query) {
     const lowerQuery = query.toLowerCase();
-    return allNodes?.filter(node => node.long_name?.toLowerCase().includes(lowerQuery)) || [];
+    const threshold = new Date();
+    threshold.setDate(threshold.getDate() - 1);
+    return nodes
+        .filter(node => new Date(node.updated_at) >= threshold)
+        .filter(node => node.long_name?.toLowerCase().includes(lowerQuery)) || [];
 }
 
 function showSuggestions(matches) {
@@ -178,4 +172,4 @@ async function portnumDistributionChart(nodeId = null) {
     }
 }
 
-fetchNodes().then(() => portnumDistributionChart());
+portnumDistributionChart();
