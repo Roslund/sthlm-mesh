@@ -55,6 +55,12 @@ För mer info se vår [dokumentation]({{<ref position.md>}}#position-precision).
     <canvas id="positionPrecisionChart"></canvas>
 </div>
 
+## Firmware versioner
+Antalet enheter av firmware version som synts i meshet de senaste 30 dagarna. Information om firmware information skickas inte över meshet. Men vi kan se om en enhet kör en gammal firmware version genom att kolla efter ["ok_to_mqtt" bitten](https://github.com/meshtastic/firmware/pull/4643)  som infördes i [2.5.0.9ac0e26](https://github.com/meshtastic/firmware/releases/tag/v2.5.0.9ac0e26).
+<div id="firmwareVersionContainer" style="min-height: 100px;width: 100%;max-width: 1000px;">
+    <canvas id="firmwareVersionChart"></canvas>
+</div>
+
 
 ## Packet typer
 Fördelningen av olika pakettyper i nätverket under de senaste dygnet. Diagrammet visar hur nätverket används, inklusive meddelanden, positionstelemetri och andra systempaket. Sökrutan till höger kan användas för att visa antalet paket av respektive typ för en given nod.
@@ -96,3 +102,4 @@ Graferna baseras på data från [map.sthlm-mesh.se](https://map.sthlm-mesh.se), 
 <script src="/js/status/portnum-distribution-chart.js"></script>
 <script src="/js/status/device-roles.js"></script>
 <script src="/js/status/nodes-seen.js"></script>
+<script src="/js/status/firmware-versions.js"></script>
