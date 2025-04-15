@@ -35,8 +35,8 @@ async function firmwareVersionGraph() {
 
         console.log(statsArray)
 
-        // Sort by count ascending
-        const sorted = statsArray.sort((a, b) => a.count - b.count);
+        // Sort by count descending
+        const sorted = statsArray.sort((a, b) => b.count - a.count);
 
         const labels = sorted.map(entry => entry.version);
         const counts = sorted.map(entry => entry.count);
