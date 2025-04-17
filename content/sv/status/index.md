@@ -48,7 +48,7 @@ Antalet enheter av respektive Enhetsroll som synts i meshet de senaste 30 dagarn
 
 
 ## Position Precision
-Grafen visar position precision, eller noggrannhet, på de noder som rapporterat sin position de senaste 7 dagarna. 
+Grafen visar position precision, eller noggrannhet, på de noder som rapporterat sin position de senaste 30 dagarna. 
 Vi ser gärna att man använder en noggrannhet på ±182m eller noggrannare. Detta är dock inte möjligt att ställa in i iPhone Appen.
 För mer info se vår [dokumentation]({{<ref position.md>}}#position-precision).
 <div id="positionPrecisionContainer" style="min-height: 200px;width: 100%;max-width: 1000px;">
