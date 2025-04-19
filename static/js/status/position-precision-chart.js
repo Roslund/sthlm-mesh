@@ -114,7 +114,7 @@ async function positionPrecisionGraph() {
         const backgroundColors = sorted.map(entry => getPositionColor(entry.precision));
 
         const chartContainer = document.getElementById('positionPrecisionContainer');
-        chartContainer.style.height = `${labels.length *35}px`;
+        chartContainer.style.height = `${labels.length * 35 + 50}px`;
 
         new Chart(ctx, {
             type: 'bar',

@@ -134,7 +134,7 @@ async function portnumDistributionChart(nodeId = null) {
         });
         
         const chartContainer = document.getElementById('portnumDistributionContainer');
-        chartContainer.style.height = `${labels.length * 35}px`;
+        chartContainer.style.height = `${labels.length * 35 + 50}px`;
 
         if (chartInstance) chartInstance.destroy();
 

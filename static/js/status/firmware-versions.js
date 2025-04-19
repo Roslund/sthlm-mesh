@@ -40,7 +40,7 @@ async function firmwareVersionGraph() {
         const counts = sorted.map(entry => entry.count);
 
         const chartContainer = document.getElementById('firmwareVersionContainer');
-        chartContainer.style.height = `${labels.length * 35}px`;
+        chartContainer.style.height = `${labels.length * 35 + 50}px`;
 
         new Chart(ctx, {
             type: 'bar',

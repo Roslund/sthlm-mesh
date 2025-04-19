@@ -29,7 +29,7 @@ async function hardwareStatsGraph() {
 
         // Adjust chart height based on number of items
         const chartContainer = document.getElementById('hardwareChartContainer');
-        chartContainer.style.height = `${labels.length * 25}px`;
+        chartContainer.style.height = `${labels.length * 25 + 50}px`;
 
 
         new Chart(ctx, {
