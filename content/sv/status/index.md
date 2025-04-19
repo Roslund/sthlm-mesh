@@ -8,7 +8,7 @@ draft: false
 {{% blocks/section color="white"  %}}
 
 ## Antal Enheter
-<div class="container my-4 mx-0" style="max-width: 1000px;">
+<div class="container my-3 mx-0" style="max-width: 1000px;">
   <div class="row text-center px-0">
     <div class="col">
       <h2 class="display-4 text-primary fw-bold" id="count-1">–</h2>
@@ -27,7 +27,7 @@ draft: false
 
 ## Text Meddelanden
 Antalet meddelanden per timme senaste 7 dygnen. Grafen visar meddelanden som skickats på LongFast kanalen, men även okrypterade meddelanden mellan noder. De meddelanden som skickas går att se [här]({{< ref messages >}}).
-<div style="min-height: 300px;width: 100%;max-width: 1000px;">
+<div class="stats-chart-container">
     <canvas id="messagesChart"></canvas>
 </div>
 
@@ -36,29 +36,8 @@ Antalet meddelanden per timme senaste 7 dygnen. Grafen visar meddelanden som ski
 Grafen nedan visar vilka noder som har skickat flest paket under det senaste dygnet. 
 Graferna bygger på MQTT-data från ett begränsat antal noder.
 Eftersom vi har begränsad bandbredd är det viktigt att hålla nere trafiken. En sändningsvolym på max 100 paket per dygn är önskvärd.
-<div id="mostActiveNodesContainer" style="min-height: 300px;width: 100%;max-width: 1000px;">
+<div id="mostActiveNodesContainer" class="stats-chart-container">
     <canvas id="mostActiveNodes"></canvas>
-</div>
-
-## Enhetsroll
-Antalet enheter av respektive Enhetsroll som synts i meshet de senaste 30 dagarna. I större mesh så som Stockholm bör i princip all noder vara `Client` eller `Client Mute`. Enbart ett fåtal `Router` eller `Repeater` behövs. Dessa måste vara placerade extremt strategiskt, till exempel högst upp i en skidbacke. `Router Client` är en avvecklad roll som inte finns längre, men i meshen lever det kvar några noder som inte blivit uppdaterade. För med info see vår [dokumentation]({{<ref device_role.md>}}).
-<div id="deviceRolesContainer" style="min-height: 200px;width: 100%;max-width: 1000px;">
-    <canvas id="deviceRoles"></canvas>
-</div>
-
-
-## Position Precision
-Grafen visar position precision, eller noggrannhet, på de noder som rapporterat sin position de senaste 30 dagarna. 
-Vi ser gärna att man använder en noggrannhet på ±182m eller noggrannare. Detta är dock inte möjligt att ställa in i iPhone Appen.
-För mer info se vår [dokumentation]({{<ref position.md>}}#position-precision).
-<div id="positionPrecisionContainer" style="min-height: 200px;width: 100%;max-width: 1000px;">
-    <canvas id="positionPrecisionChart"></canvas>
-</div>
-
-## Firmware versioner
-Antalet enheter av firmware version som synts i meshet de senaste 30 dagarna. Information om firmware information skickas inte över meshet. Men vi kan se om en enhet kör en gammal firmware version genom att kolla efter ["ok_to_mqtt" bitten](https://github.com/meshtastic/firmware/pull/4643)  som infördes i [2.5.0.9ac0e26](https://github.com/meshtastic/firmware/releases/tag/v2.5.0.9ac0e26).
-<div id="firmwareVersionContainer" style="min-height: 100px;width: 100%;max-width: 1000px;">
-    <canvas id="firmwareVersionChart"></canvas>
 </div>
 
 
@@ -74,14 +53,36 @@ Fördelningen av olika pakettyper i nätverket under de senaste dygnet. Diagramm
     <ul id="suggestions" class="dropdown-menu w-100" style="display: none; max-height: 300px; overflow-y: auto; position: absolute; z-index: 1000;"></ul>
   </div>
 </div>
-<div id="portnumDistributionContainer" style="min-height: 150px;width: 100%;max-width: 1000px;">
+<div id="portnumDistributionContainer" class="stats-chart-container">
     <canvas id="portnumDistribution"></canvas>
+</div>
+
+
+## Enhetsroll
+Antalet enheter av respektive Enhetsroll som synts i meshet de senaste 30 dagarna. I större mesh så som Stockholm bör i princip all noder vara `Client` eller `Client Mute`. Enbart ett fåtal `Router` eller `Repeater` behövs. Dessa måste vara placerade extremt strategiskt, till exempel högst upp i en skidbacke. `Router Client` är en avvecklad roll som inte finns längre, men i meshen lever det kvar några noder som inte blivit uppdaterade. För med info see vår [dokumentation]({{<ref device_role.md>}}).
+<div id="deviceRolesContainer" class="stats-chart-container">
+    <canvas id="deviceRoles"></canvas>
+</div>
+
+
+## Position Precision
+Grafen visar position precision, eller noggrannhet, på de noder som rapporterat sin position de senaste 30 dagarna. 
+Vi ser gärna att man använder en noggrannhet på ±182m eller noggrannare. Detta är dock inte möjligt att ställa in i iPhone Appen.
+För mer info se vår [dokumentation]({{<ref position.md>}}#position-precision).
+<div id="positionPrecisionContainer" class="stats-chart-container">
+    <canvas id="positionPrecisionChart"></canvas>
+</div>
+
+## Firmware versioner
+Antalet enheter av firmware version som synts i meshet de senaste 30 dagarna. Information om firmware information skickas inte över meshet. Men vi kan se om en enhet kör en gammal firmware version genom att kolla efter ["ok_to_mqtt" bitten](https://github.com/meshtastic/firmware/pull/4643)  som infördes i [2.5.0.9ac0e26](https://github.com/meshtastic/firmware/releases/tag/v2.5.0.9ac0e26).
+<div id="firmwareVersionContainer" class="stats-chart-container">
+    <canvas id="firmwareVersionChart"></canvas>
 </div>
 
 
 ## Hårdvarumodeller
 Antalet enheter av respektive hårdvarutyp som synts i meshet de senaste 30 dagarna.
-<div id="hardwareChartContainer" style="width: 100%;max-width: 1000px;">
+<div id="hardwareChartContainer" class="stats-chart-container">
     <canvas id="hardwareChart"></canvas>
 </div>
 

@@ -68,3 +68,10 @@ code {
 .lazy-img-container img.loaded {
     opacity: 1;
 }
+
+/* Styling of the chart on the status page */
+.stats-chart-container {
+    @extend .pb-3;
+    width: 100%;
+    max-width: 1000px;
+}
