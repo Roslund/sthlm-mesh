@@ -33,8 +33,6 @@ async function firmwareVersionGraph() {
             count
         }));
 
-        console.log(statsArray)
-
         // Sort by firmware version descending
         const sorted = statsArray.sort((a, b) => b.version.localeCompare(a.version));
 
