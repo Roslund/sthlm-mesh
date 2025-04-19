@@ -12,9 +12,9 @@ _build:
 {{% alert title="Varning" color="danger" %}}
 Att ladda ner firmware från internet medför alltid en risk. Istället bör du själv genomföra kodändringarna nedan och kompilera firmware själv.
 {{% /alert %}}
-* [ros-firmware-rak4631-2.6.4.b89355f.uf2](ros-firmware-rak4631-2.6.4.b89355f.uf2)
-* [ros-firmware-rak4631-2.5.21.447533a.uf2](ros-firmware-rak4631-2.5.21.447533a.uf2)
-* [nrf_erase2.uf2](nrf_erase2.uf2)
+* [ros-firmware-rak4631-2.6.4.b89355f.uf2](/firmware/ros-firmware-rak4631-2.6.4.b89355f.uf2)
+* [ros-firmware-rak4631-2.5.21.447533a.uf2](/firmware/ros-firmware-rak4631-2.5.21.447533a.uf2)
+* [nrf_erase2.uf2](/firmware/nrf_erase2.uf2)
 
 ## Kodändringar
 Nedan är de ändringar jag gör på firmwaren för att det ska passa mig.
