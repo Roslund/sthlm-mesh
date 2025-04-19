@@ -17,7 +17,7 @@ async function mostActiveNodesGraph() {
 
         // Adjust chart height based on number of items
         const chartContainer = document.getElementById('mostActiveNodesContainer');
-        chartContainer.style.height = `${labels.length * 25}px`;
+        chartContainer.style.height = `${labels.length * 22 + 50}px`;
 
         const backgroundColors = counts.map(count => {
             if (count < 100) return '#7EB26D';     // Green

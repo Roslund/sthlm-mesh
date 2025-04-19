@@ -27,7 +27,7 @@ async function deviceRolesChart() {
 
         // Dynamically size the container based on the number of elements
         const chartContainer = document.getElementById('deviceRolesContainer');
-        chartContainer.style.height = `${labels.length *35}px`;
+        chartContainer.style.height = `${labels.length *35 + 50}px`;
 
         const backgroundColors = labels.map(label => {
             if (label == "ROUTER_CLIENT") return 'rgb(196, 36, 18)';
