@@ -75,7 +75,19 @@ För portabla noder som flyttar sig blir Neighbor Info missvisande.&lt;/p></desc
 
 &lt;/div>
 
-&lt;p>Kartan är ett fantastik verktyg för att analysera meshen, man kan se vart olika noder finns. vilka noder som har vilken roll. Klickar man på en nod och visar detaljer så får man grafer över telemetri. Kartan kan visa vilka noder som har kontakt med vilka genom &lt;a href="https://sthlm-mesh.se/docs/neighbor_info/">neighbor info&lt;/a> modulen.&lt;/p></description></item><item><title>Solnoder</title><link>https://sthlm-mesh.se/docs/solar_nodes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/solar_nodes/</guid><description>&lt;figure>
+&lt;p>Kartan är ett fantastik verktyg för att analysera meshen, man kan se vart olika noder finns. vilka noder som har vilken roll. Klickar man på en nod och visar detaljer så får man grafer över telemetri. Kartan kan visa vilka noder som har kontakt med vilka genom &lt;a href="https://sthlm-mesh.se/docs/neighbor_info/">neighbor info&lt;/a> modulen.&lt;/p></description></item><item><title>Hårdvara</title><link>https://sthlm-mesh.se/docs/hardware/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/hardware/</guid><description>&lt;p>Bortsett från skruvar och buntband som kan behövas vid byggen så finns ett gäng nyckelkomponenter som behövs vid byggen av en Meshtastic-nod.&lt;/p>
+&lt;p>Vi går igenom några av de nedan och vilka som passar bäst för olika områden när man bygger / köper en färdig nod.&lt;/p>
+
+
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">Observera&lt;/h4>
+
+ Du behöver i princip enbart läsa om antenner / mikrokontrollrar om du ämnar att köpa en färdig nod.
+
+&lt;/div>
+
+&lt;h2 id="mikrokontroller--styrenhet">Mikrokontroller / Styrenhet:&lt;a class="td-heading-self-link" href="#mikrokontroller--styrenhet" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>Mikrokontrollern är hjärtat i verket och du kommer inte särskilt långt utan en.&lt;/p></description></item><item><title>Solnoder</title><link>https://sthlm-mesh.se/docs/solar_nodes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/solar_nodes/</guid><description>&lt;figure>
  &lt;img src="https://sthlm-mesh.se/images/docs/solar_nodes/IMG_86552.jpg" width="700px"/> 
 &lt;/figure>
 
@@ -85,7 +97,7 @@ Många platser som är optimala för att placera en nod saknar ofta strömförs�
 &lt;h2 id="att-bygga-en-solnod">Att bygga en solnod&lt;a class="td-heading-self-link" href="#att-bygga-en-solnod" aria-label="Heading self-link">&lt;/a>&lt;/h2>
 &lt;h3 id="val-av-lora-hårdvara">Val av LoRa hårdvara&lt;a class="td-heading-self-link" href="#val-av-lora-h%c3%a5rdvara" aria-label="Heading self-link">&lt;/a>&lt;/h3>
 &lt;p>Det är en stor skillnad i strömförbrukning mellan ESP32-baserade och nRF52840-baserade enheter.
-Detta har gjort WisBlock RAK4631 som det självklara valet när man bygger en solnod.&lt;/p></description></item><item><title>Communities i Sverige</title><link>https://sthlm-mesh.se/docs/communities/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/communities/</guid><description>&lt;h2 id="facebook-grupper">Facebook Grupper&lt;a class="td-heading-self-link" href="#facebook-grupper" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+Detta har gjort WisBlock RAK4631 det självklara valet vid bygget av en solnod.&lt;/p></description></item><item><title>Communities i Sverige</title><link>https://sthlm-mesh.se/docs/communities/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/communities/</guid><description>&lt;h2 id="facebook-grupper">Facebook Grupper&lt;a class="td-heading-self-link" href="#facebook-grupper" aria-label="Heading self-link">&lt;/a>&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a href="https://www.facebook.com/groups/355886956911219/">Meshtastic Uppsala&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://www.facebook.com/groups/1505804590265242/">Meshtastic Gothenburg&lt;/a>&lt;/li>
