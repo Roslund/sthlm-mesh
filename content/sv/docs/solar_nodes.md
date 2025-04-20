@@ -13,13 +13,14 @@ Kanalen [#solar-power](https://discord.com/channels/867578229534359593/970723761
 ## Att bygga en solnod
 ### Val av LoRa hårdvara
 Det är en stor skillnad i strömförbrukning mellan ESP32-baserade och nRF52840-baserade enheter.
-Detta har gjort WisBlock RAK4631 som det självklara valet när man bygger en solnod.
+Detta har gjort WisBlock RAK4631 det självklara valet vid bygget av en solnod.
 
 ### Komponenter
 Bamse från Discord har satt ihop en lista och publicerat på [Github](https://github.com/TheBamse/Meshtastic-Solar-Nodes/blob/main/partslist_2025.md).
+Superminaren har arbetat vidare på denna på [Github](https://github.com/Superminaren/Meshtastic-Solar-Nodes/)
 
 ### Märkning
-Det är viktigt att märka din solnod så att det tydligt framgår vad det är, samt kontaktuppgifter. Om polisen eller kommunen får upp ögonen för din nod är det viktigt att dom förstår vad det är. Skulle placeringen inte vara okej har du en chans att få tillbaka noden om den är märkt med kontaktuppgifter. Vill man vara _anonym_ kan man använda sig av en icke personlig mailadress som sedan vidarebefordrar inkommande epost till din privata.
+Det är viktigt att märka din solnod så att det tydligt framgår vad det är samt kontaktuppgifter. Om polisen eller kommunen får upp ögonen för din nod är det viktigt att dom förstår vad det är. Skulle placeringen inte vara okej har du en chans att få tillbaka noden om den är märkt med kontaktuppgifter. Vill man vara _anonym_ kan man använda sig av en icke personlig mailadress som sedan vidarebefordrar inkommande epost till din privata.
 
 ## Placering av solnod
 Vi rekommenderar att alltid be om tillstånd innan du placerar ut en solnod.
