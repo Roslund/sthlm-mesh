@@ -1,22 +1,236 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>STHLM-MESH</title><link>https://sthlm-mesh.se/</link><description>Recent content on STHLM-MESH</description><generator>Hugo -- gohugo.io</generator><language>sv</language><atom:link href="https://sthlm-mesh.se/index.xml" rel="self" type="application/rss+xml"/><item><title>Rekommenderade Inställningar</title><link>https://sthlm-mesh.se/docs/settings/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/settings/</guid><description>Här listas rekommenderade inställningar för Stockholm. Inställningarna heter olika saker och konfigureras på olika sätt i de olika klienterna. För mer information och detaljer rekommenderas den officiella dokumentationen.
-LoRa Configuration Inställning Värde Beskrivning Region EU_868 Den som primärt används i Sverige och EU Modem Preset LONG_FAST Max Hops 4-5 Försök håll så lågt som möjligt Transmit Enabled true Kan stängas av vid byta antenn 1 Ignore MQTT true Vidarebefordra inte meddelanden som kommer från MQTT OK to MQTT true Kan stängas av föra att inte synas på karttjänsterna 2 Max hops Max hops anger i hur många led noder ska vidarebefordra ditt meddelande.</description></item><item><title>Enhetsroller i Meshtastic</title><link>https://sthlm-mesh.se/docs/device_role/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/device_role/</guid><description>Enhetsrollen i Meshtastic avgör hur en nod fungerar inom nätverket. Varje roll är optimerad för specifika användningsområden och påverkar hur meshnätverket fungerar.
-Att välja rätt roll är avgörande för ett välfungerande meshnätverk. Om en enhet har fel roll märks det sällan för användaren själv, men det kan försämra nätverkets prestanda.
-Client CLIENT är standardrollen för Meshtastic och fungerar bäst i de flesta fall. Det är först när nätverket blir större som det blir viktigt att noggrant välja rätt roller.</description></item><item><title>Position</title><link>https://sthlm-mesh.se/docs/position/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/position/</guid><description>En nod kan dela sin position till alla andra noder över meshet. Det gör det möjligt att se hur meshset sträcker sig geografiskt.
-För att dela position behövs antingen en GPS-modul eller en ansluten smartphone. Alternativt så kan man sätta en fixed location där man själv anger koordinater, eller använder telefonens nuvarande position.
-Position Precision Som standard kommer din nod inte dela med sig av sin exakta position. Den kommer skicka en position och en noggrannhet.</description></item><item><title>MQTT</title><link>https://sthlm-mesh.se/docs/mqtt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/mqtt/</guid><description>MQTT (Message Queuing Telemetry Transport) är ett protokoll för meddelandeöverföring som ofta används för IoT-kommunikation. Det är designat för att vara effektivt, även i nätverk med låg bandbredd eller hög latens.
-Vi använder MQTT för att kunna analysera meshet. Detta gör vi genom att enbart ha uplink igång. På så sätt kan vi tillhandahålla information om meshet som går att analysera med andra verktyg.
-Meshtastic har stöd för att använda MQTT för att brygga olika mesh-nätverk.</description></item><item><title>Neighbor Info</title><link>https://sthlm-mesh.se/docs/neighbor_info/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/neighbor_info/</guid><description>Neighbor Info modulen samlar information om en nods grannar som den har direktkontakt med (0-hopp). Denna information kan sedan skickas över MQTT eller LoRa.
-Informationen kan sedan visualiseras på karttjänster. Liam Cottles karta visar information om varje förbindelse. Utöver SNR visas även en terränggraf från HeyWhatsThat.com.
-Neighbor Info Konfiguration Neighbor Info bör endast konfigureras på statiska noder, helst de som har kontakt med många andra noder. För portabla noder som flyttar sig blir Neighbor Info missvisande.</description></item><item><title>Kartor</title><link>https://sthlm-mesh.se/docs/kartor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/kartor/</guid><description>Det finns massvis med olika karttjänster, vi rekommenderar Liam Cottles karta: https://meshtastic.liamcottle.net/
-Uppmärksamma För att tillåta andra noder publicera din nod på kartan behöver lora.config_ok_to_mqtt vara aktiverat. Kartan är ett fantastik verktyg för att analysera meshen, man kan se vart olika noder finns. vilka noder som har vilken roll. Klickar man på en nod och visar detaljer så får man grafer över telemetri. Kartan kan visa vilka noder som har kontakt med vilka genom neighbor info modulen.</description></item><item><title>Solnoder</title><link>https://sthlm-mesh.se/docs/solar_nodes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/solar_nodes/</guid><description>Att bygga en solnod är både en rolig teknisk utmaning och ett effektivt sätt att förbättra täckningen i meshnätverket. Många platser som är optimala för att placera en nod saknar ofta strömförsörjning. Oavsett om det är på toppen av ett berg eller ett villatak.
-Kanalen #solar-power på den officiella Discord serven är en bra källa till tips, inspiration och diskussioner.
-Att bygga en solnod Val av LoRa hårdvara Det är en stor skillnad i strömförbrukning mellan ESP32-baserade och nRF52840-baserade enheter.</description></item><item><title>Communities i Sverige</title><link>https://sthlm-mesh.se/docs/communities/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/communities/</guid><description>Facebook Grupper Meshtastic Uppsala Meshtastic Gothenburg Meshtastic Östergötland Matrix Meshtastic in Sweden Webbsidor meshat.se sk0qo.se</description></item><item><title>Meddelanden</title><link>https://sthlm-mesh.se/messages/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/messages/</guid><description>Senaste meddelanden Alla CVK JwK Ros1 Älg ? Loading...</description></item><item><title>Meetups</title><link>https://sthlm-mesh.se/meetups/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/meetups/</guid><description> Kommande Meetups 🍻 Meshtastic AW i Stockholm! 🍻 Träffa likasinnade, snacka LoRa och bygg ut nätverket i Stockholm!
-📍 Plats: TBD
-📅 Datum: TDB
-⏰ Tid: TDB Anmäl dig här Tidigare meetups: Datum: 2025-04-08 Tid: 17:00 - 22:00 Plats: The Bishops Arms, Sundbyberg Event: Facebook Datum: 2024-09-04 Tid: 17:00 - 22:00 Plats: The Bishops Arms, Sundbyberg Event: Facebook Datum: 2024-05-05 Tid: 17:00 Plats: Takpark by Urban Deli, Sveavägen 44</description></item><item><title>Om STHLM-MESH</title><link>https://sthlm-mesh.se/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/about/</guid><description>Om STHLM-MESH STHLM-MESH är ett community-drivet open-source-projekt som syftar till att bygga och dokumentera ett öppet LoRa Mesh-nätverk i Stockholm. Projektet drivs av entusiaster som vill utforska möjligheterna med decentraliserad kommunikation och verka för ett välfungerande mesh för alla i Stockholm.
-Backend Denna webbplats är byggd med de statiska site-generatorn Hugo och använder Docsy som tema.
-Collaboration Källkoden för webbplatsen är öppen och tillgänglig på GitHub, och vi uppmuntrar bidrag från communityt!</description></item><item><title>Mesh Status</title><link>https://sthlm-mesh.se/status/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/status/</guid><description>Antal Enheter – Hörts idag
-– Senaste 7 dagarna
-– Senaste 30 dagarna
-Text Meddelanden Antalet meddelanden per timme senaste 7 dygnen. Grafen visar meddelanden som skickats på LongFast kanalen, men även okrypterade meddelanden mellan noder. De meddelanden som skickas går att se här.
-Skapade paket per nod Grafen nedan visar vilka noder som har skickat flest paket under det senaste dygnet. Graferna bygger på MQTT-data från ett begränsat antal noder.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>STHLM-MESH</title><link>https://sthlm-mesh.se/</link><description>Recent content on STHLM-MESH</description><generator>Hugo</generator><language>sv</language><atom:link href="https://sthlm-mesh.se/index.xml" rel="self" type="application/rss+xml"/><item><title>Rekommenderade Inställningar</title><link>https://sthlm-mesh.se/docs/settings/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/settings/</guid><description>&lt;p>Här listas rekommenderade inställningar för Stockholm. Inställningarna heter olika saker och konfigureras på olika sätt i de olika klienterna. För mer information och detaljer rekommenderas den &lt;a href="https://meshtastic.org/docs/configuration/">officiella dokumentationen&lt;/a>.&lt;/p>
+&lt;h2 id="lora-configuration">LoRa Configuration&lt;a class="td-heading-self-link" href="#lora-configuration" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Inställning&lt;/th>
+ &lt;th>Värde&lt;/th>
+ &lt;th>Beskrivning&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>Region&lt;/td>
+ &lt;td>EU_868&lt;/td>
+ &lt;td>Den som primärt används i Sverige och EU&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Modem Preset&lt;/td>
+ &lt;td>&lt;code>LONG_FAST&lt;/code>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Max Hops&lt;/td>
+ &lt;td>4-5&lt;/td>
+ &lt;td>Försök håll så lågt som möjligt&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Transmit Enabled&lt;/td>
+ &lt;td>true&lt;/td>
+ &lt;td>Kan stängas av vid byta antenn &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Ignore MQTT&lt;/td>
+ &lt;td>true&lt;/td>
+ &lt;td>Vidarebefordra inte meddelanden som kommer från MQTT&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>OK to MQTT&lt;/td>
+ &lt;td>true&lt;/td>
+ &lt;td>Kan stängas av föra att inte synas på karttjänsterna &lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="max-hops">Max hops&lt;a class="td-heading-self-link" href="#max-hops" aria-label="Heading self-link">&lt;/a>&lt;/h3>
+&lt;p>Max hops anger i hur många led noder ska vidarebefordra ditt meddelande. Max hops sätts när paket sänds, en nod som vidarebefordrar ett paket minskar &lt;em>max hops&lt;/em> med ett. Vad nodens som vidarebefordrar medelande har för max hopps påverkar inte.&lt;/p></description></item><item><title>Enhetsroller i Meshtastic</title><link>https://sthlm-mesh.se/docs/device_role/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/device_role/</guid><description>&lt;p>Enhetsrollen i Meshtastic avgör hur en nod fungerar inom nätverket. Varje roll är optimerad för specifika användningsområden och påverkar hur meshnätverket fungerar.&lt;/p>
+&lt;p>Att välja rätt roll är avgörande för ett välfungerande meshnätverk. Om en enhet har fel roll märks det sällan för användaren själv, men det kan försämra nätverkets prestanda.&lt;/p>
+&lt;h2 id="client">Client&lt;a class="td-heading-self-link" href="#client" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>&lt;code>CLIENT&lt;/code> är &lt;em>standardrollen&lt;/em> för Meshtastic och fungerar bäst i de flesta fall. Det är först när nätverket blir större som det blir viktigt att noggrant välja rätt roller.&lt;/p></description></item><item><title>Position</title><link>https://sthlm-mesh.se/docs/position/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/position/</guid><description>&lt;p>En nod kan dela sin position till alla andra noder över meshet.
+Det gör det möjligt att se hur meshset sträcker sig geografiskt.&lt;/p>
+&lt;p>För att dela position behövs antingen en GPS-modul eller en ansluten smartphone.
+Alternativt så kan man sätta en &lt;em>fixed location&lt;/em> där man själv anger koordinater, eller använder telefonens nuvarande position.&lt;/p>
+&lt;h2 id="position-precision">Position Precision&lt;a class="td-heading-self-link" href="#position-precision" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>Som standard kommer din nod inte dela med sig av sin exakta position. Den kommer skicka en position och en noggrannhet. Detta visar sig som en cirkel runt noden på karta, där din nod är någonstans inom den cirkeln.&lt;/p></description></item><item><title>MQTT</title><link>https://sthlm-mesh.se/docs/mqtt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/mqtt/</guid><description>&lt;p>MQTT (Message Queuing Telemetry Transport) är ett protokoll för meddelandeöverföring som ofta används för IoT-kommunikation. Det är designat för att vara effektivt, även i nätverk med låg bandbredd eller hög latens.&lt;/p>
+&lt;p>Vi använder MQTT för att kunna analysera meshet. Detta gör vi genom att enbart ha &lt;em>uplink&lt;/em> igång. På så sätt kan vi tillhandahålla information om meshet som går att analysera med andra verktyg.&lt;/p>
+&lt;p>Meshtastic har stöd för att använda MQTT för att &lt;em>brygga&lt;/em> olika mesh-nätverk.
+I Stockholm har vi redan ett stort mesh, och MQTT-trafik skulle snabbt överbelasta meshet.
+Därför har vi &lt;em>downlink&lt;/em> avstängt samt &lt;code>lora.ignore_mqtt&lt;/code> aktiverat.&lt;/p></description></item><item><title>Neighbor Info</title><link>https://sthlm-mesh.se/docs/neighbor_info/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/neighbor_info/</guid><description>&lt;p>&lt;a href="https://meshtastic.org/docs/configuration/module/neighbor-info/">Neighbor Info modulen&lt;/a> samlar information om en nods grannar som den har direktkontakt med (0-hopp). Denna information kan sedan skickas över MQTT eller LoRa.&lt;/p>
+&lt;p>Informationen kan sedan visualiseras på karttjänster. Liam Cottles karta visar information om varje förbindelse. Utöver SNR visas även en terränggraf från &lt;a href="HeyWhatsThat.com">HeyWhatsThat.com&lt;/a>.&lt;/p>
+
+&lt;figure>
+ &lt;img src="https://sthlm-mesh.se/images/docs/neighbors.png" width="400px" height="300px"/> 
+&lt;/figure>
+
+&lt;h2 id="neighbor-info-konfiguration">Neighbor Info Konfiguration&lt;a class="td-heading-self-link" href="#neighbor-info-konfiguration" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>Neighbor Info bör &lt;strong>endast&lt;/strong> konfigureras på &lt;strong>statiska noder&lt;/strong>, helst de som har kontakt med många andra noder.
+För portabla noder som flyttar sig blir Neighbor Info missvisande.&lt;/p></description></item><item><title>Kartor</title><link>https://sthlm-mesh.se/docs/kartor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/kartor/</guid><description>&lt;p>Det finns massvis med olika karttjänster, vi rekommenderar Liam Cottles karta:
+&lt;a href="https://meshtastic.liamcottle.net/">https://meshtastic.liamcottle.net/&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://meshtastic.liamcottle.net/">&lt;img src="https://sthlm-mesh.se/featured-background-map.png" width="50%">&lt;/a>&lt;/p>
+
+
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">Uppmärksamma&lt;/h4>
+
+ För att tillåta andra noder publicera din nod på kartan behöver &lt;code>lora.config_ok_to_mqtt&lt;/code> vara aktiverat.
+
+&lt;/div>
+
+&lt;p>Kartan är ett fantastik verktyg för att analysera meshen, man kan se vart olika noder finns. vilka noder som har vilken roll. Klickar man på en nod och visar detaljer så får man grafer över telemetri. Kartan kan visa vilka noder som har kontakt med vilka genom &lt;a href="https://sthlm-mesh.se/docs/neighbor_info/">neighbor info&lt;/a> modulen.&lt;/p></description></item><item><title>Solnoder</title><link>https://sthlm-mesh.se/docs/solar_nodes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/solar_nodes/</guid><description>&lt;figure>
+ &lt;img src="https://sthlm-mesh.se/images/docs/solar_nodes/IMG_86552.jpg" width="700px"/> 
+&lt;/figure>
+
+&lt;p>Att bygga en solnod är både en rolig teknisk utmaning och ett effektivt sätt att förbättra täckningen i meshnätverket.
+Många platser som är optimala för att placera en nod saknar ofta strömförsörjning. Oavsett om det är på toppen av ett berg eller ett villatak.&lt;/p>
+&lt;p>Kanalen &lt;a href="https://discord.com/channels/867578229534359593/970723761013800970">#solar-power&lt;/a> på den officiella Discord serven är en bra källa till tips, inspiration och diskussioner.&lt;/p>
+&lt;h2 id="att-bygga-en-solnod">Att bygga en solnod&lt;a class="td-heading-self-link" href="#att-bygga-en-solnod" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;h3 id="val-av-lora-hårdvara">Val av LoRa hårdvara&lt;a class="td-heading-self-link" href="#val-av-lora-h%c3%a5rdvara" aria-label="Heading self-link">&lt;/a>&lt;/h3>
+&lt;p>Det är en stor skillnad i strömförbrukning mellan ESP32-baserade och nRF52840-baserade enheter.
+Detta har gjort WisBlock RAK4631 som det självklara valet när man bygger en solnod.&lt;/p></description></item><item><title>Communities i Sverige</title><link>https://sthlm-mesh.se/docs/communities/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/communities/</guid><description>&lt;h2 id="facebook-grupper">Facebook Grupper&lt;a class="td-heading-self-link" href="#facebook-grupper" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://www.facebook.com/groups/355886956911219/">Meshtastic Uppsala&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.facebook.com/groups/1505804590265242/">Meshtastic Gothenburg&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.facebook.com/groups/690392173081456/">Meshtastic Östergötland&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="matrix">Matrix&lt;a class="td-heading-self-link" href="#matrix" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://matrix.to/#/%23general-swe:meshnet.club">Meshtastic in Sweden&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="webbsidor">Webbsidor&lt;a class="td-heading-self-link" href="#webbsidor" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://meshat.se">meshat.se&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.sk0qo.se/index.php/3698-ny-meshtastic-router-pa-plats-i-brandbergen">sk0qo.se&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Meddelanden</title><link>https://sthlm-mesh.se/messages/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/messages/</guid><description>&lt;section id="messages" class="pt-0 row td-box td-box--white td-box--height-auto" style="padding-bottom: 0px !important;"x>
+ &lt;h2 id="senaste-meddelanden" class="pt-3">Senaste meddelanden&lt;a class="td-heading-self-link" href="#senaste-meddelanden" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+ 
+ &lt;div class="btn-toolbar mb-2" role="toolbar" aria-label="Toolbar with button groups">
+ &lt;div class="btn-group btn-group-sm me-2" role="group" aria-label="Basic radio toggle button group">
+ &lt;input type="radio" class="btn-check" name="btnradio" id="all" autocomplete="off" checked>
+ &lt;label class="btn btn-outline-primary" for="all">Alla&lt;/label>
+ &lt;/div>
+ &lt;div class="btn-group btn-group-sm me-2" role="group" aria-label="Basic radio toggle button group">
+ &lt;input type="radio" class="btn-check" name="btnradio" id="1978245180" autocomplete="off">
+ &lt;label class="btn btn-outline-primary" for="1978245180" data-bs-toggle="tooltip" data-bs-placement="top" title="SA0CVK 0 (Ny Router)">CVK&lt;/label>
+
+ &lt;input type="radio" class="btn-check" name="btnradio" id="862351628" autocomplete="off">
+ &lt;label class="btn btn-outline-primary" for="862351628" data-bs-toggle="tooltip" data-bs-placement="top" title="JwK Bas">JwK&lt;/label>
+
+ &lt;input type="radio" class="btn-check" name="btnradio" id="3663385928" autocomplete="off">
+ &lt;label class="btn btn-outline-primary" for="3663385928" data-bs-toggle="tooltip" data-bs-placement="top" title="Mariehäll Alprosen">Ros1&lt;/label>
+
+ &lt;input type="radio" class="btn-check" name="btnradio" id="2971894662" autocomplete="off">
+ &lt;label class="btn btn-outline-primary" for="2971894662" data-bs-toggle="tooltip" data-bs-placement="top" title="Stora Älgön 2.0">Älg&lt;/label>
+ &lt;/div>
+ &lt;!-- Info Button with Tooltip -->
+ &lt;div data-bs-toggle="tooltip" data-bs-placement="right" title="Visar meddelanden mottagna av respektive nod. Användbart för att förstå vilka noder som har hört ett meddelande.">
+ &lt;span class="badge rounded-pill bg-dark">?&lt;/span>
+ &lt;/div>
+ &lt;/div>
+ &lt;div id="loading">&lt;p>Loading...&lt;/p></description></item><item><title>Meetups</title><link>https://sthlm-mesh.se/meetups/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/meetups/</guid><description>&lt;link rel="preload" as="image" href="https://sthlm-mesh.se/meetups/background-meetup_hu_7af96a43eb48e0.png" media="(max-width: 1200px)">
+&lt;link rel="preload" as="image" href="https://sthlm-mesh.se/meetups/background-meetup_hu_726b9cb778e7e883.png" media="(min-width: 1200px)">
+&lt;style>
+#td-cover-block-0 {
+ background-image: url(/meetups/background-meetup_hu_7af96a43eb48e0.png);
+}
+@media only screen and (min-width: 1200px) {
+ #td-cover-block-0 {
+ background-image: url(/meetups/background-meetup_hu_726b9cb778e7e883.png);
+ }
+}
+&lt;/style>
+&lt;section id="td-cover-block-0" class="row td-cover-block td-cover-block--height-min td-overlay td-overlay--dark -bg-dark">
+ &lt;div class="col-12">
+ &lt;div class="container td-overlay__inner">
+ &lt;div class="text-center">
+ 
+ 
+ &lt;div class="pt-3 lead">
+ 
+ 
+ 
+ &lt;/div>
+ &lt;/div>
+ &lt;/div>
+ &lt;/div>
+ 
+&lt;/section>
+
+&lt;div>&lt;a id="td-block-1" class="td-offset-anchor">&lt;/a>&lt;/div>
+&lt;section class="row td-box td-box--1 td-box--height-auto">
+&lt;div class="col">
+&lt;div class="container">
+&lt;h2 id="kommande-meetups">Kommande Meetups&lt;a class="td-heading-self-link" href="#kommande-meetups" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;div class="container mt-5">
+&lt;div class="card shadow-lg">
+&lt;div class="card-body">
+&lt;h1 class="text-center text-primary">🍻 Meshtastic AW i Stockholm! 🍻&lt;/h1>
+&lt;p class="lead text-center">Träffa likasinnade, snacka LoRa och bygg ut nätverket i Stockholm!&lt;/p>
+&lt;div class="text-center my-4">
+&lt;strong>📍 Plats:&lt;/strong> &lt;span>TBD&lt;/span>&lt;br>
+&lt;strong>📅 Datum:&lt;/strong> &lt;span>TDB&lt;/span>&lt;br>
+&lt;strong>⏰ Tid:&lt;/strong> &lt;span>TDB&lt;/span>
+&lt;/div>
+&lt;!--&lt;p class="text-center">Våren närmar sig och det är massvis med trafik i meshen. Det har dessutom tillkommit massvis med nya noder och personer. Vi bjuder därför in till After Work för de som vill träffa likasinnade, snacka LoRa, dela erfarenheter och visa hemmabyggen.&lt;/p></description></item><item><title>Om STHLM-MESH</title><link>https://sthlm-mesh.se/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/about/</guid><description>&lt;link rel="preload" as="image" href="https://sthlm-mesh.se/about/background-sunset_hu_e3de9a257b7b9dc5.jpeg" media="(max-width: 1200px)">
+&lt;link rel="preload" as="image" href="https://sthlm-mesh.se/about/background-sunset_hu_91e95a2bc8ac4fa2.jpeg" media="(min-width: 1200px)">
+&lt;style>
+#td-cover-block-0 {
+ background-image: url(/about/background-sunset_hu_e3de9a257b7b9dc5.jpeg);
+}
+@media only screen and (min-width: 1200px) {
+ #td-cover-block-0 {
+ background-image: url(/about/background-sunset_hu_91e95a2bc8ac4fa2.jpeg);
+ }
+}
+&lt;/style>
+&lt;section id="td-cover-block-0" class="row td-cover-block td-cover-block--height-min td-overlay td-overlay--dark -bg-dark">
+ &lt;div class="col-12">
+ &lt;div class="container td-overlay__inner">
+ &lt;div class="text-center">
+ &lt;h1 class="display-1 mt-0 mt-md-5 pb-4">Om STHLM-MESH&lt;/h1>
+ 
+ &lt;div class="pt-3 lead">
+ 
+ 
+ 
+ &lt;/div>
+ &lt;/div>
+ &lt;/div>
+ &lt;/div>
+ 
+&lt;/section>
+
+&lt;div>&lt;a id="td-block-1" class="td-offset-anchor">&lt;/a>&lt;/div>
+&lt;section class="row td-box td-box--1 td-box--height-auto">
+&lt;div class="col">
+&lt;div class="container">
+&lt;p>STHLM-MESH är ett community-drivet &lt;strong>open-source-projekt&lt;/strong> som syftar till att bygga och dokumentera ett öppet LoRa Mesh-nätverk i Stockholm.
+Projektet drivs av entusiaster som vill utforska möjligheterna med decentraliserad kommunikation och verka för ett välfungerande mesh för alla i Stockholm.&lt;/p></description></item><item><title>Mesh Status</title><link>https://sthlm-mesh.se/status/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/status/</guid><description>&lt;br/>
+&lt;div>&lt;a id="td-block-0" class="td-offset-anchor">&lt;/a>&lt;/div>
+&lt;section class="row td-box td-box--white td-box--height-auto">
+&lt;div class="col">
+&lt;div class="container">
+&lt;h2 id="antal-enheter">Antal Enheter&lt;a class="td-heading-self-link" href="#antal-enheter" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;div class="container my-3 mx-0" style="max-width: 1000px;">
+ &lt;div class="row text-center px-0">
+ &lt;div class="col">
+ &lt;h2 class="display-4 text-primary fw-bold" id="count-1">–&lt;/h2>
+ &lt;p class="text-muted">Hörts idag&lt;/p>
+ &lt;/div>
+ &lt;div class="col">
+ &lt;h2 class="display-4 text-warning fw-bold" id="count-7">–&lt;/h2>
+ &lt;p class="text-muted">Senaste 7 dagarna&lt;/p>
+ &lt;/div>
+ &lt;div class="col">
+ &lt;h2 class="display-4 text-success fw-bold" id="count-30">–&lt;/h2>
+ &lt;p class="text-muted">Senaste 30 dagarna&lt;/p>
+ &lt;/div>
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="text-meddelanden">Text Meddelanden&lt;a class="td-heading-self-link" href="#text-meddelanden" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>Antalet meddelanden per timme senaste 7 dygnen. Grafen visar meddelanden som skickats på LongFast kanalen, men även okrypterade meddelanden mellan noder. De meddelanden som skickas går att se &lt;a href="https://sthlm-mesh.se/messages/">här&lt;/a>.&lt;/p>
+&lt;div class="stats-chart-container" style="min-height:300px;">
+ &lt;canvas id="messagesChart">&lt;/canvas>
+&lt;/div>
+&lt;h2 id="skapade-paket-per-nod">Skapade paket per nod&lt;a class="td-heading-self-link" href="#skapade-paket-per-nod" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>Grafen nedan visar vilka noder som har skickat flest paket under det senaste dygnet.
+Graferna bygger på MQTT-data från ett begränsat antal noder.
+Eftersom vi har begränsad bandbredd är det viktigt att hålla nere trafiken. En sändningsvolym på max 100 paket per dygn är önskvärd.&lt;/p></description></item></channel></rss>
