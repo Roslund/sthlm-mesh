@@ -81,14 +81,9 @@ Antalet enheter av firmware version som synts i meshet de senaste 30 dagarna. In
 
 
 ## Batteri
+Visar genomsnittlig batterinivå av de noder som rapporterat batteri nivå och inte har fast strömförsörjning.
 <div id="batteryContainer" class="stats-chart-container" style="min-height:300px;">
     <canvas id="batteryChart"></canvas>
-</div>
-
-
-## Channel Utilization
-<div id="channelUtilizationContainer" class="stats-chart-container" style="min-height:300px;">
-    <canvas id="channelUtilizationChart"></canvas>
 </div>
 
 
@@ -119,4 +114,3 @@ Graferna baseras på data från [map.sthlm-mesh.se](https://map.sthlm-mesh.se), 
 <script src="/js/status/nodes-seen.js"></script>
 <script src="/js/status/firmware-versions.js"></script>
 <script src="/js/status/battery-stats.js"></script>
-<script src="/js/status/channel-utilization.js"></script>
