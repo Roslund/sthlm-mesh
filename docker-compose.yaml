@@ -3,7 +3,7 @@ version: "3.8"
 services:
 
   site:
-    image: hugomods/hugo:exts
+    image: hugomods/hugo:exts-0.145.0
     command: server --buildDrafts --poll 500ms
     ports:
       - "1313:1313"
