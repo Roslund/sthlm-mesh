@@ -27,7 +27,7 @@ draft: false
 
 ## Text Meddelanden
 Antalet meddelanden per timme senaste 7 dygnen. Grafen visar meddelanden som skickats på LongFast kanalen, men även okrypterade meddelanden mellan noder. De meddelanden som skickas går att se [här]({{< ref messages >}}).
-<div class="stats-chart-container">
+<div class="stats-chart-container" style="min-height:300px;">
     <canvas id="messagesChart"></canvas>
 </div>
 
@@ -80,6 +80,18 @@ Antalet enheter av firmware version som synts i meshet de senaste 30 dagarna. In
 </div>
 
 
+## Batteri
+<div id="batteryContainer" class="stats-chart-container" style="min-height:300px;">
+    <canvas id="batteryChart"></canvas>
+</div>
+
+
+## Channel Utilization
+<div id="channelUtilizationContainer" class="stats-chart-container" style="min-height:300px;">
+    <canvas id="channelUtilizationChart"></canvas>
+</div>
+
+
 ## Hårdvarumodeller
 Antalet enheter av respektive hårdvarutyp som synts i meshet de senaste 30 dagarna.
 <div id="hardwareChartContainer" class="stats-chart-container">
@@ -95,6 +107,8 @@ Graferna baseras på data från [map.sthlm-mesh.se](https://map.sthlm-mesh.se), 
 {{% /blocks/section %}}
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/luxon"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon"></script>
 <script src="/js/status/shared.js"></script>
 <script src="/js/status/messagesChart.js"></script>
 <script src="/js/status/most-active-nodes.js"></script>
@@ -104,3 +118,5 @@ Graferna baseras på data från [map.sthlm-mesh.se](https://map.sthlm-mesh.se), 
 <script src="/js/status/device-roles.js"></script>
 <script src="/js/status/nodes-seen.js"></script>
 <script src="/js/status/firmware-versions.js"></script>
+<script src="/js/status/battery-stats.js"></script>
+<script src="/js/status/channel-utilization.js"></script>
