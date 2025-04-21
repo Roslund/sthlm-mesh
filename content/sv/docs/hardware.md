@@ -36,6 +36,17 @@ __Förenkling, om du ska bygga__:
 - Balkongnod, välj: Någon ESP32-baserad nod
 - Tracker för bil: T-Beam med GPS, RAK med GPS för optimal batteritid.
 
+## Sändtagarkretsar
+När du väljer en mikrokontroller för de mest vanligt förekommande syftena så är detta inget du behöver tänka på.
+Däremot; Ifall du exempelvis skall installera en nod väldigt nära en mobilmast eller annan störningskälla så är det sannolikt mer viktigt.
+
+Det finns som utgångsläge två modeller av Sändtagare, SX1276 och SX1262.
+SX1262 är den kretsen som i dagsläget är mest förekommande, den är mer strömsnål samt har högre uteffekt, denna förekommer i nästan alla hårdvaror.
+SX1276 är dock av högre kvalitet, men med något sämre känslighet och uteffekt. 
+
+SX1276 har dock ett ess i rockärmen, och detta är dess utmärkta blockeringsförmåga. När en stark sändare på en närliggande frekvens (mobilmast) sänder så inför detta störningar i kretsen. 
+Just specifikt SX1276 har bättre värden i denna kategorin och klarar därmed att fungera bättre i sådana miljöer.
+
 ## Batteri:
 {{% alert title="Varning" color="danger" %}}
 Hantera LiPo och Li-Ion-celler med försiktighet! De är högst reaktiva och känsliga för punktering / kortslutning.
@@ -97,3 +108,4 @@ Designad för Meshtastic, perfekt för seriösa solcellsnoder. Men kanske lite v
 * Hanterar de flesta batterikemier (LTO, NA+, LifePo4, Li-ion, ...)
 * Laddström: 1A
 * Inbyggd INA3221 I2C sensor för att övervaka strömmen från solcellen, batteriet och den externa enheten.
+
