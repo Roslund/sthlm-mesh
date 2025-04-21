@@ -76,6 +76,78 @@ För mer detaljer om enhetskonfiguration se vår sida: [Rekommenderade Inställn
 
 {{% /blocks/section %}}
 
+
+<section class="row td-box td-box--dark td-box--height-auto">
+    <div class="col">
+        <div class="container">
+            <h1 id="enheter">Enheter<a class="td-heading-self-link" href="#enheter" aria-label="Heading self-link"></a></h1>
+            <p>Nedan finns lite rekommendation på enheter för olika ändamål</p> 
+        </div>
+    </div>
+    <div class="container">
+    <!-- Row 1 -->
+    <div class="row align-items-center mb-5">
+      <div class="col-4 col-md-2 d-flex justify-content-end mb-3">
+        <img src="/images/hardware-icons/rak4631_case.svg" class="img-fluid">
+      </div>
+      <div class="col-md-10">
+        <h2>RAKwireless</h2>
+        <p>Hos RAKwireless kan du köpa färdiga enheter som 
+            <a href="https://store.rakwireless.com/products/wismesh-pocket">WisMesh Pocket V2</a>, nya 
+            <a href="https://store.rakwireless.com/products/wismesh-board-one-meshtastic-node?variant=44500173881542">WisMesh Board ONE</a>, eller en komplett solnod
+            <a href="https://store.rakwireless.com/products/wismesh-meshtastic-solar-repeater?variant=44485612765382">WisMesh Repeater</a>.</p>
+        <p>Dessutom finns det även många enskilda komponenter tillgängliga att beställa, som du kan använda för att sätta ihop en nod efter dina behov. RAK4631 med RAK19003 eller RAK19007 är community favoriter, dessa används i många olika hemmabyggen. Ett perfekt val för dig som tycker om elektronik och har tillgång till en 3D-Skrivare.</p>
+        <p>Värt att notera är att enheterna inte har WiFi.</p>
+        <p>RAKwireless säljer genom sin egen <a href="https://store.rakwireless.com/collections/meshtastic">hemsida</a> och <a href="https://rakbitmall.aliexpress.com/store/2805180">AliExpress</a>. <a href="https://pileupdx.com/product-category/brands/rak-wireless/">PileupDX</a> är en svensk återförsäljare. Perfekt för dig om är otålig och vill slippa import moms.</p>
+      </div>
+    </div>
+    <!-- Row 2 -->
+    <div class="row align-items-center mb-5">
+      <div class="col-4 col-md-2 d-flex justify-content-end mb-3">
+        <img src="/images/hardware-icons/tracker-t1000-e.svg" class="img-fluid">
+      </div>
+      <div class="col-md-10">
+        <h2>Seeed Studio T1000-E</h2>
+        <p>En kompakt allroundenhet med GPS, temperatursensor och IP65-klassificering. Lika stor som ett kreditkort</p>
+        <p>Tack vare sina kompakta mått och enkla hantering är T1000-E den idealiska enheten att alltid ha med sig och även ett bra val för ”icke-nördar” eller familjemedlemmar.</p>
+        <p>Trots ett relativt litet batteri kan den leverera en batteritid på ca 2 dagar i <code>CLIENT_MUTE</code>.</p>
+        <p><a href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html">seeedstudio.com/SenseCAP-Card-Tracker-T1000-E</a></p>
+      </div>
+    </div>
+    <!-- Row 3 -->
+    <div class="row align-items-center mb-5">
+      <div class="col-4 col-md-2 d-flex justify-content-end mb-3">
+        <img src="/images/hardware-icons/t-deck.svg" class="img-fluid">
+      </div>
+      <div class="col-md-10">
+        <h2>LilyGo T-Deck Plus</h2>
+        <p><a href="https://lilygo.cc/products/t-deck-plus-1?variant=45002348724405">T-Deck Plus</a> är en fristående enhet för dig som vill kommunicera även utan telefonen</p>
+        </p>Det inbyggda 2000 mAh-batteriet ger dessutom lång driftstid</p>
+        <p>GPS ingår som standard, och en extern antenn kan beställas som tillval, eller så kan man som hobbyist enkelt montera den själv via SMA-pigtail-anslutning och ett breakout i höljet.</p>
+        <p>LILIGO tillverkar flertalet populära LoRa Enheter, så som: 
+            <a href="https://lilygo.cc/products/t3s3-v1-0?variant=42586879721653">T3-S3</a>,
+            <a href="https://lilygo.cc/products/t-beam?variant=42204034990261">T-Beam</a>,
+            <a href="https://lilygo.cc/products/t-echo-lilygo?variant=44875727470773">T-Echo</a>, och till och med 
+            <a href="https://lilygo.cc/products/t-watch-s3">T-Watch</a>. De säljer enheterna både via deras hemsida och AliExpress
+        </p>
+      </div>
+    </div>
+    <!-- Row 4 -->
+    <div class="row align-items-centermb-5">
+      <div class="col-4 col-md-2 d-flex justify-content-end mb-3">
+        <img src="/images/hardware-icons/heltec-v3-case.svg" class="img-fluid">
+      </div>
+      <div class="col-md-10">
+        <h2>Heltec LoRa 32 (V3)</h2>
+        <p>En mycket prisvärd nybörjarenhet.</p>
+        <p>Heltec LoRa 32 (V3) är en kompakt LoRa-nod. Den kombinerar en ESP32-processor med ett SX1262 radiochipp. Den har både WiFi, Bluetooth och en OLED-display.</p>
+        <p>Med stöd för extern antenn kan enheten användas till både stationära och batteridrivna lösningar. Men då den är ESP32-baserad så är batteritiden begränsad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- Det finns garanterat bättre sätt att göra detta på... --> 
 <section class="row td-box td-box--white td-box--height-auto" style="padding-bottom: 0px !important;">
 <div class="col">
@@ -88,7 +160,6 @@ För mer detaljer om enhetskonfiguration se vår sida: [Rekommenderade Inställn
 <p>Här är de vanligaste rollerna och under vilka omständigheter de passar in i Stockholms mesh:</p>
 </div>
 </div>
-</section>
 <div class="container my-4">
     <div class="row g-4">
         <div class="col-lg-4">
@@ -123,3 +194,4 @@ För mer detaljer om enhetskonfiguration se vår sida: [Rekommenderade Inställn
         </div>
     </div>
 </div>
+</section>
