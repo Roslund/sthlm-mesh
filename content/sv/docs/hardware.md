@@ -30,7 +30,7 @@ Det är enklast att koka ner de vanligaste brädorna till de med två sorters pr
 - Oftast enbart Bluetooth inbyggt.
 - Färdigbyggda enheter kommer enbart med skärm.
 
-Förenkling, om du ska bygga:
+__Förenkling, om du ska bygga__:
 - Solnod, välj: RAK Wisblock Meshtastic Starter kit
 - Portabelnod, välj: Någon RAK-baserad nod
 - Balkongnod, välj: Någon ESP32-baserad nod
@@ -44,11 +44,11 @@ Precis som med en mikrokontroller så kommer man inte särskilt långt utan str�
 
 Det finns en hel uppsjö med alternativ att välja från, men för de flesta rekommenderas att man börjar med Litiumjon-celler (Li-Ion) eller Litiumpolymer (LiPo).
 
-- Litiumpolymer:
+- Litiumpolymer (LiPo):
   En vanligt förekommande batterityp. Utformningen är nästan alltid en platt påse av metall som är väldigt lättpunkterad, så hanteras försiktigt!
   De har en dräglig energidensitet, men har primärt hög urladdningsström och kommer i olika behändiga former som passar väl i handhållna enheter.
 
-- Litiumjon: 
+- Litiumjon (Li-Ion): 
   Likväl som LiPo en vanligt förekommande batterityp, primärt i elfordon, ficklampor och äldre laptopbatterier. Kommer i princip alltid som cylindriska celler (18650, 21700) som är lite mer lätthanterliga.
   De har en högre energidensitet än LiPo, men passar inte i alla enheter lika bra.
 
@@ -85,12 +85,15 @@ För dig som tittar på laddning med 12V-paneler eller högre spänningar så fi
 För dig som tittar på att ladda dina noder effektivt så rekommenderar vi dig starkt att använda en extern laddningskrets för dina batterier. 
 Oftast är mikrokontrollrarnas inbyggdna laddningskretsar extremt begränsade (50-100mA per timme), något som kan sätta spiken i kistan för en annars välfungerande solnod.
 
-### Kretsar:
-- TP4056:
+### TP4056:
 En alldeles utmärkt laddningskrets för både USB-laddning och Solcellsladdning. [PDF](https://www.digikey.in/htmldatasheets/production/2049110/0/0/1/TP4056.pdf)
 
-Den har inbyggt laddningskurva för Litiumbatterier, och trappar ner laddströmmen för att skydda cellerna rätt.
+* Inbyggd laddningskurva för Litiumbatterier, och trappar ner laddströmmen för att skydda cellerna rätt.
+* Laddström (0.5A - 1A)
 
-Laddström (0.5A - 1A)
+### VoltaicEnclosures - [MPPT Solar Battery Charger](https://www.etsy.com/se-en/listing/1609406536/mppt-solar-battery-charger-for-iot)
+Designad för Meshtastic, perfekt för seriösa solcellsnoder. Men kanske lite väl dyr...
 
-- 
+* Hanterar de flesta batterikemier (LTO, NA+, LifePo4, Li-ion, ...)
+* Laddström: 1A
+* Inbyggd INA3221 I2C sensor för att övervaka strömmen från solcellen, batteriet och den externa enheten.
