@@ -88,7 +88,7 @@ För mer detaljer om enhetskonfiguration se vår sida: [Rekommenderade Inställn
     <!-- Row 1 -->
     <div class="row align-items-center mb-5">
       <div class="col-4 col-md-2 d-flex justify-content-end mb-3">
-        <img src="/images/hardware-icons/rak4631_case.svg" class="img-fluid">
+        <img src="/images/hardware-icons/rak4631_case.png" class="img-fluid">
       </div>
       <div class="col-md-10">
         <h2>RAKwireless</h2>
@@ -104,7 +104,7 @@ För mer detaljer om enhetskonfiguration se vår sida: [Rekommenderade Inställn
     <!-- Row 2 -->
     <div class="row align-items-center mb-5">
       <div class="col-4 col-md-2 d-flex justify-content-end mb-3">
-        <img src="/images/hardware-icons/tracker-t1000-e.svg" class="img-fluid">
+        <img src="/images/hardware-icons/tracker-t1000-e.png" class="img-fluid">
       </div>
       <div class="col-md-10">
         <h2>Seeed Studio T1000-E</h2>
@@ -117,7 +117,7 @@ För mer detaljer om enhetskonfiguration se vår sida: [Rekommenderade Inställn
     <!-- Row 3 -->
     <div class="row align-items-center mb-5">
       <div class="col-4 col-md-2 d-flex justify-content-end mb-3">
-        <img src="/images/hardware-icons/t-deck.svg" class="img-fluid">
+        <img src="/images/hardware-icons/t-deck.png" class="img-fluid">
       </div>
       <div class="col-md-10">
         <h2>LilyGo T-Deck Plus</h2>
@@ -135,7 +135,7 @@ För mer detaljer om enhetskonfiguration se vår sida: [Rekommenderade Inställn
     <!-- Row 4 -->
     <div class="row align-items-centermb-5">
       <div class="col-4 col-md-2 d-flex justify-content-end mb-3">
-        <img src="/images/hardware-icons/heltec-v3-case.svg" class="img-fluid">
+        <img src="/images/hardware-icons/heltec-v3-case.png" class="img-fluid">
       </div>
       <div class="col-md-10">
         <h2>Heltec LoRa 32 (V3)</h2>
