@@ -135,7 +135,7 @@ För mer detaljer om enhetskonfiguration se vår sida: [Rekommenderade Inställn
     <!-- Row 4 -->
     <div class="row align-items-centermb-5">
       <div class="col-4 col-md-2 d-flex justify-content-end mb-3">
-        <img src="/images/hardware-icons/heltec-v3-case.png" class="img-fluid">
+        <img src="/images/hardware-icons/heltec-v3-case.png" class="img-fluid" style="object-fit: contain;">
       </div>
       <div class="col-md-10">
         <h2>Heltec LoRa 32 (V3)</h2>
