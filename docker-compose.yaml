@@ -2,7 +2,7 @@ name: sthlm-mesh
 
 services:
   site:
-    image: hugomods/hugo:exts-0.145.0
+    image: hugomods/hugo:exts-0.145.0 # Freeze hugo due to theme issue.
     command: server --buildDrafts --poll 500ms
     ports:
       - "1313:1313"
