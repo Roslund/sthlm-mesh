@@ -87,6 +87,13 @@ Visar genomsnittlig batterinivå av de noder som rapporterat batteri nivå och i
 </div>
 
 
+## Channel Utilization
+Visar den genomsnittliga Channel Utilization, det vill säga hur mycket radiofrekvensen används, baserat på rapporter från enheter i meshen. Eftersom enheter inte skickar telemetri när kanalutnyttjandet är högt kan siffran bli missvisande. Detsamma gäller för portabla enheter eller enheter som är placerade inomhus. Förhoppningsvis ger grafen ändå ett värdefullt underlag för att förstå hur meshen mår.
+<div id="channelUtilizationContainer" class="stats-chart-container" style="min-height:300px;">
+    <canvas id="channelUtilizationChart"></canvas>
+</div>
+
+
 ## Hårdvarumodeller
 Antalet enheter av respektive hårdvarutyp som synts i meshet de senaste 30 dagarna.
 <div id="hardwareChartContainer" class="stats-chart-container">
@@ -102,6 +109,7 @@ Graferna baseras på data från [map.sthlm-mesh.se](https://map.sthlm-mesh.se), 
 {{% /blocks/section %}}
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
 <script src="https://cdn.jsdelivr.net/npm/luxon"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon"></script>
 <script src="/js/status/shared.js"></script>
@@ -114,3 +122,4 @@ Graferna baseras på data från [map.sthlm-mesh.se](https://map.sthlm-mesh.se), 
 <script src="/js/status/nodes-seen.js"></script>
 <script src="/js/status/firmware-versions.js"></script>
 <script src="/js/status/battery-stats.js"></script>
+<script src="/js/status/channel-utilization.js"></script>
