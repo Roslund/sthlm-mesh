@@ -6,6 +6,10 @@ updates:
     interval: daily
     time: '20:00'
   open-pull-requests-limit: 10
+  ignore:
+    # Freeze hugo-extended due to theme issue.
+    - dependency-name: "hugo-extended"
+      versions: ["*"]
 - package-ecosystem: bundler
   directory: "/"
   schedule:
