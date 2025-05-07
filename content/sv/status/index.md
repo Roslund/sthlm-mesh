@@ -59,7 +59,7 @@ Fördelningen av olika pakettyper i nätverket under de senaste dygnet. Diagramm
 
 
 ## Enhetsroll
-Antalet enheter av respektive Enhetsroll som synts i meshet de senaste 30 dagarna. I större mesh så som Stockholm bör i princip all noder vara `Client` eller `Client Mute`. Enbart ett fåtal `Router` eller `Repeater` behövs. Dessa måste vara placerade extremt strategiskt, till exempel högst upp i en skidbacke. `Router Client` är en avvecklad roll som inte finns längre, men i meshen lever det kvar några noder som inte blivit uppdaterade. För med info see vår [dokumentation]({{<ref device_role.md>}}).
+Antalet enheter av respektive Enhetsroll som synts i meshet de senaste 30 dagarna. I större mesh så som Stockholm bör i princip all noder vara `Client` eller `Client Mute`. Enbart ett fåtal `Router` eller `Repeater` behövs. Dessa måste vara placerade extremt strategiskt, till exempel högst upp i en skidbacke. `Router Client` är en avvecklad roll som inte finns längre, men i meshen lever det kvar några noder som inte blivit uppdaterade. För mer info see vår [dokumentation]({{<ref device_role.md>}}).
 <div id="deviceRolesContainer" class="stats-chart-container">
     <canvas id="deviceRoles"></canvas>
 </div>
