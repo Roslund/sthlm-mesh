@@ -109,6 +109,7 @@ async function portnumDistributionChart(nodeId = null) {
     ctx.fillText('Loading data...', canvas.width / 2, canvas.height / 2);
 
     try {
+        await fetchNodes();
         const url = nodeId 
             ? `https://map.sthlm-mesh.se/api/v1/stats/portnum-counts?nodeId=${nodeId}`
             : 'https://map.sthlm-mesh.se/api/v1/stats/portnum-counts';
