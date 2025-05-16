@@ -9,7 +9,7 @@ async function batteryStatsGraph() {
     ctx.fillText('Loading battery data...', canvas.width / 2, canvas.height / 2);
 
     try {
-        const response = await fetch('https://map.sthlm-mesh.se/api/v1/stats/battery-stats?days=7');
+        const response = await fetch('https://map.sthlm-mesh.se/api/v1/stats/battery-stats?days=30');
         const data = await response.json();
 
         const labels = data.map(entry => entry.recorded_at);
