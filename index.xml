@@ -129,8 +129,8 @@ Detta har gjort WisBlock RAK4631 det självklara valet vid bygget av en solnod.&
  &lt;input type="radio" class="btn-check" name="btnradio" id="3663385928" autocomplete="off">
  &lt;label class="btn btn-outline-primary" for="3663385928" data-bs-toggle="tooltip" data-bs-placement="top" title="Mariehäll Alprosen">Ros1&lt;/label>
 
- &lt;input type="radio" class="btn-check" name="btnradio" id="2971894662" autocomplete="off">
- &lt;label class="btn btn-outline-primary" for="2971894662" data-bs-toggle="tooltip" data-bs-placement="top" title="Stora Älgön 2.0">Älg&lt;/label>
+ &lt;input type="radio" class="btn-check" name="btnradio" id="2718571204" autocomplete="off">
+ &lt;label class="btn btn-outline-primary" for="2718571204" data-bs-toggle="tooltip" data-bs-placement="top" title="DXD3 Ruggen">DXD3&lt;/label>
  &lt;/div>
  &lt;!-- Info Button with Tooltip -->
  &lt;div data-bs-toggle="tooltip" data-bs-placement="right" title="Visar meddelanden mottagna av respektive nod. Användbart för att förstå vilka noder som har hört ett meddelande.">
