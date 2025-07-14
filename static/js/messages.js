@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     function formatMessageTimestamp(createdAt) {
         const date = new Date(createdAt);
-        return date.toLocaleString('sv-SE', { hour12: false }).replace(' ', ' ').slice(0, 16);
+        return date.toLocaleString('sv-SE', { hour12: false }).slice(0, 16);
     }
 
     await fetchMessages();
