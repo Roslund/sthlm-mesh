@@ -1,109 +1,81 @@
+async function flashFirmware(board, version, fullEraseInstall) {
+  const { ESPLoader, Transport } = import('https://unpkg.com/esptool-js/bundle.js')
+  const logBox = document.getElementById('espLog');
 
-import('https://unpkg.com/esptool-js/bundle.js').then(({ ESPLoader, Transport }) => {
 
-  // ── shared elements & modal instance ──
-  const modalEl   = document.getElementById('flashModal');
-  const flashModal= new bootstrap.Modal(modalEl);
-  const logBox    = document.getElementById('espLog');
-  const titleEl   = document.getElementById('flashModalLabel');
-  const eraseChk  = document.getElementById('eraseSwitch');
-  const startBtn  = document.getElementById('startFlashBtn');
+  // Helper functions
+  function log(...m) {
+    logBox.textContent+=m.join(' ')+'\n';logBox.scrollTop=logBox.scrollHeight;
+  }
 
-  // state carried into modal
-  let currentBoardKey = '', currentVersion = '';
-
-  // ── load ESP32 board map once ──
-  const BOARD_MAP = {};
-  fetch('/firmware/firmware.json').then(r => r.json()).then(j => {
-    Object.entries(j).forEach(([k, b]) => {
-      if (b.type === 'esp32') BOARD_MAP[k] = b;
-    });
-  });
-
-  // ── helper funcs (same as before, minus offsets array) ──
-  const log = (...m)=>{logBox.textContent+=m.join(' ')+'\n';logBox.scrollTop=logBox.scrollHeight;};
-  const fetchB64 = async (url) => {
+  async function fetchBase64(url) {
     const response = await fetch(url);
-    const buffer = await response.arrayBuffer();
-    const bytes = new Uint8Array(buffer);
+    const blob = await response.blob();
 
-    let binary = '';
-    for (let i = 0; i < bytes.length; i++) {
-      binary += String.fromCharCode(bytes[i]);
+    return await new Promise((resolve, reject) => {
+      const reader = new FileReader();
+
+      reader.onloadend = () => {
+        const base64 = reader.result.split(',')[1]; // Strip "data:application/octet-stream;base64,"
+        resolve(base64);
+      };
+
+      reader.onerror = reject;
+      reader.readAsDataURL(blob); // Encodes to base64
+    });
+  }
+
+  try {
+    log(`\n=== ${board.name} · ${version} (${fullEraseInstall ? 'full' : 'update'}) ===`);
+
+    let port = await navigator.serial.requestPort({});
+    let transport = new Transport(port, true);
+    let loader = new ESPLoader({ 
+      transport: transport, 
+      baudrate: 460800,
+      terminal:{ writeLine:log, write:log, clean(){} }
+    });
+
+    await loader.main();
+    log('Connected.');
+
+    let fileArray, eraseAll = false;
+
+    if (!fullEraseInstall) {
+      // UPDATE – write app only
+      const app = await fetchB64(`/firmware/${currentBoardKey}/${version}/firmware.bin`);
+
+      fileArray = [
+        { address: 0x10000, data: app }
+      ];
+    } else {
+      // FULL ERASE – factory + ota + littlefs (shared)
+      let otaOffset=0x260000, spiffsOffset=0x300000;
+      if (board.flashSize==='8MB'){ otaOffset=0x340000; spiffsOffset=0x670000; }
+      if (board.flashSize==='16MB'){otaOffset=0x650000; spiffsOffset=0xC90000; }
+
+      const factory = await fetchB64(`/firmware/${currentBoardKey}/${version}/firmware.factory.bin`);
+      const ota     = await fetchB64(`/firmware/bleota.bin`);
+      const lfs     = await fetchB64(`/firmware/littlefs.bin`);
+
+      fileArray = [
+        { address: 0x0000,      data: factory },
+        { address: otaOffset,   data: ota     },   
+        { address: spiffsOffset,data: lfs     }
+      ];
+      eraseAll = true;
     }
 
-    return btoa(binary);
-  };
+    const flashOptions = {
+      fileArray: fileArray,
+      flashSize: 'keep',
+      eraseAll: false,
+      compress: true,
+      flashMode: 'keep',
+      flashFreq: 'keep',
+    };
 
-  let loader;
+    await loader.writeFlash(flashOptions);
 
-  // ── open modal when list button clicked ──
-  document.addEventListener('click', ev => {
-    if (!ev.target.matches('.open-modal-btn')) return;
-    currentBoardKey = ev.target.dataset.board;
-    currentVersion  = ev.target.dataset.version;
-    const b = BOARD_MAP[currentBoardKey];
-    titleEl.textContent = `Flash – ${b.name} ${currentVersion}`;
-    eraseChk.checked = false;
-    logBox.textContent = '';
-    flashModal.show();
-  });
-
-  // ── start flashing when modal button clicked ──
-  startBtn.addEventListener('click', async () => {
-    const b   = BOARD_MAP[currentBoardKey];
-    const ver = currentVersion;
-    const full = eraseChk.checked;
-
-    try {
-      startBtn.disabled = true;
-      log(`\n=== ${b.name} · ${ver} (${full ? 'full' : 'update'}) ===`);
-
-      let port = await navigator.serial.requestPort({});
-      let transport = new Transport(port, true);
-      loader = new ESPLoader({ transport: transport, baudrate: 460800,
-                               terminal:{ writeLine:log, write:log, clean(){} }});
-      await loader.main();  log('Connected.');
-
-      let fileArray, eraseAll = false;
-
-      if (!full) {
-        // UPDATE – write app only
-        const app = await fetchB64(`/firmware/${currentBoardKey}/${ver}/firmware.bin`);
-
-        fileArray = [
-          { address: 0x10000, data: app }
-        ];
-      } else {
-        // FULL ERASE – factory + ota + littlefs (shared)
-        let otaOffset=0x260000, spiffsOffset=0x300000;
-        if (b.flashSize==='8MB'){ otaOffset=0x340000; spiffsOffset=0x670000; }
-        if (b.flashSize==='16MB'){otaOffset=0x650000; spiffsOffset=0xC90000; }
-
-        const factory = await fetchB64(`/firmware/${currentBoardKey}/${ver}/firmware.factory.bin`);
-        const ota     = await fetchB64(`/firmware/bleota.bin`);
-        const lfs     = await fetchB64(`/firmware/littlefs.bin`);
-
-        fileArray = [
-          { address: 0x0000,      data: factory },
-          { address: otaOffset,   data: ota     },   
-          { address: spiffsOffset,data: lfs     }
-        ];
-        eraseAll = true;
-      }
-
-        const flashOptions = {
-          fileArray: [{ data: await fetchB64(`/firmware/${currentBoardKey}/${ver}/firmware.bin`), address: 0x10000 }],
-          flashSize: 'keep',
-          eraseAll: false,
-          compress: true,
-          flashMode: 'keep',
-          flashFreq: 'keep',
-          //reportProgress:(i,d,t)=>log(`chunk ${i}: ${(100*d/t).toFixed(1)} %`)
-        };
-
-        await loader.writeFlash(flashOptions);
-    } catch(e){ console.error(e); log('❌ Error:', e); }
-    finally { startBtn.disabled = false; }
-  });
-});
+  } catch(e){ console.error(e); log('❌ Error:', e); }
+}

@@ -1,4 +1,4 @@
-async function showFirmwareUI() {
+async function showFirmwareAccordion() {
   const boards = await fetch('/firmware/firmware.json').then(r => r.json());
   const accordion = document.getElementById('firmwareAccordion');
 
@@ -59,4 +59,51 @@ async function showFirmwareUI() {
   });
 }
 
-showFirmwareUI();
+// ── load ESP32 board map once ──
+const boards = {};
+fetch('/firmware/firmware.json').then(r => r.json()).then(j => {
+  Object.entries(j).forEach(([k, b]) => {
+    if (b.type === 'esp32') boards[k] = b;
+  });
+});
+
+// state carried into modal
+let currentBoardKey = '';
+let currentVersion = '';
+
+// ── open modal when list button clicked ──
+document.addEventListener('click', ev => {
+  if (!ev.target.matches('.open-modal-btn')) return;
+  const modalEl   = document.getElementById('flashModal');
+  const flashModal= new bootstrap.Modal(modalEl);
+  const titleEl   = document.getElementById('flashModalLabel');
+  const eraseChk  = document.getElementById('eraseSwitch');
+  const logBox = document.getElementById('espLog');
+
+
+
+  currentBoardKey = ev.target.dataset.board;
+  currentVersion  = ev.target.dataset.version;
+  const board = boards[currentBoardKey];
+  titleEl.textContent = `Flash – ${board.name} ${currentVersion}`;
+  eraseChk.checked = false;
+  logBox.textContent = '';
+  flashModal.show();
+});
+
+
+const startBtn  = document.getElementById('startFlashBtn');
+
+startBtn.addEventListener('click', async () => {
+  const eraseChk  = document.getElementById('eraseSwitch');
+  const board   = boards[currentBoardKey];
+  const version = currentVersion;
+  const fullEraseInstall = eraseChk.checked;
+
+  startBtn.disabled = true;
+  await flashFirmware(board, version, fullEraseInstall);
+  startBtn.disabled = false;
+});
+
+
+showFirmwareAccordion();
