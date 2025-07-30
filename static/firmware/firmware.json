@@ -1,0 +1,21 @@
+{
+  "rak4631": {
+    "name": "RAK WisBlock 4631",
+    "type": "nrf52",
+    "versions": ["2.6.11.60ec05e", "2.6.4.b89355f"]
+  },
+
+  "tlora-t3-s3-v1": {
+    "name": "LILYGO T-LoRa T3-S3-v1",
+    "type": "esp32",
+    "flashSize": "4MB",
+    "versions": ["2.6.11.60ec05e"]
+  },
+
+  "heltec-v3": {
+    "name": "Heltec V3",
+    "type": "esp32",
+    "flashSize": "4MB",
+    "versions": ["2.6.11.60ec05e"]
+  }
+}
