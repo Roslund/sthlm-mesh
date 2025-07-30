@@ -6,13 +6,14 @@ _build:
   list: false
   publishResources: false
 ---
-Här publicerar vi custom firmware. Vi har genomfört förändringar på den officiella firmwaren för att bättre passa våra behov och användningssätt. Vi försöker att enbart publicera riktigt väl-testade versioner.
+Vi har modifierat den officiella Meshtastic-firmwaren för att bättre möta våra behov och användningssätt. Endast vältestade versioner publiceras här.
 
 {{% alert title="Varning" color="danger" %}}
-Att ladda ner firmware från internet medför alltid en risk. Istället bör du själv genomföra kodändringarna som anges lite längre ned på sidan och kompilera firmware själv.
+Att ladda ner och använda firmware från internet innebär alltid en viss risk. För högsta säkerhet rekommenderar vi att du själv gör de nödvändiga kodändringarna (som beskrivs längre ner på sidan) och bygger firmwaren lokalt.
 {{% /alert %}}
 
-Än så länge stödjer vi bara RAK4631. Ladda ner antingen en uf2 fil, eller en zip fil som används för uppdatering via blåtand.
+I dagsläget stöds följande hårdvaruplattformar: RAK4631, Heltec V3 och LILYGO T-LoRa T3-S3.
+För ESP32-baserade enheter erbjuder vi en egen webbaserad flasher – observera att denna fortfarande är under testning och kan innehålla buggar.
 
 <!-- Accordion will be injected here -->
 <div class="accordion" id="firmwareAccordion"></div>
