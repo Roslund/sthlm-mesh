@@ -1,5 +1,5 @@
 async function flashFirmware(board, version, fullEraseInstall) {
-  const { ESPLoader, Transport } = import('https://unpkg.com/esptool-js/bundle.js')
+  const { ESPLoader, Transport } = await import('https://unpkg.com/esptool-js/bundle.js')
   const logBox = document.getElementById('espLog');
 
 
@@ -8,25 +8,28 @@ async function flashFirmware(board, version, fullEraseInstall) {
     logBox.textContent+=m.join(' ')+'\n';logBox.scrollTop=logBox.scrollHeight;
   }
 
-  async function fetchBase64(url) {
-    const response = await fetch(url);
-    const blob = await response.blob();
+function convertToBinaryString(bytes) {
+	let binaryString = "";
+	for (let i = 0; i < bytes.length; i++) {
+		binaryString += String.fromCharCode(bytes[i]);
+	}
+	return binaryString;
+}
 
-    return await new Promise((resolve, reject) => {
-      const reader = new FileReader();
+async function fetchBinaryContent(url) {
+  const response = await fetch(url);
 
-      reader.onloadend = () => {
-        const base64 = reader.result.split(',')[1]; // Strip "data:application/octet-stream;base64,"
-        resolve(base64);
-      };
-
-      reader.onerror = reject;
-      reader.readAsDataURL(blob); // Encodes to base64
-    });
+  if (!response.ok) {
+    throw new Error(`Failed to fetch ${url}: ${response.status} ${response.statusText}`);
   }
 
+  const buffer = await response.arrayBuffer();
+  return convertToBinaryString(new Uint8Array(buffer));
+}
+
+
   try {
-    log(`\n=== ${board.name} · ${version} (${fullEraseInstall ? 'full' : 'update'}) ===`);
+    log(`\n=== ${board.displayName} · ${version} (${fullEraseInstall ? 'full' : 'update'}) ===`);
 
     let port = await navigator.serial.requestPort({});
     let transport = new Transport(port, true);
@@ -43,20 +46,21 @@ async function flashFirmware(board, version, fullEraseInstall) {
 
     if (!fullEraseInstall) {
       // UPDATE – write app only
-      const app = await fetchB64(`/firmware/${currentBoardKey}/${version}/firmware.bin`);
+      const app = await fetchBinaryContent(`/firmware/${board.hwModelSlug}/${version}/firmware-${board.hwModelSlug}-${version}-update.bin`);
 
       fileArray = [
         { address: 0x10000, data: app }
       ];
     } else {
-      // FULL ERASE – factory + ota + littlefs (shared)
+      // FULL ERASE, and firmware + littlefs flash
+      // ota is share, need to af logic if supporting other devices...
       let otaOffset=0x260000, spiffsOffset=0x300000;
-      if (board.flashSize==='8MB'){ otaOffset=0x340000; spiffsOffset=0x670000; }
-      if (board.flashSize==='16MB'){otaOffset=0x650000; spiffsOffset=0xC90000; }
+      if (board.partitionScheme==='8MB'){ otaOffset=0x340000; spiffsOffset=0x670000; }
+      if (board.partitionScheme==='16MB'){otaOffset=0x650000; spiffsOffset=0xC90000; }
 
-      const factory = await fetchB64(`/firmware/${currentBoardKey}/${version}/firmware.factory.bin`);
-      const ota     = await fetchB64(`/firmware/bleota.bin`);
-      const lfs     = await fetchB64(`/firmware/littlefs.bin`);
+      const factory = await fetchBinaryContent(`/firmware/${board.hwModelSlug}/${version}/firmware-${board.hwModelSlug}-${version}.bin`);
+      const ota     = await fetchBinaryContent(`/firmware/bleota-s3.bin`);
+      const lfs     = await fetchBinaryContent(`/firmware/${board.hwModelSlug}/${version}/littlefswebui-${board.hwModelSlug}-${version}.bin`);
 
       fileArray = [
         { address: 0x0000,      data: factory },
@@ -69,7 +73,7 @@ async function flashFirmware(board, version, fullEraseInstall) {
     const flashOptions = {
       fileArray: fileArray,
       flashSize: 'keep',
-      eraseAll: false,
+      eraseAll: eraseAll,
       compress: true,
       flashMode: 'keep',
       flashFreq: 'keep',

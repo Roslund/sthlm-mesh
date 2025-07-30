@@ -1,21 +1,21 @@
-{
-  "rak4631": {
-    "name": "RAK WisBlock 4631",
-    "type": "nrf52",
+[
+  {
+    "hwModelSlug": "rak4631",
+    "architecture": "nrf52",
+    "displayName": "RAK WisBlock 4631",
     "versions": ["2.6.11.60ec05e", "2.6.4.b89355f"]
   },
-
-  "tlora-t3-s3-v1": {
-    "name": "LILYGO T-LoRa T3-S3-v1",
-    "type": "esp32",
-    "flashSize": "4MB",
-    "versions": ["2.6.11.60ec05e"]
+  {
+    "hwModelSlug": "tlora-t3s3-v1",
+    "architecture": "esp32",
+    "displayName": "LILYGO T-LoRa T3-S3",
+    "versions": ["2.6.11.60ec05e53"]
   },
-
-  "heltec-v3": {
-    "name": "Heltec V3",
-    "type": "esp32",
-    "flashSize": "4MB",
-    "versions": ["2.6.11.60ec05e"]
+  {
+    "hwModelSlug": "heltec-v3",
+    "architecture": "esp32",
+    "displayName": "Heltec V3",
+    "partitionScheme": "8MB",
+    "versions": ["2.6.11.60ec05e53"]
   }
-}
+]
