@@ -6,27 +6,54 @@ _build:
   list: false
   publishResources: false
 ---
+Vi har modifierat den officiella Meshtastic-firmwaren för att bättre möta våra behov och användningssätt. Endast vältestade versioner publiceras här.
 
-
-## Binärer
 {{% alert title="Varning" color="danger" %}}
-Att ladda ner firmware från internet medför alltid en risk. Istället bör du själv genomföra kodändringarna nedan och kompilera firmware själv.
+Att ladda ner och använda firmware från internet innebär alltid en viss risk. För högsta säkerhet rekommenderar vi att du själv gör de nödvändiga kodändringarna (som beskrivs längre ner på sidan) och bygger firmwaren lokalt.
 {{% /alert %}}
-* [ros-firmware-rak4631-2.6.11.60ec05e.uf2](/firmware/ros-firmware-rak4631-2.6.11.60ec05e.uf2)
-* [ros-firmware-rak4631-ota-2.6.11.60ec05e.zip](/firmware/ros-firmware-rak4631-ota-2.6.11.60ec05e.zip)
-* [ros-firmware-rak4631-2.6.4.b89355f.uf2](/firmware/ros-firmware-rak4631-2.6.4.b89355f.uf2)
-* [ros-firmware-rak4631-ota-2.6.4.b89355f.zip](/firmware/ros-firmware-rak4631-ota-2.6.4.b89355f.zip)
-* [ros-firmware-rak4631-2.5.21.447533a.uf2](/firmware/ros-firmware-rak4631-2.5.21.447533a.uf2)
-* [nrf_erase2.uf2](/firmware/nrf_erase2.uf2)
+
+I dagsläget stöds följande hårdvaruplattformar: RAK4631, Heltec V3 och LILYGO T-LoRa T3-S3.
+För ESP32-baserade enheter erbjuder vi en egen webbaserad flasher – observera att denna fortfarande är under testning och kan innehålla buggar.
+
+<!-- Accordion will be injected here -->
+<div class="accordion" id="firmwareAccordion"></div>
+
+
+<!-- Flash‑log modal -->
+<div class="modal fade" id="flashModal" tabindex="-1" aria-labelledby="flashModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="flashModalLabel">Flashing</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <pre id="espLog" class="bg-dark text-light p-2 rounded overflow-auto" style="height:16rem;font-size:.85rem"></pre>
+        <small class="text-muted">Requires Chrome/Edge ≥ 89 over HTTPS.</small>
+      </div>
+      <div class="modal-footer d-flex align-items-center w-100">
+        <div class="form-check form-switch mb-0">
+          <input class="form-check-input" type="checkbox" id="eraseSwitch">
+          <label class="form-check-label" for="eraseSwitch">
+            Full Erase & Install
+          </label>
+        </div>
+        <div class="ms-auto d-flex gap-2">
+          <button id="startFlashBtn" class="btn btn-primary">
+            Start Flash
+          </button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Kodändringar
-Nedan är de ändringar jag gör på firmwaren för att det ska passa mig.
+Nedan är de ändringars som gjort i den senaste firmwaren. Äldre versioner kan ha andra ändringar.
 
-### Channels.cpp
-```diff
--    channelSettings.module_settings.position_precision = 13; // default to sending location on the primary channel
-+    channelSettings.module_settings.position_precision = 32; // default to sending location on the primary channel
-```
 
 ### NeighborInfoModule.cpp
 Tillåt sändning av Neighbor info över default kanalen.
@@ -66,6 +93,12 @@ void NeighborInfoModule::cleanUpNeighbors()
 }
 ```
 
+### Channels.cpp
+```diff
+-    channelSettings.module_settings.position_precision = 13; // default to sending location on the primary channel
++    channelSettings.module_settings.position_precision = 32; // default to sending location on the primary channel
+```
+
 ### MQTT.h
 ```diff
 -    const uint32_t default_map_position_precision = 14;         // defaults to max. offset of ~1459m
@@ -86,3 +119,6 @@ Respektera __inte__ OK_TO_MQTT flaggan
 -     return;
 - }
 ```
+
+<script src="/js/firmware-ui.js"></script>
+<script src="/js/esp-flasher.js"></script>
