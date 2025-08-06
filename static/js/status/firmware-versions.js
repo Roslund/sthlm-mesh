@@ -10,21 +10,18 @@ async function firmwareVersionGraph() {
 
     try {
         await fetchNodes();
-
-        const countsByVersion = {};
-
         // Filter out nodes without firmware_version
         const nodesWithVersion = nodes.filter(node => node.firmware_version != null);
 
-        // Count how many nodes have each firmware version
+        const countsByVersion = {};
+        const validVersions = ['<2.5.0', '>2.5.0', '>2.6.8'];
+
         for (const node of nodesWithVersion) {
             const version = node.firmware_version;
-            if(version != '2.4.3 or older') {
-                countsByVersion['2.5.0 or newer'] = (countsByVersion['2.5.0 or newer'] || 0) + 1;
-            }
-            else {
-                countsByVersion[version] = (countsByVersion[version] || 0) + 1;
-            }
+            // Default to '>2.5.0' for other version. 
+            // This is mainly the nodes that report their firmware version using MQTT map_report
+            const bucket = validVersions.includes(version) ? version : '>2.5.0';
+            countsByVersion[bucket] = (countsByVersion[bucket] || 0) + 1;
         }
 
         // Convert to array of { version, count }
@@ -49,7 +46,7 @@ async function firmwareVersionGraph() {
                 datasets: [{
                     label: 'Firmware Version',
                     data: counts,
-                    backgroundColor: ['#7EB26D', '#BF1B00']
+                    backgroundColor: ['#7EB26D', '#7EB26D', '#BF1B00']
                 }]
             },
             options: {

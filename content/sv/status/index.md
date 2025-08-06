@@ -74,7 +74,7 @@ För mer info se vår [dokumentation]({{<ref position.md>}}#position-precision).
 </div>
 
 ## Firmware versioner
-Antalet enheter av firmware version som synts i meshet de senaste 30 dagarna. Information om firmware information skickas inte över meshet. Men vi kan se om en enhet kör en gammal firmware version genom att kolla efter ["ok_to_mqtt" bitten](https://github.com/meshtastic/firmware/pull/4643)  som infördes i [2.5.0.9ac0e26](https://github.com/meshtastic/firmware/releases/tag/v2.5.0.9ac0e26).
+Antalet enheter av firmware version som synts i meshet de senaste 30 dagarna. Information om firmware information skickas inte över meshet. Men det går att härleda till viss del utifrån vilken information de paket som skickas innehåller.
 <div id="firmwareVersionContainer" class="stats-chart-container">
     <canvas id="firmwareVersionChart"></canvas>
 </div>
