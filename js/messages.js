@@ -21,12 +21,12 @@ document.addEventListener("DOMContentLoaded", async function () {
             let url = "https://map.sthlm-mesh.se/api/v1/text-messages?order=desc";
             const selectedRadio = document.querySelector("input[name='btnradio']:checked");
 
-            //If all is not selected we get 15 messages. If not we get 35 due to duplicates
+            //If all is not selected we fetch 30 messages. If not we fetch 100 due to duplicates
             if (selectedRadio.id !== "all") {
                 url += `&gateway_id=${selectedRadio.id}`;
-                url += `&count=15`;
+                url += `&count=30`;
             } else {
-                url += `&count=35`;
+                url += `&count=100`;
             }
 
             const response = await fetch(url);
