@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                     <div class="flex">
                         <div class="small">
                             <a target="_blank" href="https://map.sthlm-mesh.se/?node_id=${message.from}" style="color: grey; text-decoration: none;">${getNodeLongName(message.from)}</a>
-                            ${message.to !== "4294967295" ? ` → <a target="_blank" href="https://map.sthlm-mesh.se//?node_id=${message.to}" style="color: grey; text-decoration: none;">${getNodeLongName(message.to)}</a>` : ""}
+                            ${message.to !== "4294967295" ? ` → <a target="_blank" href="https://map.sthlm-mesh.se/?node_id=${message.to}" style="color: grey; text-decoration: none;">${getNodeLongName(message.to)}</a>` : ""}
                         </div>
                         <div class="px-2 py-1 pb-1 border rounded shadow-sm" style="background-color: #efefef">
                             <div class="">${escapeMessageText(message.text)}</div>
