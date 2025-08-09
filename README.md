@@ -1,11 +1,11 @@
 # STHLM-MESH
 
 **[STHLM-MESH](https://sthlm-mesh.se)** är webbsida byggd med [Hugo][] och använder [Docsy][] som tema.
-Sidan riktar sig till de som är intresserade av LoRa mesh teknologi i almenhet. Med huvudfokus är det [Meshtastic][] mesh i som omfattar Stockholms området. 
+Sidan riktar sig till de som är intresserade av LoRa mesh teknologi i allmänhet. Med huvudfokus är det [Meshtastic][] mesh i som omfattar Stockholms området. 
 
 Innehållet skrivs på svenska eller svengelska. Sidan har stöd för flera språk, men att översätta innehållet till engelska är inte prioriterat, då det finns redan massvis med information om Meshtastic på Engelska.
 
-Sidan är hostad genom _GitHub Pages_ och en GitHub Action uppdaterar sidan vid varje commit till `main` barnchen. 
+Sidan är hostad genom _GitHub Pages_ och en GitHub Action uppdaterar sidan vid varje commit till `main` branchen. 
 
 
 ## Bidra till projektet
@@ -21,7 +21,7 @@ Webbsidan kan enkelt köras inuti en [Docker](https://docs.docker.com/)-containe
 1. Bygg containern
 
    ```bash
-   docker-compose up --build
+   docker compose up --build
    ```
 1. Öppna en webbläsare och anslut till `http://localhost:1313` 
 
