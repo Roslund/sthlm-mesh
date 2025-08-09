@@ -79,6 +79,20 @@ Antalet enheter av firmware version som synts i meshet de senaste 30 dagarna. In
     <canvas id="firmwareVersionChart"></canvas>
 </div>
 
+## Unmessagable
+Visar antalet noder som är markerade som "unmessagable" respektive "messagable" baserat på de senaste 30 dagarnas aktivitet. Inställningen "unmessagable" används för att identifiera oövervakade infrastrukturnoder så att meddelanden inte skickas till noder som aldrig kommer att svara. Noder som inte har denna inställning definierad räknas som "messagable" eftersom denna egenskap infördes i version 2.6.8.
+
+<div id="isUnmessagableContainer" class="stats-chart-container">
+    <canvas id="isUnmessagableChart"></canvas>
+</div>
+
+## OK to MQTT
+Visar antalet noder som har "ok_to_mqtt" aktiverad eller avstängd under de senaste 30 dagarna. Flaggan är en begäran om att paket inte ska vidarebefordras till MQTT-servrar och karttjänster som sthlm-mesh. Begäran behöver dock inte respekteras. För att undvika exponering på karttjänster bör man använda krypterade kanaler istället för att dela information publikt.
+Äldre firmware skickar inte denna flagga och behandlas som falskt värde.
+
+<div id="isOkToMqttContainer" class="stats-chart-container">
+    <canvas id="isOkToMqttChart"></canvas>
+</div>
 
 ## Batteri
 Visar genomsnittlig batterinivå av de noder som rapporterat batteri nivå och inte har fast strömförsörjning.
@@ -123,3 +137,5 @@ Graferna baseras på data från [map.sthlm-mesh.se](https://map.sthlm-mesh.se), 
 <script src="/js/status/firmware-versions.js"></script>
 <script src="/js/status/battery-stats.js"></script>
 <script src="/js/status/channel-utilization.js"></script>
+<script src="/js/status/is-unmessagable-chart.js"></script>
+<script src="/js/status/is-ok-to-mqtt-chart.js"></script>
