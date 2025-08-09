@@ -8,12 +8,16 @@ async function messagesStatsGraph() {
     ctx.textAlign = 'center';
     ctx.fillText('Loading data...', canvas.width / 2, canvas.height / 2);
 
+    function formatMessageTimestamp(createdAt) {
+        const date = new Date(createdAt);
+        return date.toLocaleString('sv-SE', { hour12: false }).slice(0, 16);
+    }
 
     try {
         const response = await fetch('https://map.sthlm-mesh.se/api/v1/stats/messages-per-hour')
         const data = await response.json();
         
-        const labels = data.map(entry => entry.hour);
+        const labels = data.map(entry => formatMessageTimestamp(entry.hour));
         const counts = data.map(entry => entry.count);
 
         new Chart(ctx, {
@@ -34,7 +38,7 @@ async function messagesStatsGraph() {
                     x: {
                         ticks: {
                             callback: function(value, index) {
-                                return labels[index].endsWith('00') ? labels[index].split('T')[0] : null;
+                                return labels[index].endsWith('00:00') ? labels[index].split(' ')[0] : null;
                             },
                             autoSkip: false
                         }
