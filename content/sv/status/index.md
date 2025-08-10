@@ -79,6 +79,12 @@ Antalet enheter av firmware version som synts i meshet de senaste 30 dagarna. In
     <canvas id="firmwareVersionChart"></canvas>
 </div>
 
+## Max antal hopp
+Visar fördelningen av konfigurerade max-hopp för noder som synts de senaste 30 dagarna. För att värna om meshens stabilitet bör man använda ett så lågt antal max hops som möjlig. Används traceroute funktionen för att se hur många hops det krävs för dig att nå olika noder.
+<div id="maxHopsContainer" class="stats-chart-container">
+    <canvas id="maxHopsChart"></canvas>
+</div>
+
 ## Unmessagable
 Visar antalet noder som är markerade som "unmessagable" respektive "messagable" baserat på de senaste 30 dagarnas aktivitet. Inställningen "unmessagable" används för att identifiera oövervakade infrastrukturnoder så att meddelanden inte skickas till noder som aldrig kommer att svara. Noder som inte har denna inställning definierad räknas som "messagable" eftersom denna egenskap infördes i version 2.6.8.
 
@@ -139,3 +145,4 @@ Graferna baseras på data från [map.sthlm-mesh.se](https://map.sthlm-mesh.se), 
 <script src="/js/status/channel-utilization.js"></script>
 <script src="/js/status/is-unmessagable-chart.js"></script>
 <script src="/js/status/is-ok-to-mqtt-chart.js"></script>
+<script src="/js/status/max-hops-chart.js"></script>
