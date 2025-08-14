@@ -17,20 +17,24 @@ menu: {main: {weight: 40}}
 <p class="lead text-center">Träffa likasinnade, snacka LoRa och bygg ut nätverket i Stockholm!</p>
 
 <div class="text-center my-4">
-<strong>📍 Plats:</strong> <span>TBD</span><br>
-<strong>📅 Datum:</strong> <span>TDB</span><br>
-<strong>⏰ Tid:</strong> <span>TDB</span>
+<strong>📍 Plats:</strong> <span>Midsommarköket, Svandammsparken (T) Midsommarkransen</span><br>
+<strong>📅 Datum:</strong> <span>Tisdag 21 augusti</span><br>
+<strong>⏰ Tid:</strong> <span>17:00 (baren öppnar 15:00)</span>
 </div>
 
-<!--<p class="text-center">Våren närmar sig och det är massvis med trafik i meshen. Det har dessutom tillkommit massvis med nya noder och personer. Vi bjuder därför in till After Work för de som vill träffa likasinnade, snacka LoRa, dela erfarenheter och visa hemmabyggen.</p>-->
+<p class="text-center">Nu är det dags för en Meshtastic AW i Stockholm igen! Denna gång hoppas vi på bra väder och träffas på baren i Svandammsparken. Kom och träffa likasinnade, snacka LoRa och bygg ut nätverket i Stockholm!</p>
 
-<!-- <p class="text-center"><strong>Ta gärna med din nod, eller visa upp det senaste bygget.</strong></p>-->
+<p class="text-center"><strong>Ta gärna med din nod, eller visa upp det senaste bygget.</strong></p>
 
 <div class="text-center mt-4">
-<a href="#" class="btn btn-outline-secondary btn-lg disabled" style=""><i class="fab fa-facebook"></i> Anmäl dig här</a>
+<a href="https://maps.app.goo.gl/n1XSUWvoUF7yNbzb6" class="btn btn-primary btn-lg" target="_blank"><i class="fas fa-map-marker-alt"></i> Visa på karta</a>
 </div>
+
+<!-- RSVP Tracker Container -->
+<div id="rsvp-tracker-aw-21-8" class="mt-4"></div>
+
 <br>
-<!-- <p class="text-center">Om du inte har Facebook är det helt okej att dyka upp oanmäld. Men skriv gärna ett meddelande på meshen eller Discord om du kommer!</p> -->
+<p class="text-center">Om du inte kan komma exakt 17:00 är det helt okej att dyka upp senare. Skriv gärna ett meddelande på meshen eller Discord om du kommer!</p>
 </div>
 </div>
 </div>
@@ -60,4 +64,12 @@ menu: {main: {weight: 40}}
 {{< /cardpane >}}
 
 {{% /blocks/section %}}
+
+<script src="/js/rsvp-tracker.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Initialize RSVP tracker for the August 21 afterwork
+    initRSVPTracker('AW 21/8');
+});
+</script>
 
