@@ -18,7 +18,7 @@ menu: {main: {weight: 40}}
 
 <div class="text-center my-4">
 <strong>📍 Plats:</strong> <span>Midsommarköket, Svandammsparken (T) Midsommarkransen</span><br>
-<strong>📅 Datum:</strong> <span>Tisdag 21 augusti</span><br>
+<strong>📅 Datum:</strong> <span>Tisdag 19 augusti</span><br>
 <strong>⏰ Tid:</strong> <span>17:00 (baren öppnar 15:00)</span>
 </div>
 
@@ -69,7 +69,7 @@ menu: {main: {weight: 40}}
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     // Initialize RSVP tracker for the August 21 afterwork
-    initRSVPTracker('AW 21/8');
+    initRSVPTracker('AW 19/8');
 });
 </script>
 
