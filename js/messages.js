@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                         <div class="px-2 py-1 pb-1 border rounded shadow-sm" style="background-color: #efefef">
                             <div class="">${escapeMessageText(message.text)}</div>
                         </div>
-                        <div class="pt-1" style="font-size: 0.65rem;color: grey;">${formatMessageTimestamp(message.created_at)}</div>
+                        <div class="pt-1" style="font-size: 0.65rem;color: grey;">${formatMessageTimestamp(message.created_at)}&ensp;${message.channel_id}</div>
                     </div>
 
             `;
