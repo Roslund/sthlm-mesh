@@ -12,11 +12,11 @@ class RSVPTracker {
             rsvpResponses: new Map() // nodeId -> latest response
         };
         
-        // RSVP response patterns
+        // RSVP response patterns (order matters - check longer phrases first!)
         this.responsePatterns = {
-            'kommer': ['kommer', 'yes', 'ja', 'attending', 'deltar'],
+            'kommer inte': ['kommer inte', 'no', 'nej', 'not attending', 'kan inte', 'cannot attend'],
             'kanske': ['kanske', 'maybe', 'unsure', 'oklart', 'tvekar'],
-            'kommer inte': ['kommer inte', 'no', 'nej', 'not attending', 'kan inte', 'cannot attend']
+            'kommer': ['kommer', 'yes', 'ja', 'attending', 'deltar']
         };
     }
 
@@ -274,13 +274,6 @@ class RSVPTracker {
      */
     getNodeColour(nodeId) {
         return "#" + (nodeId & 0x00FFFFFF).toString(16).padStart(6, '0');
-    }
-
-    /**
-     * Get example message format
-     */
-    getExampleMessage() {
-        return `${this.eventLabel} - Kommer`;
     }
 }
 
