@@ -31,7 +31,7 @@ menu: {main: {weight: 40}}
 </div>
 
 <!-- RSVP Tracker Container -->
-<div id="rsvp-tracker-aw-19-8" class="mt-4"></div>
+<div id="rsvp-tracker-2025-08-19-aw-telefonplan" class="mt-4"></div>
 
 <br>
 <p class="text-center">Om du inte kan komma exakt 17:00 är det helt okej att dyka upp senare. Skriv gärna ett meddelande på meshen eller Discord om du kommer!</p>
@@ -65,11 +65,12 @@ menu: {main: {weight: 40}}
 
 {{% /blocks/section %}}
 
+<script src="/js/status/shared.js"></script>
 <script src="/js/rsvp-tracker.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     // Initialize RSVP tracker for the August 21 afterwork
-    initRSVPTracker('AW 19/8');
+    initRSVPTracker('2025-08-19-aw-telefonplan');
 });
 </script>
 

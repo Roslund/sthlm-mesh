@@ -1,0 +1,119 @@
+{
+  "messagePattern": "AW 19/8",
+  "archived": true,
+  "exportedAt": "2025-08-20T19:11:59.376Z",
+  "description": "AW Telefonplan meetup",
+  "attendees": {
+    "yes": [
+      {
+        "nodeId": "364861217",
+        "shortName": "KAKd",
+        "longName": "Kladdkakd",
+        "response": "yes",
+        "timestamp": "2025-08-18T21:55:44.225Z"
+      },
+      {
+        "nodeId": "910104769",
+        "shortName": "TXD0",
+        "longName": "Wibbe",
+        "response": "yes",
+        "timestamp": "2025-08-18T20:01:19.763Z"
+      },
+      {
+        "nodeId": "2745076674",
+        "shortName": "TWK5",
+        "longName": "TWK-Mobil T114",
+        "response": "yes",
+        "timestamp": "2025-08-18T18:13:36.385Z"
+      },
+      {
+        "nodeId": "1258726557",
+        "shortName": "JwKC",
+        "longName": "JwK Car",
+        "response": "yes",
+        "timestamp": "2025-08-18T11:51:05.986Z"
+      },
+      {
+        "nodeId": "3681979732",
+        "shortName": "Ros",
+        "longName": "Ros Mobil",
+        "response": "yes",
+        "timestamp": "2025-08-15T05:19:51.846Z"
+      },
+      {
+        "nodeId": "762864438",
+        "shortName": "TUFx",
+        "longName": "Lasse",
+        "response": "yes",
+        "timestamp": "2025-08-15T04:15:40.832Z"
+      },
+      {
+        "nodeId": "2718571204",
+        "shortName": "DXD3",
+        "longName": "DXD3 Ruggen",
+        "response": "yes",
+        "timestamp": "2025-08-14T19:33:19.153Z"
+      },
+      {
+        "nodeId": "1422344156",
+        "shortName": "TELE",
+        "longName": "MDG Telefonplan",
+        "response": "yes",
+        "timestamp": "2025-08-14T19:19:56.688Z"
+      },
+      {
+        "nodeId": "2152997845",
+        "shortName": "MDG5",
+        "longName": "MDG5 /R1",
+        "response": "yes",
+        "timestamp": "2025-08-14T19:16:29.975Z"
+      }
+    ],
+    "maybe": [
+      {
+        "nodeId": "220489446",
+        "shortName": "SolS",
+        "longName": "SolarStation",
+        "response": "maybe",
+        "timestamp": "2025-08-17T07:26:51.406Z"
+      },
+      {
+        "nodeId": "2892741592",
+        "shortName": "bbd8",
+        "longName": "Meshtastic bbd8",
+        "response": "maybe",
+        "timestamp": "2025-08-16T11:48:12.544Z"
+      },
+      {
+        "nodeId": "4102046320",
+        "shortName": "DLTA",
+        "longName": "Delta Flyer",
+        "response": "maybe",
+        "timestamp": "2025-08-14T21:23:49.942Z"
+      },
+      {
+        "nodeId": "2879616005",
+        "shortName": "JlyT",
+        "longName": "Jelly Test",
+        "response": "maybe",
+        "timestamp": "2025-08-14T20:48:10.687Z"
+      }
+    ],
+    "no": [
+      {
+        "nodeId": "2956846808",
+        "shortName": "LSD",
+        "longName": "R∆dioW∆ve🇸🇪",
+        "response": "no",
+        "timestamp": "2025-08-19T11:39:03.262Z"
+      },
+      {
+        "nodeId": "2947306466",
+        "shortName": "CVK",
+        "longName": "SA0CVK Primary",
+        "response": "no",
+        "timestamp": "2025-08-18T12:51:47.594Z"
+      }
+    ]
+  }
+}
