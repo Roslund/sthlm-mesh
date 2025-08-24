@@ -1,0 +1,28 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage"
+    {{- with .Site.Language.LanguageDirection }} dir="{{ . }}" {{- end -}}
+    {{ with .Site.Language.Lang }} lang="{{ . }}" {{- end }} {{/**/ -}}
+    class="no-js">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body class="td-{{ .Kind }} td-blog {{- with .Page.Params.body_class }} {{ . }}{{ end }}">
+    <header>
+      {{ partial "navbar.html" . }}
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main" {{- partialCached "td/scrollspy-attr.txt" . .Section | safeHTMLAttr }}>
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            {{ partial "sidebar.html" . }}
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5 pe-md-4" role="main">
+            {{ block "main" . }}{{ end }}
+          </main>
+        </div>
+      </div>
+      {{ partial "footer.html" . }}
+    </div>
+    {{ partial "scripts.html" . }}
+  </body>
+</html>

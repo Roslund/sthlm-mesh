@@ -1,0 +1,10 @@
+{{ if not (.Param "ui.scrollspy.disable") -}}
+  {{ replaceRE `\s+` " "
+  `
+  data-bs-spy="scroll"
+  data-bs-target="#TableOfContents"
+  data-bs-root-margin="0px 0px -40%"
+  `
+ | strings.TrimSpace | add " " -}}
+
+ {{ end -}}

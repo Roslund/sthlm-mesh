@@ -26,6 +26,7 @@ pygmentsStyle: tango
 
 # Configure how URLs look like per section.
 permalinks:
+  blog: /blog/:year/:slug/
 
 # Image processing configuration.
 imaging:
@@ -58,6 +59,9 @@ menu:
     - name: "Map"
       url: "https://map.sthlm-mesh.se/"
       weight: 80
+    - name: "Blogg"
+      url: "/blog/"
+      weight: 20
 
 # Everything below this are Site Params
 params:

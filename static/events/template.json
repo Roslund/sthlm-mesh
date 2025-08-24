@@ -1,0 +1,9 @@
+{
+  "messagePattern": "Ett unikt id för anmälan. exempel: AW 19/8",
+  "description": "En kort beskrivning av meetupet",
+  "attendees": {
+    "yes": [],
+    "maybe": [],
+    "no": []
+  }
+}
