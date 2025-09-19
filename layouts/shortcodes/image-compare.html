@@ -1,0 +1,224 @@
+<!-- Image comparison slider shortcode -->
+<div class="image-compare-container" data-left-image="{{ .Get "left" }}" data-right-image="{{ .Get "right" }}">
+  <div class="image-compare">
+    <div class="image-compare-left">
+      <img src="{{ .Get "left" }}" alt="{{ .Get "left-alt" | default "Before image" }}" loading="lazy">
+    </div>
+    <div class="image-compare-right">
+      <img src="{{ .Get "right" }}" alt="{{ .Get "right-alt" | default "After image" }}" loading="lazy">
+    </div>
+    <div class="image-compare-slider">
+      <div class="image-compare-handle">
+        <div class="image-compare-handle-line"></div>
+        <div class="image-compare-handle-circle">
+          <span class="handle-arrow-left">‹</span>
+          <span class="handle-arrow-right">›</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ if .Get "caption" }}
+  <p class="image-compare-caption">{{ .Get "caption" }}</p>
+  {{ end }}
+</div>
+
+<style>
+.image-compare-container {
+  margin: 2rem 0;
+  max-width: 100%;
+}
+
+.image-compare {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  cursor: col-resize;
+}
+
+.image-compare-left,
+.image-compare-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image-compare-left {
+  z-index: 1;
+}
+
+.image-compare-right {
+  z-index: 2;
+  clip-path: inset(0 0 0 50%);
+}
+
+.image-compare img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-compare-slider {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: white;
+  z-index: 3;
+  transform: translateX(-50%);
+  cursor: col-resize;
+}
+
+.image-compare-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
+
+.image-compare-handle-line {
+  width: 2px;
+  height: 60px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.image-compare-handle-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #007bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  cursor: col-resize;
+}
+
+.handle-arrow-left,
+.handle-arrow-right {
+  font-size: 14px;
+  font-weight: bold;
+  color: #007bff;
+  position: absolute;
+}
+
+.handle-arrow-left {
+  left: 8px;
+}
+
+.handle-arrow-right {
+  right: 8px;
+}
+
+.image-compare-caption {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .image-compare-handle-circle {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .handle-arrow-left,
+  .handle-arrow-right {
+    font-size: 12px;
+  }
+  
+  .handle-arrow-left {
+    left: 6px;
+  }
+  
+  .handle-arrow-right {
+    right: 6px;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const containers = document.querySelectorAll('.image-compare-container');
+  
+  containers.forEach(container => {
+    const compare = container.querySelector('.image-compare');
+    const leftImage = container.querySelector('.image-compare-left img');
+    const rightDiv = container.querySelector('.image-compare-right');
+    const slider = container.querySelector('.image-compare-slider');
+    let isResizing = false;
+
+    // Set initial height based on image aspect ratio
+    leftImage.addEventListener('load', function() {
+      const aspectRatio = this.naturalHeight / this.naturalWidth;
+      compare.style.paddingBottom = (aspectRatio * 100) + '%';
+      compare.style.height = '0';
+      compare.style.position = 'relative';
+    });
+
+    // Mouse events
+    function startResize(e) {
+      isResizing = true;
+      document.body.style.cursor = 'col-resize';
+      e.preventDefault();
+    }
+
+    function stopResize() {
+      isResizing = false;
+      document.body.style.cursor = 'default';
+    }
+
+    function handleResize(e) {
+      if (!isResizing) return;
+      
+      const rect = compare.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
+      
+      slider.style.left = percentage + '%';
+      rightDiv.style.clipPath = `inset(0 0 0 ${percentage}%)`;
+    }
+
+    // Touch events for mobile
+    function handleTouchResize(e) {
+      if (!isResizing) return;
+      
+      const rect = compare.getBoundingClientRect();
+      const x = e.touches[0].clientX - rect.left;
+      const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
+      
+      slider.style.left = percentage + '%';
+      rightDiv.style.clipPath = `inset(0 0 0 ${percentage}%)`;
+    }
+
+    // Event listeners
+    slider.addEventListener('mousedown', startResize);
+    document.addEventListener('mousemove', handleResize);
+    document.addEventListener('mouseup', stopResize);
+    
+    // Touch events
+    slider.addEventListener('touchstart', startResize);
+    document.addEventListener('touchmove', handleTouchResize);
+    document.addEventListener('touchend', stopResize);
+    
+    // Prevent image dragging
+    compare.addEventListener('dragstart', e => e.preventDefault());
+  });
+});
+</script>
