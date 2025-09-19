@@ -2,11 +2,11 @@
 title: Övergång till MediumFast den 27 September!
 date: 2025-09-19
 ---
-Meshtastic nätverket i Stockholm har vuxit kraftigt under de senaste två åren. Med över 200 daglit aktiva noder räcker inte längre Bandbrädden till även med optimerade inställningar, detta påverkar tillförligtligheten i meshen och flertalet medelanden når inte fram. 
+Meshtastic nätverket i Stockholm har vuxit kraftigt under de senaste två åren. Med över 200 dagligt aktiva noder räcker inte längre bandbredden till, även med optimerade inställningar, detta påverkar tillförlitligheten i meshen och flertalet meddelanden når inte fram. 
 
-För att att få ett stabilare mesh där vi har möjlighet att fortsätta växa kommer vi gå över från LongFast till MediumFast modulation. Detta innebär bland annat:
+För att få ett stabilare mesh där vi har möjlighet att fortsätta växa kommer vi gå över från LongFast till MediumFast modulation. Detta innebär bland annat:
 - **Snabbare meddelanden**: 3x kortare sändningstid
-- **Mindre kollisioner**: Färre störningar på och högre leveranssäkerhet
+- **Mindre kollisioner**: Färre störningar och högre leveranssäkerhet
 - **Bättre batteritid**: Särskilt viktigt för solcellsdrivna noder
 - **Högre nodkapacitet**: Plats för fler noder i nätverket
 
@@ -15,7 +15,7 @@ För att att få ett stabilare mesh där vi har möjlighet att fortsätta växa 
 
 
 ### Riskerar detta inte kortare räckvidd?
-MediumFast klarar en Signal to Noise Ratio på -15dBm till skillnad mot LongFasts -20dBm. Då vi har ett meshnätverk så är det anslutningen mellan närliggande noder som är viktigt. Stockholm är ett välanslutet mesh. Bilden nedan visar vilka anslutningar som klarar MediumFast givet nuvarande Noisefloor. I praktiken förväntar vi oss ännu bättre prestanda. Det finns dock ett fåtal noder som ligger långt bort eller har dåligt läge som riskerar att inte kunna nå meshen på MediumFast, men detta blir incitament till att fortsätta bygga ut meshen. Det viktiga är att MediumFast ger oss möjlighet att fortsätta växa, och med högre bandbredd och tillförlitlighet öppnar det upp för fler användningsområden.
+MediumFast klarar en Signal to Noise Ratio på `-15dBm` till skillnad mot LongFasts `-20dBm`. Bilden nedan visar hur en övergång till MediumFast påverkar förbindelser i meshen. I praktiken förväntar vi oss ännu bättre resultat då risken för kollisioner minskar. Bilden är baserad på data från traceroutes och är inte heltäckande. För att se hur du blir påverkad genomför traceroutes till dina närmsta grannar, får du SNR på över `-15dBm` så kommer MediumFast fungera bättre än LongFast.
 
 {{< image-compare left="/images/blog/2025-09-19-switch-to-mediumfast-lf.png" right="/images/blog/2025-09-19-switch-to-mediumfast-mf.png" left-alt="LongFast anslutningar" right-alt="MediumFast anslutningar" caption="Jämförelse mellan LongFast (vänster) och MediumFast (höger) anslutningar i Stockholm mesh. Dra reglaget för att se skillnaden." >}}
 
