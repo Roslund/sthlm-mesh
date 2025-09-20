@@ -37,7 +37,7 @@ Mätarna visar genomsnittligt kanalutnyttjande för de 10 noder som har högst k
 
 <div class="container my-3 mx-0" style="max-width: 1000px;">
   <div class="row text-center px-0">
-    <div class="col-md-6">
+    <div class="col-md-6 mb-4">
       <h5 class="text-muted mb-3">LongFast</h5>
       <div id="longfastGaugeContainer" class="stats-chart-container" style="height: 300px;">
         <canvas id="longfastGauge"></canvas>
