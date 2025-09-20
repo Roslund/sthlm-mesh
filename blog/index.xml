@@ -6,5 +6,4 @@
 &lt;li>&lt;strong>Bättre batteritid&lt;/strong>: Särskilt viktigt för solcellsdrivna noder&lt;/li>
 &lt;li>&lt;strong>Högre nodkapacitet&lt;/strong>: Plats för fler noder i nätverket&lt;/li>
 &lt;/ul>
-&lt;h3 id="behöver-jag-göra-något">Behöver jag göra något?&lt;a class="td-heading-self-link" href="#beh%c3%b6ver-jag-g%c3%b6ra-n%c3%a5got" aria-label="Heading self-link">&lt;/a>&lt;/h3>
-&lt;p>&lt;strong>Ja&lt;/strong>, du behöver manuellt uppdatera till MediumFast-preset under LoRa inställningarna. Detta fungerar även över RemoteAdmin för noder på svåråtkomliga platser.&lt;/p></description></item></channel></rss>
+&lt;p>Bilden nedan visar hur en övergång till MediumFast påverkar förbindelser i meshen. I praktiken förväntar vi oss ännu bättre resultat då risken för kollisioner minskar. Bilden är baserad på data från traceroutes och är inte heltäckande.&lt;/p></description></item></channel></rss>
