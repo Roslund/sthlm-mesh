@@ -51,10 +51,11 @@ MediumFast klarar en Signal to Noise Ratio på `-15dBm` till skillnad mot LongFa
 
 
 ##### Vilka andra europeiska städer har bytt?
-Stockholm följer trenden. Flertalet andra stora europeiska mesh-nätverk har bytt till MediumFast med lyckat resultat. Till exempel:
+Stockholm följer trenden. Flertalet andra stora europeiska mesh-nätverk har bytt från LongFast med lyckat resultat. Till exempel:
 - **Berlin**: [Bytte till MediumFast](https://www.reddit.com/r/meshtastic/comments/1kal6vv/berlin_is_switching_to_mediumfast/)
 - **Paris**: [Använder MediumFast](https://wiki.mesh-idf.fr/fr/carte/carte-du-mesh-idf)  
 - **Polen**: [Nationell kampanj för MediumFast](https://przejdznamediumfast.pl/)
+- **Madrid**: Har bytt till MediumSlow.
 
 Det finns säkert fler som vi inte känner till. Har du koll på andra städer i Europa som har bytt, meddela oss på Discord.
 
