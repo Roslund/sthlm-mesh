@@ -32,6 +32,29 @@ Antalet meddelanden per timme senaste 7 dygnen. Grafen visar meddelanden som ski
 </div>
 
 
+## Kanalutnyttjande
+Mätarna visar genomsnittligt kanalutnyttjande för de 10 noder som har högst kanalutnyttjande. Kanalutnyttjande (Channel Utilization) visar hur mycket av radiokanalen som är upptagen. Under 15–20% är allt normalt, över 25% får Telemetri lägre prioritet, vilket kan ge längre tid mellan uppdateringar. Runt 40% stryps positionsuppdateringar. Här i EU gäller dessutom max 10% sändtid per timme som kan pausa sändningar helt.
+
+<div class="container my-3 mx-0" style="max-width: 1000px;">
+  <div class="row text-center px-0">
+    <div class="col-md-6">
+      <h5 class="text-muted mb-3">LongFast</h5>
+      <div id="longfastGaugeContainer" class="stats-chart-container" style="height: 300px;">
+        <canvas id="longfastGauge"></canvas>
+      </div>
+      <div id="longfastLegend" class="mt-3" style="font-size: 0.85rem;"></div>
+    </div>
+    <div class="col-md-6">
+      <h5 class="text-muted mb-3">MediumFast</h5>
+      <div id="mediumfastGaugeContainer" class="stats-chart-container" style="height: 300px;">
+        <canvas id="mediumfastGauge"></canvas>
+      </div>
+      <div id="mediumfastLegend" class="mt-3" style="font-size: 0.85rem;"></div>
+    </div>
+  </div>
+</div>
+
+
 ## Skapade paket per nod
 Grafen nedan visar vilka noder som har skickat flest paket under det senaste dygnet. 
 Graferna bygger på MQTT-data från ett begränsat antal noder.
@@ -143,6 +166,7 @@ Graferna baseras på data från [map.sthlm-mesh.se](https://map.sthlm-mesh.se), 
 <script src="/js/status/firmware-versions.js"></script>
 <script src="/js/status/battery-stats.js"></script>
 <script src="/js/status/channel-utilization.js"></script>
+<script src="/js/status/channel-utilization-gauges.js"></script>
 <script src="/js/status/is-unmessagable-chart.js"></script>
 <script src="/js/status/is-ok-to-mqtt-chart.js"></script>
 <script src="/js/status/max-hops-chart.js"></script>
