@@ -1,7 +1,6 @@
 function countNodesSince(daysAgo) {
     const now = new Date();
-    const threshold = new Date(now);
-    threshold.setDate(threshold.getDate() - daysAgo);
+    const threshold = new Date(now.getTime() - daysAgo * 24 * 60 * 60 * 1000);
     return nodes.filter(node => new Date(node.updated_at) >= threshold).length;
 }
 

@@ -4,8 +4,8 @@ let chartInstance;
 
 function filterSuggestions(query) {
     const lowerQuery = query.toLowerCase();
-    const threshold = new Date();
-    threshold.setDate(threshold.getDate() - 1);
+    const now = new Date();
+    const threshold = new Date(now.getTime() - 1 * 24 * 60 * 60 * 1000);
     return nodes
         .filter(node => new Date(node.updated_at) >= threshold)
         .filter(node => node.long_name?.toLowerCase().includes(lowerQuery)) || [];
