@@ -10,12 +10,27 @@ För att få ett stabilare mesh där vi har möjlighet att fortsätta växa komm
 - **Bättre batteritid**: Särskilt viktigt för solcellsdrivna noder
 - **Högre nodkapacitet**: Plats för fler noder i nätverket
 
+
 Bilden nedan visar hur en övergång till MediumFast påverkar förbindelser i meshen. I praktiken förväntar vi oss ännu bättre resultat då risken för kollisioner minskar. Bilden är baserad på data från traceroutes och är inte heltäckande. 
 
 {{< image-compare left="/images/blog/2025-09-19-switch-to-mediumfast-lf.png" right="/images/blog/2025-09-19-switch-to-mediumfast-mf.png" left-alt="LongFast anslutningar" right-alt="MediumFast anslutningar" caption="Jämförelse mellan LongFast (vänster) och MediumFast (höger) anslutningar i Stockholm mesh. Dra reglaget för att se skillnaden." >}}
 
 ### Meetup
 Vi planerar även att köra en meetup den 1:a oktober för att utvärdera övergången till MediumFast. Förhoppningsvis kan vi fira och fokusera på hur meshet blir ännu bättre i framtiden. Mer info kommer.
+
+### Övergångsstatus till MediumFast
+Denna mätare visar hur många noder som har växlat till MediumFast-kanalen av det totala antalet noder som hörts idag.
+
+<div class="container my-3 mx-0" style="max-width: 600px;">
+  <div class="row text-center px-0">
+    <div class="col">
+      <div id="transitionGaugeContainer" class="stats-chart-container" style="height: 300px;">
+        <canvas id="transitionGauge"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 ### Mer teknisk information
 För fler tekniska detaljer om MediumFast, läs Meshtastics officiella artikel: [Why Your Mesh Should Switch From LongFast](https://meshtastic.org/blog/why-your-mesh-should-switch-from-longfast/)
@@ -59,3 +74,8 @@ Stockholm följer trenden. Flertalet andra stora europeiska mesh-nätverk har by
 
 Det finns säkert fler som vi inte känner till. Har du koll på andra städer i Europa som har bytt, meddela oss på Discord.
 
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
+<script src="/js/status/shared.js"></script>
+<script src="/js/status/transition-status-gauge.js"></script>
