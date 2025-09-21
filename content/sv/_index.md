@@ -70,7 +70,7 @@ Vi rekommenderar den senaste betan, men titta tillbaka regelbundet då utvecklin
 
 {{% blocks/feature icon="fab fa-app-store-ios" title="Konfigurera med appen" %}}
 För att konfigurera din enhet rekommenderas den officiella appen för <a href="https://apple.co/3Auysep" target="_blank" rel="noopener noreferrer">iOS</a> eller <a href="https://play.google.com/store/apps/details?id=com.geeksville.mesh" target="_blank" rel="noopener noreferrer">Android</a>. \
-I Stockholm använder vi kanal-preseten **Long Fast**. \
+I Stockholm använder vi kanal-preseten **Medium Range - Fast**. \
 För mer detaljer om enhetskonfiguration se vår sida: [Rekommenderade Inställningar]({{<ref settings>}}).
 {{% /blocks/feature %}}
 

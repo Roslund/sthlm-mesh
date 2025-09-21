@@ -7,14 +7,14 @@ Här listas rekommenderade inställningar för Stockholm. Inställningarna heter
 
 ## LoRa Configuration
 
-| Inställning      | Värde       | Beskrivning |
-|------------------|-------------|-------------|
-| Region           | EU_868      | Den som primärt används i Sverige och EU |
-| Modem Preset     | `LONG_FAST` |             |
-| Max Hops         | 4-5         | Försök håll så lågt som möjligt |
-| Transmit Enabled | true        | Kan stängas av vid byta antenn [^1] |
-| Ignore MQTT      | true        | Vidarebefordra inte meddelanden som kommer från MQTT |
-| OK to MQTT       | true        | Kan stängas av föra att inte synas på karttjänsterna [^2] |
+| Inställning      | Värde         | Beskrivning |
+|------------------|---------------|-------------|
+| Region           | EU_868        | Den som primärt används i Sverige och EU |
+| Modem Preset     | `MEDIUM_FAST` | Medium Range - Fast            |
+| Max Hops         | 4-5           | Försök håll så lågt som möjligt |
+| Transmit Enabled | true          | Kan stängas av vid byta antenn [^1] |
+| Ignore MQTT      | true          | Vidarebefordra inte meddelanden som kommer från MQTT |
+| OK to MQTT       | true          | Kan stängas av föra att inte synas på karttjänsterna [^2] |
 
 [^1]: Det kan vara skadligt för enheten att sända utan antenn.
 [^2]: Detta är enbart en vädjan, det finns inget kryptografiskt skydd. Flertalet tjänster ignorerar denna vädjan och publicerar din nod ändå. 
