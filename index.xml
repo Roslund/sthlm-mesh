@@ -16,8 +16,8 @@
  &lt;/tr>
  &lt;tr>
  &lt;td>Modem Preset&lt;/td>
- &lt;td>&lt;code>LONG_FAST&lt;/code>&lt;/td>
- &lt;td>&lt;/td>
+ &lt;td>&lt;code>MEDIUM_FAST&lt;/code>&lt;/td>
+ &lt;td>Medium Range - Fast&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>Max Hops&lt;/td>
