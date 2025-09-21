@@ -1,6 +1,6 @@
 ---
 title: Tidigare Meetups
 description: nej
-layout: list
+layout: meetups_list
 weight: 70
 ---

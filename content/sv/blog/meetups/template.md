@@ -1,6 +1,7 @@
 ---
 title: Meetup 19 Augusti - Telefonplan
 date: 2025-08-24
+layout: meetup_single
 build:
   render: never
   list: false

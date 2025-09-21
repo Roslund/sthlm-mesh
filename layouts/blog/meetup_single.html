@@ -1,0 +1,29 @@
+{{ define "main" -}}
+<div class="td-content">
+	<h1>{{ .Title }}</h1>
+	{{ with .Params.description }}<div class="lead">{{ . | markdownify }}</div>{{ end }}
+	
+	{{/* Show meetup content without blog post metadata */}}
+	{{ .Content }}
+	
+	{{/* Optional: Add navigation to other meetups */}}
+	<div class="mt-5 pt-3 border-top">
+		<div class="row">
+			<div class="col">
+				{{ with .PrevInSection }}
+					<a href="{{ .RelPermalink }}" class="btn btn-outline-primary">
+						← {{ .Title }}
+					</a>
+				{{ end }}
+			</div>
+			<div class="col text-end">
+				{{ with .NextInSection }}
+					<a href="{{ .RelPermalink }}" class="btn btn-outline-primary">
+						{{ .Title }} →
+					</a>
+				{{ end }}
+			</div>
+		</div>
+	</div>
+</div>
+{{- end }}

@@ -1,6 +1,6 @@
 ---
-title: Meetups
-layout: list
+title: Kommande Meetups
+layout: meetups_list
 weight: 60
 ---
 
@@ -13,10 +13,10 @@ STHLM-MESH är ett community – vem som helst kan arrangera en träff. Så här
 
 1. Skapa en ny fil i `content/sv/blog/meetups/` (namnge gärna med datum i filnamnet).
 2. Utgå från mallen i `content/sv/blog/meetups/template.md` och fyll i plats, datum, tid och en kort beskrivning.
-3. Vill du använda vår RSVP-komponent skapa även en json fil under `static/events` utgå från filen `template.json`
+3. Vill du använda vår RSVP-komponent, skapa även en json-fil under `static/events` och utgå från filen `template.json`
 4. Skicka en PR på GitHub
 
-Alternativ är det bara skriva till oss på Discord så hjälper vi dig lägga upp ditt event.
+Alternativt kan du skriva till oss på Discord så hjälper vi dig lägga upp ditt event.
 
 
 ### Tidigare meetups
