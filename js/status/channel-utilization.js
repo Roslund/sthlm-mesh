@@ -41,7 +41,7 @@ async function channelUtilizationHourlyAverage() {
             },
           },
           y: {
-            min: 9.5,
+            min: 6,
             max: 14,
             title: { display: true, text: 'Avg. Channel Utilization (%)' }
           }
