@@ -24,7 +24,7 @@ function parseRSVPMessage(messageText, messagePattern) {
 }
 
 async function fetchMessages() {
-    const response = await fetch('https://map.sthlm-mesh.se/api/v1/text-messages?order=desc&count=500');
+    const response = await fetch('https://map.sthlm-mesh.se/api/v1/text-messages?order=desc&count=1000');
     const data = await response.json();
     return data.text_messages;
 }
