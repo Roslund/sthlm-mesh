@@ -53,6 +53,9 @@ Mätarna visar genomsnittligt kanalutnyttjande för de 10 noder som har högst k
     </div>
   </div>
 </div>
+<div id="channelUtilizationContainer" class="stats-chart-container" style="min-height:300px;">
+    <canvas id="channelUtilizationChart"></canvas>
+</div>
 
 
 ## Skapade paket per nod
@@ -128,14 +131,6 @@ Visar genomsnittlig batterinivå av de noder som rapporterat batteri nivå och i
 <div id="batteryContainer" class="stats-chart-container" style="min-height:300px;">
     <canvas id="batteryChart"></canvas>
 </div>
-
-
-## Channel Utilization
-Visar den genomsnittliga Channel Utilization, det vill säga hur mycket radiofrekvensen används, baserat på rapporter från enheter i meshen. Eftersom enheter inte skickar telemetri när kanalutnyttjandet är högt kan siffran bli missvisande. Detsamma gäller för portabla enheter eller enheter som är placerade inomhus. Förhoppningsvis ger grafen ändå ett värdefullt underlag för att förstå hur meshen mår.
-<div id="channelUtilizationContainer" class="stats-chart-container" style="min-height:300px;">
-    <canvas id="channelUtilizationChart"></canvas>
-</div>
-
 
 ## Hårdvarumodeller
 Antalet enheter av respektive hårdvarutyp som synts i meshet de senaste 30 dagarna.
