@@ -60,7 +60,7 @@ async function fetchBinaryContent(url) {
 
       const factory = await fetchBinaryContent(`/firmware/${board.hwModelSlug}/${version}/firmware-${board.hwModelSlug}-${version}.bin`);
       const ota     = await fetchBinaryContent(`/firmware/bleota-s3.bin`);
-      const lfs     = await fetchBinaryContent(`/firmware/${board.hwModelSlug}/${version}/littlefswebui-${board.hwModelSlug}-${version}.bin`);
+      const lfs     = await fetchBinaryContent(`/firmware/${board.hwModelSlug}/${version}/littlefs-${board.hwModelSlug}-${version}.bin`);
 
       fileArray = [
         { address: 0x0000,      data: factory },
