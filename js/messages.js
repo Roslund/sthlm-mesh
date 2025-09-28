@@ -191,7 +191,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     function renderOkToMqttWarning(nodeId) {
         const node = state.nodesById[nodeId];
         if (!node?.ok_to_mqtt) {
-            console.log("Node", nodeId, "has ok_to_mqtt", node?.ok_to_mqtt);
             return `<span class="text-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-container="body" data-bs-trigger="hover focus" title="Denna nod har inte ok_to_mqtt. Meddelanden ignoreras av flertalet gateways.">⚠️</span>`;
         }
         return "";
