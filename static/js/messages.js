@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", async function () {
     const messagesContainer = document.getElementById("messages");
     const radioButtons = document.querySelectorAll("input[name='btnradio']");
+    const channelRadioButtons = document.querySelectorAll("input[name='btnchannel']");
     const loadingDiv = document.getElementById("loading");
     const messagesList = document.createElement("div");
     messagesList.style="max-height:70vh;overflow: auto;"
@@ -15,36 +16,64 @@ document.addEventListener("DOMContentLoaded", async function () {
         radio.addEventListener("change", fetchMessages);
     });
 
+    channelRadioButtons.forEach(radio => {
+        radio.addEventListener("change", fetchMessages);
+    });
+
 
     async function fetchMessages() {
         try {
-            let url = "https://map.sthlm-mesh.se/api/v1/text-messages?order=desc";
+            let url = "https://map.sthlm-mesh.se/api/v1/text-messages?order=desc&count=300";
             const selectedRadio = document.querySelector("input[name='btnradio']:checked");
+            const selectedChannel = document.querySelector("input[name='btnchannel']:checked");
 
-            //If all is not selected we fetch 30 messages. If not we fetch 100 due to duplicates
-            if (selectedRadio.id !== "all") {
-                url += `&gateway_id=${selectedRadio.id}`;
-                url += `&count=30`;
-            } else {
-                url += `&count=100`;
+            if (selectedChannel) {
+                const channelId = selectedChannel.getAttribute('data-channel');
+                if (channelId) {
+                    url += `&channel_id=${encodeURIComponent(channelId)}`;
+                }
             }
 
             const response = await fetch(url);
             const data = await response.json();
-            
-            //Filter duplicate messages
-            state.messages = Array.from(
-                new Map(data.text_messages.map(msg => [msg.packet_id, msg])).values()
-            );
+
+            // Group by packet_id and collect all gateways that heard the packet
+            const byPacket = new Map();
+            for (const msg of data.text_messages) {
+                let entry = byPacket.get(msg.packet_id);
+                if (!entry) {
+                    entry = { message: msg, gatewayIds: new Set() };
+                    byPacket.set(msg.packet_id, entry);
+                }
+                entry.gatewayIds.add(msg.gateway_id);
+            }
+
+            // Build aggregated messages with gateway_ids array
+            let aggregated = Array.from(byPacket.values()).map(entry => ({
+                ...entry.message,
+                gateway_ids: Array.from(entry.gatewayIds)
+            }));
+
+            // If a specific gateway is selected, filter to messages heard by that gateway
+            if (selectedRadio && selectedRadio.id !== "all") {
+                const selectedGatewayId = selectedRadio.id;
+                aggregated = aggregated.filter(m => m.gateway_ids && m.gateway_ids.some(id => id?.toString() === selectedGatewayId));
+            }
+
+            state.messages = aggregated;
 
             // Sort the messages, for some reason with multiple mqtt gateways they are unsorted.
             state.messages.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
 
             // fetch node info
-            for(const message of state.messages){
+            for (const message of state.messages) {
                 await fetchNodeInfo(message.to);
                 await fetchNodeInfo(message.from);
-                await fetchNodeInfo(message.gateway_id);
+                if (Array.isArray(message.gateway_ids)) {
+                    for (const gid of message.gateway_ids) {
+                        await fetchNodeInfo(gid);
+                    }
+                }
             }
 
             updateUI();
@@ -100,7 +129,10 @@ document.addEventListener("DOMContentLoaded", async function () {
                         <div class="px-2 py-1 pb-1 border rounded shadow-sm" style="background-color: #efefef">
                             <div class="">${escapeMessageText(message.text)}</div>
                         </div>
-                        <div class="pt-1" style="font-size: 0.65rem;color: grey;">${formatMessageTimestamp(message.created_at)}&ensp;${message.channel_id}</div>
+                        <div class="pt-1" style="font-size: 0.65rem;color: grey;">
+                            ${formatMessageTimestamp(message.created_at)}&ensp;${message.channel_id}
+                            ${renderGatewayShortNames(message.gateway_ids)}
+                        </div>
                     </div>
 
             `;
@@ -141,6 +173,21 @@ document.addEventListener("DOMContentLoaded", async function () {
     function formatMessageTimestamp(createdAt) {
         const date = new Date(createdAt);
         return date.toLocaleString('sv-SE', { hour12: false }).slice(0, 16);
+    }
+
+    function renderGatewayShortNames(gatewayIds) {
+        if (!Array.isArray(gatewayIds) || gatewayIds.length === 0) {
+            return "";
+        }
+        const names = gatewayIds
+            .map(id => state.nodesById[id]?.short_name)
+            .filter(Boolean)
+            .map(n => `[${n}]`)
+            .join(' ');
+        if (!names) {
+            return "";
+        }
+        return `&ensp;Gated by: ${names}`;
     }
 
     await fetchMessages();
