@@ -7,6 +7,16 @@ document.addEventListener("DOMContentLoaded", async function () {
     messagesList.style="max-height:70vh;overflow: auto;"
     messagesContainer.appendChild(messagesList);
     
+    // Initialize Bootstrap tooltips (delegated) so static and dynamic elements work
+    if (window.bootstrap && typeof window.bootstrap.Tooltip === "function") {
+        new window.bootstrap.Tooltip(document.body, {
+            selector: "[data-bs-toggle='tooltip']",
+            container: "body"
+        });
+    } else {
+        console.warn("Bootstrap Tooltip not available; falling back to native titles.");
+    }
+    
     const state = {
         messages: [],
         nodesById: {},
@@ -131,7 +141,10 @@ document.addEventListener("DOMContentLoaded", async function () {
                             <div class="">${escapeMessageText(message.text)}</div>
                         </div>
                         <div class="pt-1" style="font-size: 0.65rem;color: grey;">
-                            ${formatMessageTimestamp(message.created_at)}&ensp;${message.channel_id}&ensp;${renderGatewayShortNames(message.gateways)}
+                            ${formatMessageTimestamp(message.created_at)}
+                            ${message.channel_id}&nbsp;
+                            ${renderGatewayShortNames(message.gateways)}&nbsp;
+                            ${renderOkToMqttWarning(message.from)}
                         </div>
                     </div>
 
@@ -173,6 +186,15 @@ document.addEventListener("DOMContentLoaded", async function () {
     function formatMessageTimestamp(createdAt) {
         const date = new Date(createdAt);
         return date.toLocaleString('sv-SE', { hour12: false }).slice(0, 16);
+    }
+
+    function renderOkToMqttWarning(nodeId) {
+        const node = state.nodesById[nodeId];
+        if (!node?.ok_to_mqtt) {
+            console.log("Node", nodeId, "has ok_to_mqtt", node?.ok_to_mqtt);
+            return `<span class="text-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-container="body" data-bs-trigger="hover focus" title="Denna nod har inte ok_to_mqtt. Meddelanden ignoreras av flertalet gateways.">⚠️</span>`;
+        }
+        return "";
     }
 
     function renderGatewayShortNames(gateways) {
