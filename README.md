@@ -1,7 +1,7 @@
 # STHLM-MESH
 
-**[STHLM-MESH](https://sthlm-mesh.se)** är webbsida byggd med [Hugo][] och använder [Docsy][] som tema.
-Sidan riktar sig till de som är intresserade av LoRa mesh teknologi i allmänhet. Med huvudfokus är det [Meshtastic][] mesh i som omfattar Stockholms området. 
+**[STHLM-MESH](https://sthlm-mesh.se)** är en webbsida byggd med [Hugo][] och använder [Docsy][] som tema.
+Sidan riktar sig till de som är intresserade av LoRa mesh-teknologi i allmänhet. Med huvudfokus är det [Meshtastic][]-mesh som omfattar Stockholmsområdet.
 
 Innehållet skrivs på svenska eller svengelska. Sidan har stöd för flera språk, men att översätta innehållet till engelska är inte prioriterat, då det finns redan massvis med information om Meshtastic på Engelska.
 
