@@ -24,7 +24,7 @@ function parseRSVPMessage(messageText, messagePattern) {
 }
 
 async function fetchMessages() {
-    const response = await fetch('https://map.sthlm-mesh.se/api/v1/text-messages?order=desc&count=1000');
+    const response = await fetch('https://map.sthlm-mesh.se/api/v1/text-messages?order=desc&count=3000');
     const data = await response.json();
     return data.text_messages;
 }
@@ -159,6 +159,49 @@ function generateRSVPHTML(summary) {
 }
 
 
+function mergeRSVPSummaries(primarySummary, manualAttendees) {
+    const latestByNode = new Map();
+
+    const addFrom = (collection, fallbackType) => {
+        if (!Array.isArray(collection)) return;
+        for (const attendee of collection) {
+            const nodeId = attendee.nodeId ?? attendee.node_id ?? attendee.id;
+            if (!nodeId) continue;
+            const responseType = attendee.response ?? fallbackType;
+            if (!responseType) continue;
+            const timestampString = attendee.timestamp ?? null;
+            const ts = timestampString ? new Date(timestampString).getTime() : -Infinity;
+
+            const existing = latestByNode.get(nodeId);
+            if (!existing || ts > existing.ts) {
+                latestByNode.set(nodeId, {
+                    nodeId: nodeId,
+                    shortName: attendee.shortName ?? attendee.short_name ?? '?',
+                    longName: attendee.longName ?? attendee.long_name ?? `!${parseInt(nodeId).toString(16)}`,
+                    response: responseType,
+                    timestamp: timestampString ?? existing?.timestamp ?? new Date(0).toISOString(),
+                    ts
+                });
+            }
+        }
+    };
+
+    ['yes', 'maybe', 'no'].forEach(type => addFrom(primarySummary?.[type], type));
+    ['yes', 'maybe', 'no'].forEach(type => addFrom(manualAttendees?.[type], type));
+
+    const merged = { yes: [], maybe: [], no: [] };
+    for (const { ts, ...attendee } of latestByNode.values()) {
+        if (merged[attendee.response]) merged[attendee.response].push(attendee);
+    }
+
+    Object.values(merged).forEach(arr =>
+        arr.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))
+    );
+
+    return merged;
+}
+
+
 /**
  * Initialize RSVP tracking for a specific event
  * Supports both active events (parse messages + JSON) and archived events (JSON only)
@@ -192,10 +235,8 @@ async function initRSVPTracker(eventId) {
             const responses = parseRSVPResponses(messages, eventData.messagePattern);
             summary = createRSVPSummary(responses);
             
-            // Add manual attendees
-            Object.entries(eventData.attendees).forEach(([type, attendees]) => {
-                summary[type].push(...attendees);
-            });
+            // Merge manual attendees with message-derived ones, keeping the latest response per attendee
+            summary = mergeRSVPSummaries(summary, eventData.attendees);
         }
         
         // Display results

@@ -1,9 +1,104 @@
 {
   "messagePattern": "AW 1/10",
   "description": "Meetup 1 Oktober - Sundbyberg",
+  "exportedAt": "2025-09-28T10:59:49.506Z",
   "attendees": {
-    "yes": [],
-    "maybe": [],
-    "no": []
+    "yes": [
+      {
+        "nodeId": "2665944228",
+        "shortName": "TPH1",
+        "longName": "TPH-1 Täby",
+        "response": "yes",
+        "timestamp": "2025-09-27T11:18:40.725Z"
+      },
+      {
+        "nodeId": "1422344156",
+        "shortName": "TELE",
+        "longName": "MDG Telefonplan",
+        "response": "yes",
+        "timestamp": "2025-09-26T23:07:19.802Z"
+      },
+      {
+        "nodeId": "2718571204",
+        "shortName": "DXD3",
+        "longName": "DXD3 Ruggen",
+        "response": "yes",
+        "timestamp": "2025-09-26T20:14:58.613Z"
+      },
+      {
+        "nodeId": "2947306466",
+        "shortName": "CVK",
+        "longName": "SA0CVK Primary",
+        "response": "yes",
+        "timestamp": "2025-09-26T19:53:44.302Z"
+      },
+      {
+        "nodeId": "2879616005",
+        "shortName": "JlyT",
+        "longName": "Jelly Test",
+        "response": "yes",
+        "timestamp": "2025-09-26T14:25:11.116Z"
+      },
+      {
+        "nodeId": "1128157388",
+        "shortName": "varg",
+        "longName": "vargtastic",
+        "response": "yes",
+        "timestamp": "2025-09-25T16:47:09.777Z"
+      },
+      {
+        "nodeId": "3681979732",
+        "shortName": "Ros",
+        "longName": "Ros Mobil",
+        "response": "yes",
+        "timestamp": "2025-09-24T16:02:08.895Z"
+      },
+      {
+        "nodeId": "1978245180",
+        "shortName": "CVK",
+        "longName": "SA0CVK 0 (Ny Router)",
+        "response": "yes",
+        "timestamp": "2025-09-22T17:06:11.296Z"
+      },
+      {
+        "nodeId": "3677336824",
+        "shortName": "Chip",
+        "longName": "Chip",
+        "response": "yes",
+        "timestamp": "2025-09-22T17:00:53.857Z"
+      },
+      {
+        "nodeId": "3655315140",
+        "shortName": "Ros9",
+        "longName": "Roslund9",
+        "response": "yes",
+        "timestamp": "2025-09-22T05:37:43.576Z"
+      },
+      {
+        "nodeId": "1222480744",
+        "shortName": "JwKL",
+        "longName": "JwK LF",
+        "response": "yes",
+        "timestamp": "2025-09-21T20:54:17.235Z"
+      }
+    ],
+    "maybe": [
+      {
+        "nodeId": "364861217",
+        "shortName": "KAKd",
+        "longName": "Kladdkakd",
+        "response": "maybe",
+        "timestamp": "2025-09-22T22:00:55.197Z"
+      }
+    ],
+    "no": [
+      {
+        "nodeId": "3946133666",
+        "shortName": "phPi",
+        "longName": "ph Raspberry Pi",
+        "response": "no",
+        "timestamp": "2025-09-26T20:11:29.025Z"
+      }
+    ]
   }
 }
