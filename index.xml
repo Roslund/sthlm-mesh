@@ -158,11 +158,14 @@ Detta har gjort WisBlock RAK4631 det självklara valet vid bygget av en solnod.&
  &lt;input type="radio" class="btn-check" name="btnradio" id="1978245180" autocomplete="off">
  &lt;label class="btn btn-outline-primary" for="1978245180" data-bs-toggle="tooltip" data-bs-placement="top" title="SA0CVK 0 (Ny Router)">CVK&lt;/label>
 
- &lt;input type="radio" class="btn-check" name="btnradio" id="862351628" autocomplete="off">
- &lt;label class="btn btn-outline-primary" for="862351628" data-bs-toggle="tooltip" data-bs-placement="top" title="JwK Bas">JwK&lt;/label>
+ &lt;input type="radio" class="btn-check" name="btnradio" id="862351184" autocomplete="off">
+ &lt;label class="btn btn-outline-primary" for="862351184" data-bs-toggle="tooltip" data-bs-placement="top" title="JwK Bas">JwK&lt;/label>
 
  &lt;input type="radio" class="btn-check" name="btnradio" id="3663385928" autocomplete="off">
  &lt;label class="btn btn-outline-primary" for="3663385928" data-bs-toggle="tooltip" data-bs-placement="top" title="Mariehäll Alprosen">Ros1&lt;/label>
+
+ &lt;input type="radio" class="btn-check" name="btnradio" id="2733242120" autocomplete="off">
+ &lt;label class="btn btn-outline-primary" for="2733242120" data-bs-toggle="tooltip" data-bs-placement="top" title="La Essingen S SM0YOS">ESSS&lt;/label>
 
  &lt;input type="radio" class="btn-check" name="btnradio" id="2718571204" autocomplete="off">
  &lt;label class="btn btn-outline-primary" for="2718571204" data-bs-toggle="tooltip" data-bs-placement="top" title="DXD3 Ruggen">DXD3&lt;/label>
@@ -172,6 +175,22 @@ Detta har gjort WisBlock RAK4631 det självklara valet vid bygget av en solnod.&
  &lt;/div>
  &lt;!-- Info Button with Tooltip -->
  &lt;div data-bs-toggle="tooltip" data-bs-placement="right" title="Visar meddelanden mottagna av respektive nod. Användbart för att förstå vilka noder som har hört ett meddelande.">
+ &lt;span class="badge rounded-pill bg-dark">?&lt;/span>
+ &lt;/div>
+ &lt;/div>
+ &lt;div class="btn-toolbar mb-2" role="toolbar" aria-label="Channel toolbar">
+ &lt;div class="btn-group btn-group-sm me-2" role="group" aria-label="Channel filter">
+ &lt;input type="radio" class="btn-check" name="btnchannel" id="channelAll" autocomplete="off" checked>
+ &lt;label class="btn btn-outline-primary" for="channelAll">Alla&lt;/label>
+ &lt;/div>
+ &lt;div class="btn-group btn-group-sm me-2" role="group" aria-label="Basic radio toggle button group">
+ &lt;input type="radio" class="btn-check" name="btnchannel" id="channelMediumFast" data-channel="MediumFast" autocomplete="off">
+ &lt;label class="btn btn-outline-primary" for="channelMediumFast">MediumFast&lt;/label>
+
+ &lt;input type="radio" class="btn-check" name="btnchannel" id="channelLongFast" data-channel="LongFast" autocomplete="off">
+ &lt;label class="btn btn-outline-primary" for="channelLongFast">LongFast&lt;/label>
+ &lt;/div>
+ &lt;div data-bs-toggle="tooltip" data-bs-placement="right" title="Filtrera på kanal eller visa alla.">
  &lt;span class="badge rounded-pill bg-dark">?&lt;/span>
  &lt;/div>
  &lt;/div>
