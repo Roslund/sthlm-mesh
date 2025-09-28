@@ -22,7 +22,7 @@
  &lt;tr>
  &lt;td>Max Hops&lt;/td>
  &lt;td>4-5&lt;/td>
- &lt;td>Försök håll så lågt som möjligt&lt;/td>
+ &lt;td>Försök hålla så lågt som möjligt&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>Transmit Enabled&lt;/td>
@@ -37,18 +37,18 @@
  &lt;tr>
  &lt;td>OK to MQTT&lt;/td>
  &lt;td>true&lt;/td>
- &lt;td>Kan stängas av föra att inte synas på karttjänsterna &lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/td>
+ &lt;td>Kan stängas av för att inte synas på karttjänsterna &lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
 &lt;h3 id="max-hops">Max hops&lt;a class="td-heading-self-link" href="#max-hops" aria-label="Heading self-link">&lt;/a>&lt;/h3>
-&lt;p>Max hops anger i hur många led noder ska vidarebefordra ditt meddelande. Max hops sätts när paket sänds, en nod som vidarebefordrar ett paket minskar &lt;em>max hops&lt;/em> med ett. Vad nodens som vidarebefordrar medelande har för max hopps påverkar inte.&lt;/p></description></item><item><title>Enhetsroller i Meshtastic</title><link>https://sthlm-mesh.se/docs/device_role/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/device_role/</guid><description>&lt;p>Enhetsrollen i Meshtastic avgör hur en nod fungerar inom nätverket. Varje roll är optimerad för specifika användningsområden och påverkar hur meshnätverket fungerar.&lt;/p>
+&lt;p>Max hops anger i hur många led noder ska vidarebefordra ditt meddelande. Max hops sätts när paket sänds, en nod som vidarebefordrar ett paket minskar &lt;em>max hops&lt;/em> med ett. Vad noden som vidarebefordrar meddelandet har för max hops påverkar inte.&lt;/p></description></item><item><title>Enhetsroller i Meshtastic</title><link>https://sthlm-mesh.se/docs/device_role/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/device_role/</guid><description>&lt;p>Enhetsrollen i Meshtastic avgör hur en nod fungerar inom nätverket. Varje roll är optimerad för specifika användningsområden och påverkar hur meshnätverket fungerar.&lt;/p>
 &lt;p>Att välja rätt roll är avgörande för ett välfungerande meshnätverk. Om en enhet har fel roll märks det sällan för användaren själv, men det kan försämra nätverkets prestanda.&lt;/p>
 &lt;h2 id="client">Client&lt;a class="td-heading-self-link" href="#client" aria-label="Heading self-link">&lt;/a>&lt;/h2>
 &lt;p>&lt;code>CLIENT&lt;/code> är &lt;em>standardrollen&lt;/em> för Meshtastic och fungerar bäst i de flesta fall. Det är först när nätverket blir större som det blir viktigt att noggrant välja rätt roller.&lt;/p></description></item><item><title>Position</title><link>https://sthlm-mesh.se/docs/position/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/position/</guid><description>&lt;p>En nod kan dela sin position till alla andra noder över meshet.
-Det gör det möjligt att se hur meshset sträcker sig geografiskt.&lt;/p>
+Det gör det möjligt att se hur meshet sträcker sig geografiskt.&lt;/p>
 &lt;p>För att dela position behövs antingen en GPS-modul eller en ansluten smartphone.
-Alternativt så kan man sätta en &lt;em>fixed location&lt;/em> där man själv anger koordinater, eller använder telefonens nuvarande position.&lt;/p>
+Alternativt kan man sätta en &lt;em>fixed location&lt;/em> där man själv anger koordinater eller använder telefonens nuvarande position.&lt;/p>
 &lt;h2 id="position-precision">Position Precision&lt;a class="td-heading-self-link" href="#position-precision" aria-label="Heading self-link">&lt;/a>&lt;/h2>
 &lt;p>Som standard kommer din nod inte dela med sig av sin exakta position. Den kommer skicka en position och en noggrannhet. Detta visar sig som en cirkel runt noden på karta, där din nod är någonstans inom den cirkeln.&lt;/p></description></item><item><title>Meetup 1 Oktober - Sundbyberg</title><link>https://sthlm-mesh.se/blog/2025/meetup-1-oktober-sundbyberg/</link><pubDate>Sun, 21 Sep 2025 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/blog/2025/meetup-1-oktober-sundbyberg/</guid><description>&lt;p>Nu är det dags för en Meshtastic AW i Stockholm igen! Vi träffas för att uvärdera övergången till MediumFast. Aningen firar vi eller så beslutar vi att gå tillbaka till LongFast.&lt;/p>
 &lt;p>Har du missat att vi går över till MediumFast så kan du &lt;a href="https://sthlm-mesh.se/blog/2025/%C3%B6verg%C3%A5ng-till-mediumfast-den-27-september/">läsa mer här&lt;/a>.&lt;/p>
@@ -89,8 +89,8 @@ Det ska vara upp till 22 grader på dagen och kvällen blir förhoppningsfullt v
 &lt;p>Vi använder MQTT för att kunna analysera meshet. Detta gör vi genom att enbart ha &lt;em>uplink&lt;/em> igång. På så sätt kan vi tillhandahålla information om meshet som går att analysera med andra verktyg.&lt;/p>
 &lt;p>Meshtastic har stöd för att använda MQTT för att &lt;em>brygga&lt;/em> olika mesh-nätverk.
 I Stockholm har vi redan ett stort mesh, och MQTT-trafik skulle snabbt överbelasta meshet.
-Därför har vi &lt;em>downlink&lt;/em> avstängt samt &lt;code>lora.ignore_mqtt&lt;/code> aktiverat.&lt;/p></description></item><item><title>Neighbor Info</title><link>https://sthlm-mesh.se/docs/neighbor_info/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/neighbor_info/</guid><description>&lt;p>&lt;a href="https://meshtastic.org/docs/configuration/module/neighbor-info/">Neighbor Info modulen&lt;/a> samlar information om en nods grannar som den har direktkontakt med (0-hopp). Denna information kan sedan skickas över MQTT eller LoRa.&lt;/p>
-&lt;p>Informationen kan sedan visualiseras på karttjänster. Liam Cottles karta visar information om varje förbindelse. Utöver SNR visas även en terränggraf från &lt;a href="HeyWhatsThat.com">HeyWhatsThat.com&lt;/a>.&lt;/p>
+Därför har vi &lt;em>downlink&lt;/em> avstängt samt &lt;code>lora.ignore_mqtt&lt;/code> aktiverat.&lt;/p></description></item><item><title>Neighbor Info</title><link>https://sthlm-mesh.se/docs/neighbor_info/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/neighbor_info/</guid><description>&lt;p>&lt;a href="https://meshtastic.org/docs/configuration/module/neighbor-info/">Neighbor Info-modulen&lt;/a> samlar information om en nods grannar som den har direktkontakt med (0-hopp). Denna information kan sedan skickas över MQTT eller LoRa.&lt;/p>
+&lt;p>Informationen kan sedan visualiseras på karttjänster. Liam Cottles karta visar information om varje förbindelse. Utöver SNR visas även en terränggraf från &lt;a href="https://www.heywhatsthat.com">HeyWhatsThat.com&lt;/a>.&lt;/p>
 
 &lt;figure>
  &lt;img src="https://sthlm-mesh.se/images/docs/neighbors.png" width="400px" height="300px"/> 
