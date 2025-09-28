@@ -10,7 +10,7 @@ async function deviceRolesChart() {
 
     try {
         await fetchNodes();
-        const predefinedLabels = ['CLIENT', 'CLIENT_MUTE', 'CLIENT_HIDDEN', 'ROUTER_LATE', 'ROUTER', 'ROUTER_CLIENT'];
+        const predefinedLabels = ['CLIENT', 'CLIENT_MUTE', 'CLIENT_HIDDEN', 'CLIENT_BASE', 'ROUTER_LATE', 'ROUTER', 'ROUTER_CLIENT'];
 
         // Count role occurrences
         const roleCounts = {};
