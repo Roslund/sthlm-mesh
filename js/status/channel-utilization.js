@@ -71,8 +71,8 @@ async function channelUtilizationHourlyAverage() {
             },
           },
           y: {
-            min: 10,
-            max: 24,
+            min: 8,
+            max: 26,
             title: { display: true, text: 'Avg. Channel Utilization (%)' }
           }
         },
@@ -90,20 +90,20 @@ async function channelUtilizationHourlyAverage() {
             annotations: {
               bad: {
                 type: 'box',
-                yMin: 20,
-                yMax: 24,
+                yMin: 22,
+                yMax: 100,
                 backgroundColor: 'rgba(255, 0, 0, 0.2)'
               },
               medium: {
                 type: 'box',
-                yMin: 15,
-                yMax: 20,
+                yMin: 16,
+                yMax: 22,
                 backgroundColor: 'rgba(234, 184, 57, 0.2)', //'rgba(255, 165, 0, 0.1)'
               },
               good: {
                 type: 'box',
                 yMin: 0,
-                yMax: 15,
+                yMax: 16,
                 backgroundColor: 'rgba(1, 163, 23, 0.1)', //'rgba(0, 128, 0, 0.1)'
               }
             }
