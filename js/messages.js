@@ -37,27 +37,28 @@ document.addEventListener("DOMContentLoaded", async function () {
             const response = await fetch(url);
             const data = await response.json();
 
-            // Group by packet_id and collect all gateways that heard the packet
+            // Group by packet_id and collect all gateways that heard the packet (with hops left)
             const byPacket = new Map();
             for (const msg of data.text_messages) {
                 let entry = byPacket.get(msg.packet_id);
                 if (!entry) {
-                    entry = { message: msg, gatewayIds: new Set() };
+                    entry = { message: msg, gateways: new Map() };
                     byPacket.set(msg.packet_id, entry);
                 }
-                entry.gatewayIds.add(msg.gateway_id);
+                // store the latest hop_limit seen for this gateway_id
+                entry.gateways.set(msg.gateway_id, msg.hop_limit);
             }
 
-            // Build aggregated messages with gateway_ids array
+            // Build aggregated messages with gateways array [{ gateway_id, hop_limit }]
             let aggregated = Array.from(byPacket.values()).map(entry => ({
                 ...entry.message,
-                gateway_ids: Array.from(entry.gatewayIds)
+                gateways: Array.from(entry.gateways.entries()).map(([gateway_id, hop_limit]) => ({ gateway_id, hop_limit }))
             }));
 
             // If a specific gateway is selected, filter to messages heard by that gateway
             if (selectedRadio && selectedRadio.id !== "all") {
                 const selectedGatewayId = selectedRadio.id;
-                aggregated = aggregated.filter(m => m.gateway_ids && m.gateway_ids.some(id => id?.toString() === selectedGatewayId));
+                aggregated = aggregated.filter(m => Array.isArray(m.gateways) && m.gateways.some(g => g.gateway_id?.toString() === selectedGatewayId));
             }
 
             state.messages = aggregated;
@@ -69,9 +70,9 @@ document.addEventListener("DOMContentLoaded", async function () {
             for (const message of state.messages) {
                 await fetchNodeInfo(message.to);
                 await fetchNodeInfo(message.from);
-                if (Array.isArray(message.gateway_ids)) {
-                    for (const gid of message.gateway_ids) {
-                        await fetchNodeInfo(gid);
+                if (Array.isArray(message.gateways)) {
+                    for (const g of message.gateways) {
+                        await fetchNodeInfo(g.gateway_id);
                     }
                 }
             }
@@ -130,8 +131,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                             <div class="">${escapeMessageText(message.text)}</div>
                         </div>
                         <div class="pt-1" style="font-size: 0.65rem;color: grey;">
-                            ${formatMessageTimestamp(message.created_at)}&ensp;${message.channel_id}
-                            ${renderGatewayShortNames(message.gateway_ids)}
+                            ${formatMessageTimestamp(message.created_at)}&ensp;${message.channel_id}&ensp;${renderGatewayShortNames(message.gateways)}
                         </div>
                     </div>
 
@@ -175,19 +175,24 @@ document.addEventListener("DOMContentLoaded", async function () {
         return date.toLocaleString('sv-SE', { hour12: false }).slice(0, 16);
     }
 
-    function renderGatewayShortNames(gatewayIds) {
-        if (!Array.isArray(gatewayIds) || gatewayIds.length === 0) {
+    function renderGatewayShortNames(gateways) {
+        if (!Array.isArray(gateways) || gateways.length === 0) {
             return "";
         }
-        const names = gatewayIds
-            .map(id => state.nodesById[id]?.short_name)
+        const sorted = gateways.slice().sort((a, b) => Number(a.gateway_id) - Number(b.gateway_id));
+        const names = sorted
+            .map(g => {
+                const short = state.nodesById[g.gateway_id]?.short_name;
+                if (!short) return null;
+                const hop = (g.hop_limit ?? '').toString();
+                return hop ? `[${short}: ${hop}]` : `[${short}]`;
+            })
             .filter(Boolean)
-            .map(n => `[${n}]`)
             .join(' ');
         if (!names) {
             return "";
         }
-        return `&ensp;Gated by: ${names}`;
+        return `Gated by: ${names}`;
     }
 
     await fetchMessages();
