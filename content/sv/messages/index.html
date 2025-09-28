@@ -15,11 +15,14 @@ menu: {main: {weight: 50}}
             <input type="radio" class="btn-check" name="btnradio" id="1978245180" autocomplete="off">
             <label class="btn btn-outline-primary" for="1978245180" data-bs-toggle="tooltip" data-bs-placement="top" title="SA0CVK 0 (Ny Router)">CVK</label>
 
-            <input type="radio" class="btn-check" name="btnradio" id="862351628" autocomplete="off">
-            <label class="btn btn-outline-primary" for="862351628" data-bs-toggle="tooltip" data-bs-placement="top" title="JwK Bas">JwK</label>
+            <input type="radio" class="btn-check" name="btnradio" id="862351184" autocomplete="off">
+            <label class="btn btn-outline-primary" for="862351184" data-bs-toggle="tooltip" data-bs-placement="top" title="JwK Bas">JwK</label>
 
             <input type="radio" class="btn-check" name="btnradio" id="3663385928" autocomplete="off">
             <label class="btn btn-outline-primary" for="3663385928" data-bs-toggle="tooltip" data-bs-placement="top" title="Mariehäll Alprosen">Ros1</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="2733242120" autocomplete="off">
+            <label class="btn btn-outline-primary" for="2733242120" data-bs-toggle="tooltip" data-bs-placement="top" title="La Essingen S SM0YOS">ESSS</label>
 
             <input type="radio" class="btn-check" name="btnradio" id="2718571204" autocomplete="off">
             <label class="btn btn-outline-primary" for="2718571204" data-bs-toggle="tooltip" data-bs-placement="top" title="DXD3 Ruggen">DXD3</label>
@@ -29,6 +32,22 @@ menu: {main: {weight: 50}}
         </div>
         <!-- Info Button with Tooltip -->
         <div data-bs-toggle="tooltip" data-bs-placement="right" title="Visar meddelanden mottagna av respektive nod. Användbart för att förstå vilka noder som har hört ett meddelande.">
+            <span class="badge rounded-pill bg-dark">?</span>
+        </div>
+    </div>
+    <div class="btn-toolbar mb-2" role="toolbar" aria-label="Channel toolbar">
+        <div class="btn-group btn-group-sm me-2" role="group" aria-label="Channel filter">
+            <input type="radio" class="btn-check" name="btnchannel" id="channelAll" autocomplete="off" checked>
+            <label class="btn btn-outline-primary" for="channelAll">Alla</label>
+        </div>
+        <div class="btn-group btn-group-sm me-2" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnchannel" id="channelMediumFast" data-channel="MediumFast" autocomplete="off">
+            <label class="btn btn-outline-primary" for="channelMediumFast">MediumFast</label>
+
+            <input type="radio" class="btn-check" name="btnchannel" id="channelLongFast" data-channel="LongFast" autocomplete="off">
+            <label class="btn btn-outline-primary" for="channelLongFast">LongFast</label>
+        </div>
+        <div data-bs-toggle="tooltip" data-bs-placement="right" title="Filtrera på kanal eller visa alla.">
             <span class="badge rounded-pill bg-dark">?</span>
         </div>
     </div>
