@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                             ${formatMessageTimestamp(message.created_at)}
                             ${message.channel_id}&nbsp;
                             ${renderGatewayShortNames(message.gateways)}&nbsp;
-                            ${renderOkToMqttWarning(message.from)}
+                            ${renderOkToMqttWarning(message.ok_to_mqtt)}
                         </div>
                     </div>
 
@@ -188,9 +188,8 @@ document.addEventListener("DOMContentLoaded", async function () {
         return date.toLocaleString('sv-SE', { hour12: false }).slice(0, 16);
     }
 
-    function renderOkToMqttWarning(nodeId) {
-        const node = state.nodesById[nodeId];
-        if (!node?.ok_to_mqtt) {
+    function renderOkToMqttWarning(okToMqtt) {
+        if (okToMqtt === false) {
             return `<span class="text-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-container="body" data-bs-trigger="hover focus" title="Denna nod har inte ok_to_mqtt. Meddelanden ignoreras av flertalet gateways.">⚠️</span>`;
         }
         return "";
