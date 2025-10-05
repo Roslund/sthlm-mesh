@@ -12,6 +12,8 @@ function getHopsColor(maxHops) {
     return 'rgb(200, 200, 200)';
 }
 
+let maxHopsChartInstance = null;
+
 async function maxHopsGraph() {
   const canvas = document.getElementById('maxHopsChart');
   const ctx = canvas.getContext('2d');
@@ -29,7 +31,13 @@ async function maxHopsGraph() {
     const countsByHops = {};
     for (let i = 0; i <= 7; i++) countsByHops[i] = 0;
 
-    const nodesWithMaxHops = nodes.filter(n => n.max_hops !== null && n.max_hops !== undefined);
+    const channelId = (typeof StatusFilter !== 'undefined' && StatusFilter.getChannelId) ? StatusFilter.getChannelId() : null;
+    const filteredNodes = Array.isArray(nodes) ? nodes.filter(n => {
+      if (!channelId) return true;
+      return n.channel_id === channelId;
+    }) : [];
+
+    const nodesWithMaxHops = filteredNodes.filter(n => n.max_hops !== null && n.max_hops !== undefined);
 
     for (const node of nodesWithMaxHops) {
       const val = Number(node.max_hops);
@@ -43,7 +51,12 @@ async function maxHopsGraph() {
     const chartContainer = document.getElementById('maxHopsContainer');
     if (chartContainer) chartContainer.style.height = `${labels.length * 35 + 50}px`;
 
-    new Chart(ctx, {
+    if (maxHopsChartInstance) {
+      maxHopsChartInstance.destroy();
+      maxHopsChartInstance = null;
+    }
+
+    maxHopsChartInstance = new Chart(ctx, {
       type: 'bar',
       data: {
         labels,
@@ -73,5 +86,13 @@ async function maxHopsGraph() {
 }
 
 maxHopsGraph();
+
+
+// Re-render on channel change
+document.addEventListener('DOMContentLoaded', () => {
+  if (typeof StatusFilter !== 'undefined' && StatusFilter.subscribe) {
+    StatusFilter.subscribe(() => maxHopsGraph());
+  }
+});
 
 
