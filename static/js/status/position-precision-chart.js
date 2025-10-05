@@ -77,6 +77,8 @@ function formatPositionPrecision(positionPrecision) {
 
 }
 
+let positionPrecisionChartInstance = null;
+
 async function positionPrecisionGraph() {
     const canvas = document.getElementById('positionPrecisionChart');
     const ctx = canvas.getContext('2d');
@@ -90,10 +92,13 @@ async function positionPrecisionGraph() {
 
     try {
         await fetchNodes();
+        const channelId = (typeof StatusFilter !== 'undefined' && StatusFilter.getChannelId) ? StatusFilter.getChannelId() : null;
         const countsByPrecision = {};
 
         // Filter out nodes without position_precision
-        const nodesWithPoistion = nodes.filter(node => node.position_precision != null);
+        const nodesWithPoistion = nodes
+            .filter(node => node.position_precision != null)
+            .filter(node => !channelId || node.channel_id === channelId);
 
         // Count how many nodes fall into each precision value
         for (const node of nodesWithPoistion) {
@@ -116,7 +121,12 @@ async function positionPrecisionGraph() {
         const chartContainer = document.getElementById('positionPrecisionContainer');
         chartContainer.style.height = `${labels.length * 35 + 50}px`;
 
-        new Chart(ctx, {
+        if (positionPrecisionChartInstance) {
+            positionPrecisionChartInstance.destroy();
+            positionPrecisionChartInstance = null;
+        }
+
+        positionPrecisionChartInstance = new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: labels,
@@ -145,3 +155,10 @@ async function positionPrecisionGraph() {
 
 
 positionPrecisionGraph();
+
+// Re-render on channel change
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof StatusFilter !== 'undefined' && StatusFilter.subscribe) {
+        StatusFilter.subscribe(() => positionPrecisionGraph());
+    }
+});

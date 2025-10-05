@@ -11,8 +11,11 @@ async function isUnmessagableGraph() {
 
     try {
         await fetchNodes();
-        // Filter nodes to only include those updated within the last 30 days
-        const recentNodes = nodes.filter(node => new Date(node.updated_at) >= new Date(Date.now() - 30 * 24 * 60 * 60 * 1000));
+        const channelId = (typeof StatusFilter !== 'undefined' && StatusFilter.getChannelId) ? StatusFilter.getChannelId() : null;
+        // Filter nodes to only include those updated within the last 30 days and channel match
+        const recentNodes = nodes
+            .filter(node => new Date(node.updated_at) >= new Date(Date.now() - 30 * 24 * 60 * 60 * 1000))
+            .filter(node => !channelId || node.channel_id === channelId);
 
         let countTrue = 0;
         let countFalse = 0;
@@ -32,7 +35,12 @@ async function isUnmessagableGraph() {
 
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        new Chart(ctx, {
+        if (window.isUnmessagableChartInstance) {
+            window.isUnmessagableChartInstance.destroy();
+            window.isUnmessagableChartInstance = null;
+        }
+
+        window.isUnmessagableChartInstance = new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: ['unmessagable', 'messagable'],
@@ -82,3 +90,10 @@ async function isUnmessagableGraph() {
 }
 
 isUnmessagableGraph();
+
+// Re-render on channel change
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof StatusFilter !== 'undefined' && StatusFilter.subscribe) {
+        StatusFilter.subscribe(() => isUnmessagableGraph());
+    }
+});

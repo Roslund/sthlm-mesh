@@ -11,8 +11,11 @@ async function isOkToMqttGraph() {
 
     try {
         await fetchNodes();
-        // Filter nodes to only include those updated within the last 30 days
-        const recentNodes = nodes.filter(node => new Date(node.updated_at) >= new Date(Date.now() - 30 * 24 * 60 * 60 * 1000));
+        const channelId = (typeof StatusFilter !== 'undefined' && StatusFilter.getChannelId) ? StatusFilter.getChannelId() : null;
+        // Filter nodes to only include those updated within the last 30 days and channel match
+        const recentNodes = nodes
+            .filter(node => new Date(node.updated_at) >= new Date(Date.now() - 30 * 24 * 60 * 60 * 1000))
+            .filter(node => !channelId || node.channel_id === channelId);
 
         let countTrue = 0;
         let countFalse = 0;
@@ -30,7 +33,12 @@ async function isOkToMqttGraph() {
 
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        new Chart(ctx, {
+        if (window.isOkToMqttChartInstance) {
+            window.isOkToMqttChartInstance.destroy();
+            window.isOkToMqttChartInstance = null;
+        }
+
+        window.isOkToMqttChartInstance = new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: ['True', 'False'],
@@ -76,5 +84,12 @@ async function isOkToMqttGraph() {
 }
 
 isOkToMqttGraph();
+
+// Re-render on channel change
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof StatusFilter !== 'undefined' && StatusFilter.subscribe) {
+        StatusFilter.subscribe(() => isOkToMqttGraph());
+    }
+});
 
 

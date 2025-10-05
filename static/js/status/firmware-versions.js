@@ -10,8 +10,11 @@ async function firmwareVersionGraph() {
 
     try {
         await fetchNodes();
-        // Filter out nodes without firmware_version
-        const nodesWithVersion = nodes.filter(node => node.firmware_version != null);
+        const channelId = (typeof StatusFilter !== 'undefined' && StatusFilter.getChannelId) ? StatusFilter.getChannelId() : null;
+        // Filter out nodes without firmware_version and channel match
+        const nodesWithVersion = nodes
+            .filter(node => node.firmware_version != null)
+            .filter(node => !channelId || node.channel_id === channelId);
 
         const countsByVersion = {};
         const validVersions = ['<2.5.0', '>2.5.0', '>2.6.8'];
@@ -39,7 +42,12 @@ async function firmwareVersionGraph() {
         const chartContainer = document.getElementById('firmwareVersionContainer');
         chartContainer.style.height = `${labels.length * 35 + 50}px`;
 
-        new Chart(ctx, {
+        if (window.firmwareVersionChartInstance) {
+            window.firmwareVersionChartInstance.destroy();
+            window.firmwareVersionChartInstance = null;
+        }
+
+        window.firmwareVersionChartInstance = new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: labels,
@@ -67,3 +75,10 @@ async function firmwareVersionGraph() {
 }
 
 firmwareVersionGraph();
+
+// Re-render on channel change
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof StatusFilter !== 'undefined' && StatusFilter.subscribe) {
+        StatusFilter.subscribe(() => firmwareVersionGraph());
+    }
+});

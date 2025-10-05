@@ -1,3 +1,6 @@
+let deviceRolesChartInstance = null;
+let selectedChannelIdRoles = null; // null = All
+
 async function deviceRolesChart() {
     const canvas = document.getElementById('deviceRoles');
     const ctx = canvas.getContext('2d');
@@ -14,7 +17,12 @@ async function deviceRolesChart() {
 
         // Count role occurrences
         const roleCounts = {};
-        nodes.forEach(node => {
+        const filteredNodes = Array.isArray(nodes) ? nodes.filter(n => {
+            if (!selectedChannelIdRoles) return true; // All
+            return n.channel_id === selectedChannelIdRoles;
+        }) : [];
+
+        filteredNodes.forEach(node => {
           const role = node.role_name || "UNKNOWN";
           roleCounts[role] = (roleCounts[role] || 0) + 1;
         });
@@ -36,7 +44,12 @@ async function deviceRolesChart() {
                                           return 'rgb(41, 156, 70)';
         });
 
-        new Chart(ctx, {
+        if (deviceRolesChartInstance) {
+            deviceRolesChartInstance.destroy();
+            deviceRolesChartInstance = null;
+        }
+
+        deviceRolesChartInstance = new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: labels,
@@ -71,3 +84,14 @@ async function deviceRolesChart() {
 }
 
 deviceRolesChart();
+
+// Listen via shared StatusFilter
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof StatusFilter !== 'undefined' && StatusFilter.subscribe) {
+        selectedChannelIdRoles = StatusFilter.getChannelId ? StatusFilter.getChannelId() : null;
+        StatusFilter.subscribe(() => {
+            selectedChannelIdRoles = StatusFilter.getChannelId ? StatusFilter.getChannelId() : null;
+            deviceRolesChart();
+        });
+    }
+});

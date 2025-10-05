@@ -7,6 +7,30 @@ draft: false
 <br/>
 {{% blocks/section color="white"  %}}
 
+<style>
+@media (max-width: 576px) {
+  #channelToolbar { top: 16px !important; }
+}
+</style>
+
+<div id="channelToolbar" class="d-flex justify-content-end sticky-top" style="top: 84px;">
+  <div class="btn-toolbar bg-white shadow-sm rounded-3 py-2 px-2" role="toolbar" aria-label="Channel toolbar">
+    <div class="btn-group btn-group-sm me-2" role="group" aria-label="Channel filter">
+      <input type="radio" class="btn-check" name="btnchannel-nodes" id="filterChannelAll" autocomplete="off" checked>
+      <label class="btn btn-outline-primary" for="filterChannelAll">Alla</label>
+    </div>
+    <div class="btn-group btn-group-sm me-2" role="group" aria-label="Basic radio toggle button group">
+      <input type="radio" class="btn-check" name="btnchannel-nodes" id="filterChannelMediumFast" data-channel="MediumFast" autocomplete="off">
+      <label class="btn btn-outline-primary" for="filterChannelMediumFast">MediumFast</label>
+      <input type="radio" class="btn-check" name="btnchannel-nodes" id="filterChannelLongFast" data-channel="LongFast" autocomplete="off">
+      <label class="btn btn-outline-primary" for="filterChannelLongFast">LongFast</label>
+    </div>
+    <div data-bs-toggle="tooltip" data-bs-placement="left" title="Filtrera på kanal eller visa alla.">
+      <span class="badge rounded-pill bg-dark">?</span>
+    </div>
+  </div>
+</div>
+
 ## Antal Enheter
 <div class="container my-3 mx-0" style="max-width: 1000px;">
   <div class="row text-center px-0">
@@ -165,3 +189,16 @@ Graferna baseras på data från [map.sthlm-mesh.se](https://map.sthlm-mesh.se), 
 <script src="/js/status/is-unmessagable-chart.js"></script>
 <script src="/js/status/is-ok-to-mqtt-chart.js"></script>
 <script src="/js/status/max-hops-chart.js"></script>
+<script>
+  // Initialize Bootstrap tooltips (delegated) so static and dynamic elements work
+  document.addEventListener('DOMContentLoaded', function () {
+      if (window.bootstrap && typeof window.bootstrap.Tooltip === 'function') {
+          new window.bootstrap.Tooltip(document.body, {
+              selector: "[data-bs-toggle='tooltip']",
+              container: 'body'
+          });
+      } else {
+          console.warn("Bootstrap Tooltip not available; falling back to native titles.");
+      }
+  });
+</script>

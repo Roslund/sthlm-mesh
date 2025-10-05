@@ -1,7 +1,15 @@
+let selectedChannelIdNodes = null; // null = All
+
 function countNodesSince(daysAgo) {
     const now = new Date();
     const threshold = new Date(now.getTime() - daysAgo * 24 * 60 * 60 * 1000);
-    return nodes.filter(node => new Date(node.updated_at) >= threshold).length;
+    return nodes
+        .filter(node => new Date(node.updated_at) >= threshold)
+        .filter(node => {
+            if (!selectedChannelIdNodes) return true; // All
+            return node.channel_id === selectedChannelIdNodes;
+        })
+        .length;
 }
 
 async function nodesSeen() {
@@ -13,3 +21,14 @@ async function nodesSeen() {
 }
 
 nodesSeen();
+
+// Listen for Antal Enheter channel changes (local only)
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof StatusFilter !== 'undefined' && StatusFilter.subscribe) {
+        selectedChannelIdNodes = StatusFilter.getChannelId ? StatusFilter.getChannelId() : null;
+        StatusFilter.subscribe(() => {
+            selectedChannelIdNodes = StatusFilter.getChannelId ? StatusFilter.getChannelId() : null;
+            nodesSeen();
+        });
+    }
+});

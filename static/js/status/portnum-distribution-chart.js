@@ -1,5 +1,6 @@
 let highlightedIndex = -1;
 let chartInstance;
+let selectedChannelIdPort = null; // null = All
 
 
 function filterSuggestions(query) {
@@ -97,6 +98,21 @@ document.getElementById('clearFilterBtn').addEventListener('click', () => {
     portnumDistributionChart(); // Reload full chart
 });
 
+// Channel filter listeners (mirrors messages/most-active-nodes design)
+if (typeof StatusFilter !== 'undefined' && StatusFilter.subscribe) {
+    StatusFilter.subscribe(() => {
+        selectedChannelIdPort = StatusFilter.getChannelId ? StatusFilter.getChannelId() : null;
+        const currentNodeName = document.getElementById('nodeSearch').value.trim();
+        if (currentNodeName) {
+            const match = (nodes || []).find(n => n.long_name === currentNodeName);
+            const nodeId = match ? match.node_id : null;
+            portnumDistributionChart(nodeId);
+        } else {
+            portnumDistributionChart();
+        }
+    });
+}
+
 // Main chart function
 async function portnumDistributionChart(nodeId = null) {
     const canvas = document.getElementById('portnumDistribution');
@@ -110,9 +126,11 @@ async function portnumDistributionChart(nodeId = null) {
 
     try {
         await fetchNodes();
-        const url = nodeId 
-            ? `https://map.sthlm-mesh.se/api/v1/stats/portnum-counts?nodeId=${nodeId}`
-            : 'https://map.sthlm-mesh.se/api/v1/stats/portnum-counts';
+        const base = 'https://map.sthlm-mesh.se/api/v1/stats/portnum-counts';
+        const params = new URLSearchParams();
+        if (nodeId) params.set('nodeId', nodeId);
+        if (selectedChannelIdPort) params.set('channel_id', selectedChannelIdPort);
+        const url = params.toString() ? `${base}?${params.toString()}` : base;
 
         const response = await fetch(url);
         const data = await response.json();
