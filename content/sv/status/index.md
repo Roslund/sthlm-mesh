@@ -50,7 +50,7 @@ draft: false
 </div>
 
 ## Text Meddelanden
-Antalet meddelanden per timme senaste 7 dygnen. Grafen visar meddelanden som skickats på LongFast kanalen, men även okrypterade meddelanden mellan noder. De meddelanden som skickas går att se [här]({{< ref messages >}}).
+Antalet meddelanden per timme senaste 7 dygnen. Grafen visar antal okrypterade meddelanden som skickats. Direktmedelanden mellan noder är krypterade och visas inte i grafen. De meddelanden som skickas går att se [här]({{< ref messages >}}).
 <div class="stats-chart-container" style="min-height:300px;">
     <canvas id="messagesChart"></canvas>
 </div>
@@ -62,18 +62,18 @@ Mätarna visar genomsnittligt kanalutnyttjande för de 10 noder som har högst k
 <div class="container my-3 mx-0" style="max-width: 1000px;">
   <div class="row text-center px-0">
     <div class="col-md-6 mb-4">
-      <h5 class="text-muted mb-3">LongFast</h5>
-      <div id="longfastGaugeContainer" class="stats-chart-container" style="height: 300px;">
+      <h5 class="text-muted">LongFast</h5>
+      <div id="longfastGaugeContainer" class="" style="height: 300px;">
         <canvas id="longfastGauge"></canvas>
       </div>
-      <div id="longfastLegend" class="mt-3" style="font-size: 0.85rem;"></div>
+      <div id="longfastLegend" class="" style="font-size: 0.85rem;"></div>
     </div>
     <div class="col-md-6">
-      <h5 class="text-muted mb-3">MediumFast</h5>
-      <div id="mediumfastGaugeContainer" class="stats-chart-container" style="height: 300px;">
+      <h5 class="text-muted">MediumFast</h5>
+      <div id="mediumfastGaugeContainer" class="" style="height: 300px;">
         <canvas id="mediumfastGauge"></canvas>
       </div>
-      <div id="mediumfastLegend" class="mt-3" style="font-size: 0.85rem;"></div>
+      <div id="mediumfastLegend" class="" style="font-size: 0.85rem;"></div>
     </div>
   </div>
 </div>
