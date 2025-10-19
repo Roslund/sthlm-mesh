@@ -160,7 +160,7 @@ function showTop10NodesLegend(channelName, top10Nodes) {
     
     if (!legendContainer || top10Nodes.length === 0) return;
 
-    let legendHTML = '<h6 class="text-muted mb-2">Top 10 Nodes:</h6>';
+    let legendHTML = '<h6 class="text-muted mb-2">Top 10 Nodes</h6>';
     legendHTML += '<div class="row">';
     
     top10Nodes.forEach((node, index) => {
@@ -169,7 +169,7 @@ function showTop10NodesLegend(channelName, top10Nodes) {
         
         legendHTML += `
             <div class="col-6 mb-1 d-flex align-items-center">
-                <span class="badge me-2" style="background-color: ${utilizationColor}; color: white; font-size: 0.7rem; min-width: 35px;">
+                <span class="badge me-2" style="background-color: ${utilizationColor}; color: white; font-size: 0.7rem; min-width: 45px;">
                     ${node.utilizationValue.toFixed(1)}%
                 </span>
                 <span class="text-truncate" style="font-size: 0.75rem;" title="${node.long_name || shortName}">
