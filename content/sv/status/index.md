@@ -55,7 +55,6 @@ Mätarna visar genomsnittligt kanalutnyttjande för de 10 noder som har högst k
 
 ## Skapade paket per nod
 Grafen nedan visar vilka noder som har skickat flest paket under det senaste dygnet. 
-Graferna bygger på MQTT-data från ett begränsat antal noder.
 Eftersom vi har begränsad bandbredd är det viktigt att hålla nere trafiken. En sändningsvolym på max 100 paket per dygn är önskvärd.
 <div id="mostActiveNodesContainer" class="stats-chart-container">
     <canvas id="mostActiveNodes"></canvas>

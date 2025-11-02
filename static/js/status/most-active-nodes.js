@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         y: {
                             ticks: { autoSkip: false, font: { size: 12 } }
                         },
-                        x: { max: 300 },
+                        x: { max: 200 },
                     },
                     plugins: {
                         legend: { display: false },
