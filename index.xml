@@ -217,28 +217,6 @@ Projektet drivs av entusiaster som vill utforska möjligheterna med decentralise
 &lt;section class="row td-box td-box--white td-box--height-auto">
 &lt;div class="col">
 &lt;div class="container">
-&lt;style>
-@media (max-width: 576px) {
- #channelToolbar { top: 16px !important; }
-}
-&lt;/style>
-&lt;div id="channelToolbar" class="d-flex justify-content-end sticky-top" style="top: 84px;">
- &lt;div class="btn-toolbar bg-white shadow-sm rounded-3 py-2 px-2" role="toolbar" aria-label="Channel toolbar">
- &lt;div class="btn-group btn-group-sm me-2" role="group" aria-label="Channel filter">
- &lt;input type="radio" class="btn-check" name="btnchannel-nodes" id="filterChannelAll" autocomplete="off" checked>
- &lt;label class="btn btn-outline-primary" for="filterChannelAll">Alla&lt;/label>
- &lt;/div>
- &lt;div class="btn-group btn-group-sm me-2" role="group" aria-label="Basic radio toggle button group">
- &lt;input type="radio" class="btn-check" name="btnchannel-nodes" id="filterChannelMediumFast" data-channel="MediumFast" autocomplete="off">
- &lt;label class="btn btn-outline-primary" for="filterChannelMediumFast">MediumFast&lt;/label>
- &lt;input type="radio" class="btn-check" name="btnchannel-nodes" id="filterChannelLongFast" data-channel="LongFast" autocomplete="off">
- &lt;label class="btn btn-outline-primary" for="filterChannelLongFast">LongFast&lt;/label>
- &lt;/div>
- &lt;div data-bs-toggle="tooltip" data-bs-placement="left" title="Filtrera på kanal eller visa alla.">
- &lt;span class="badge rounded-pill bg-dark">?&lt;/span>
- &lt;/div>
- &lt;/div>
-&lt;/div>
 &lt;h2 id="antal-enheter">Antal Enheter&lt;a class="td-heading-self-link" href="#antal-enheter" aria-label="Heading self-link">&lt;/a>&lt;/h2>
 &lt;div class="container my-3 mx-0" style="max-width: 1000px;">
  &lt;div class="row text-center px-0">
@@ -248,4 +226,18 @@ Projektet drivs av entusiaster som vill utforska möjligheterna med decentralise
  &lt;/div>
  &lt;div class="col">
  &lt;h2 class="display-4 text-warning fw-bold" id="count-7">–&lt;/h2>
- &lt;p class="text-muted">Senaste 7 dagarna&lt;/p></description></item></channel></rss>
+ &lt;p class="text-muted">Senaste 7 dagarna&lt;/p>
+ &lt;/div>
+ &lt;div class="col">
+ &lt;h2 class="display-4 text-success fw-bold" id="count-30">–&lt;/h2>
+ &lt;p class="text-muted">Senaste 30 dagarna&lt;/p>
+ &lt;/div>
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="text-meddelanden">Text Meddelanden&lt;a class="td-heading-self-link" href="#text-meddelanden" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>Antalet meddelanden per timme senaste 7 dygnen. Grafen visar antal okrypterade meddelanden som skickats. Direktmedelanden mellan noder är krypterade och visas inte i grafen. De meddelanden som skickas går att se &lt;a href="https://sthlm-mesh.se/messages/">här&lt;/a>.&lt;/p>
+&lt;div class="stats-chart-container" style="min-height:300px;">
+ &lt;canvas id="messagesChart">&lt;/canvas>
+&lt;/div>
+&lt;h2 id="kanalutnyttjande">Kanalutnyttjande&lt;a class="td-heading-self-link" href="#kanalutnyttjande" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>Mätarna visar genomsnittligt kanalutnyttjande för de 10 noder som har högst kanalutnyttjande. Kanalutnyttjande (Channel Utilization) visar hur mycket av radiokanalen som är upptagen. Under 15–20% är allt normalt, över 25% får Telemetri lägre prioritet, vilket kan ge längre tid mellan uppdateringar. Runt 40% stryps positionsuppdateringar. Här i EU gäller dessutom max 10% sändtid per timme som kan pausa sändningar helt.&lt;/p></description></item></channel></rss>
