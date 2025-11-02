@@ -2,15 +2,13 @@ async function channelUtilizationGauges() {
     try {
         await fetchNodes();
 
-        // Create gauges for both channels
-        await createChannelUtilizationGauge('LongFast', 'longfastGauge');
+        // Create gauge for MediumFast only
         await createChannelUtilizationGauge('MediumFast', 'mediumfastGauge');
 
     } catch (err) {
         console.error('Error creating channel utilization gauges:', err);
         
-        // Show error on both canvases
-        showGaugeError('longfastGauge');
+        // Show error on MediumFast canvas
         showGaugeError('mediumfastGauge');
     }
 }
@@ -160,26 +158,28 @@ function showTop10NodesLegend(channelName, top10Nodes) {
     
     if (!legendContainer || top10Nodes.length === 0) return;
 
-    let legendHTML = '<h6 class="text-muted mb-2">Top 10 Nodes</h6>';
-    legendHTML += '<div class="row">';
+    let legendHTML = '<h5 class="text-muted mb-2">Top 10 Nodes</h5>';
+    legendHTML += '<ul class="list-unstyled mb-0">';
     
     top10Nodes.forEach((node, index) => {
         const utilizationColor = getUtilizationColor(node.utilizationValue);
         const shortName = node.short_name || node.node_id_hex || `Node ${node.node_id}`;
+        const longName = node.long_name || '';
         
         legendHTML += `
-            <div class="col-6 mb-1 d-flex align-items-center">
+            <li class="mb-2 d-flex align-items-center">
                 <span class="badge me-2" style="background-color: ${utilizationColor}; color: white; font-size: 0.7rem; min-width: 45px;">
                     ${node.utilizationValue.toFixed(1)}%
                 </span>
-                <span class="text-truncate" style="font-size: 0.75rem;" title="${node.long_name || shortName}">
-                    ${shortName}
+                <span class="me-2" style="display:inline-block;width:7ch;font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 0.85rem; text-align:right; white-space:nowrap; overflow:hidden; text-overflow:clip;" title="${shortName}">[${shortName}]</span>
+                <span class="text-truncate" style="font-size: 0.85rem;" title="${longName || shortName}">
+                    ${longName}
                 </span>
-            </div>
+            </li>
         `;
     });
-    
-    legendHTML += '</div>';
+
+    legendHTML += '</ul>';
     legendContainer.innerHTML = legendHTML;
 }
 

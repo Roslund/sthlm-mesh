@@ -9,44 +9,23 @@ async function channelUtilizationHourlyAverage() {
   ctx.fillText('Loading...', canvas.width/2, canvas.height/2);
 
   try {
-    // Fetch data for both channels over the last 7 days
-    const [mediumFastResponse, longFastResponse] = await Promise.all([
-      fetch('https://map.sthlm-mesh.se/api/v1/stats/channel-utilization-stats?days=7&channel_id=MediumFast'),
-      fetch('https://map.sthlm-mesh.se/api/v1/stats/channel-utilization-stats?days=7&channel_id=LongFast')
-    ]);
+    // Fetch data for MediumFast over the last 7 days
+    const response = await fetch('https://map.sthlm-mesh.se/api/v1/stats/channel-utilization-stats?days=7&channel_id=MediumFast');
+    const allData = await response.json();
 
-    const mediumFastData = await mediumFastResponse.json();
-    const longFastData = await longFastResponse.json();
+    // Single dataset containing all points
+    const datasets = [];  
 
-    // Create datasets for both channels
-    const datasets = [];
-    
-    const mediumFastPoints = mediumFastData.map(entry => ({
+    const points = allData.map(entry => ({
       x: entry.recorded_at,
-      y: parseFloat(entry.avg_channel_utilization)
+      y: entry.avg_channel_utilization
     }));
-    
+
     datasets.push({
-      label: 'MediumFast',
-      data: mediumFastPoints,
+      label: 'channelutilization',
+      data: points,
       borderColor: 'rgb(34, 197, 94)',
       backgroundColor: 'rgba(34, 197, 94, 0.1)',
-      borderWidth: 2,
-      tension: 0.1,
-      pointRadius: 0,
-      fill: false,
-    });
-
-    const longFastPoints = longFastData.map(entry => ({
-      x: entry.recorded_at,
-      y: parseFloat(entry.avg_channel_utilization)
-    }));
-    
-    datasets.push({
-      label: 'LongFast',
-      data: longFastPoints,
-      borderColor: 'rgb(15, 169, 252)',
-      backgroundColor: 'rgba(15, 169, 252, 0.1)',
       borderWidth: 2,
       tension: 0.1,
       pointRadius: 0,
@@ -78,12 +57,7 @@ async function channelUtilizationHourlyAverage() {
         },
         plugins: {
           legend: { 
-            display: true,
-            position: 'top',
-            labels: {
-              usePointStyle: true,
-              padding: 20
-            }
+            display: false
           },
           tooltip: { mode: 'index', intersect: false },
           annotation: {
