@@ -126,6 +126,12 @@ Visar genomsnittlig batterinivå av de noder som rapporterat batteri nivå och i
     <canvas id="batteryChart"></canvas>
 </div>
 
+## Batteri - Solnoder
+Graf över batterinivå för utvalda solnoder senaste 30 dagarna.
+<div id="solarBatteryContainer" class="stats-chart-container" style="min-height:320px;">
+    <canvas id="solarBatteryChart"></canvas>
+  </div>
+
 ## Hårdvarumodeller
 Antalet enheter av respektive hårdvarutyp som synts i meshet de senaste 30 dagarna.
 <div id="hardwareChartContainer" class="stats-chart-container">
@@ -159,6 +165,7 @@ Graferna baseras på data från [map.sthlm-mesh.se](https://map.sthlm-mesh.se), 
 <script src="/js/status/is-unmessagable-chart.js"></script>
 <script src="/js/status/is-ok-to-mqtt-chart.js"></script>
 <script src="/js/status/max-hops-chart.js"></script>
+<script src="/js/status/solar-battery-chart.js"></script>
 <script>
   // Initialize Bootstrap tooltips (delegated) so static and dynamic elements work
   document.addEventListener('DOMContentLoaded', function () {
