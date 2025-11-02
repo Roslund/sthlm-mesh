@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", async function () {
     const messagesContainer = document.getElementById("messages");
     const radioButtons = document.querySelectorAll("input[name='btnradio']");
-    const channelRadioButtons = document.querySelectorAll("input[name='btnchannel']");
     const loadingDiv = document.getElementById("loading");
     const messagesList = document.createElement("div");
     messagesList.style="max-height:70vh;overflow: auto;"
@@ -26,23 +25,11 @@ document.addEventListener("DOMContentLoaded", async function () {
         radio.addEventListener("change", fetchMessages);
     });
 
-    channelRadioButtons.forEach(radio => {
-        radio.addEventListener("change", fetchMessages);
-    });
-
 
     async function fetchMessages() {
         try {
             let url = "https://map.sthlm-mesh.se/api/v1/text-messages?order=desc&count=300";
             const selectedRadio = document.querySelector("input[name='btnradio']:checked");
-            const selectedChannel = document.querySelector("input[name='btnchannel']:checked");
-
-            if (selectedChannel) {
-                const channelId = selectedChannel.getAttribute('data-channel');
-                if (channelId) {
-                    url += `&channel_id=${encodeURIComponent(channelId)}`;
-                }
-            }
 
             const response = await fetch(url);
             const data = await response.json();
