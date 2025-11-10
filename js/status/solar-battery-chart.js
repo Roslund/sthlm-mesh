@@ -35,7 +35,8 @@
 
     async function fetchDeviceMetrics(nodeId) {
         const base = `https://map.sthlm-mesh.se/api/v1/nodes/${nodeId}/device-metrics`;
-        const res = await fetch(`${base}?days=${encodeURIComponent(DAYS)}`);
+        const timeFromMs = Date.now() - (DAYS * 24 * 60 * 60 * 1000);
+        const res = await fetch(`${base}?time_from=${encodeURIComponent(timeFromMs)}`);
         if (!res.ok) throw new Error(`Failed to fetch metrics for ${nodeId}`);
         const data = await res.json();
         if (Array.isArray(data)) return data;
