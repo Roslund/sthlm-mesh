@@ -33,7 +33,7 @@ Antalet meddelanden per timme senaste 7 dygnen. Grafen visar antal okrypterade m
 
 
 ## Kanalutnyttjande
-Mätarna visar genomsnittligt kanalutnyttjande för de 10 noder som har högst kanalutnyttjande. Kanalutnyttjande (Channel Utilization) visar hur mycket av radiokanalen som är upptagen. Under 15–20% är allt normalt, över 25% får Telemetri lägre prioritet, vilket kan ge längre tid mellan uppdateringar. Runt 40% stryps positionsuppdateringar. Här i EU gäller dessutom max 10% sändtid per timme som kan pausa sändningar helt.
+Kanalutnyttjande (Channel Utilization) visar hur mycket av radiokanalen som är upptagen. Under 15–20% är allt normalt, över 25% får Telemetri lägre prioritet, vilket kan ge längre tid mellan uppdateringar. Runt 40% stryps positionsuppdateringar.
 
 <div class="container my-3 mx-0" style="max-width: 1000px;">
   <div class="row px-0 align-items-start">
@@ -127,7 +127,7 @@ Visar genomsnittlig batterinivå av de noder som rapporterat batteri nivå och i
 </div>
 
 ## Batteri - Solnoder
-Graf över batterinivå för utvalda solnoder senaste 30 dagarna.
+Graf över batterinivå för utvalda solnoder senaste 30 dagarna. Har du en solnod som levererar data stabilt, säg till på discord så kan vi lägga till den.
 <div id="solarBatteryContainer" class="stats-chart-container" style="min-height:320px;">
     <canvas id="solarBatteryChart"></canvas>
   </div>
