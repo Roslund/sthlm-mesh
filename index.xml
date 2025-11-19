@@ -245,4 +245,4 @@ Projektet drivs av entusiaster som vill utforska möjligheterna med decentralise
  &lt;canvas id="messagesChart">&lt;/canvas>
 &lt;/div>
 &lt;h2 id="kanalutnyttjande">Kanalutnyttjande&lt;a class="td-heading-self-link" href="#kanalutnyttjande" aria-label="Heading self-link">&lt;/a>&lt;/h2>
-&lt;p>Mätarna visar genomsnittligt kanalutnyttjande för de 10 noder som har högst kanalutnyttjande. Kanalutnyttjande (Channel Utilization) visar hur mycket av radiokanalen som är upptagen. Under 15–20% är allt normalt, över 25% får Telemetri lägre prioritet, vilket kan ge längre tid mellan uppdateringar. Runt 40% stryps positionsuppdateringar. Här i EU gäller dessutom max 10% sändtid per timme som kan pausa sändningar helt.&lt;/p></description></item></channel></rss>
+&lt;p>Kanalutnyttjande (Channel Utilization) visar hur mycket av radiokanalen som är upptagen. Under 15–20% är allt normalt, över 25% får Telemetri lägre prioritet, vilket kan ge längre tid mellan uppdateringar. Runt 40% stryps positionsuppdateringar.&lt;/p></description></item></channel></rss>
