@@ -11,6 +11,7 @@
         //286692481,  // Tornberget
         3324004241, // Skårdal 1
         3328975709, // MDG Gränö
+        235175901, // Hammarbyhöjden
     ];
 
     const DAYS = 30;
