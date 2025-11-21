@@ -120,15 +120,9 @@ Visar antalet noder som har "ok_to_mqtt" aktiverad eller avstängd under de sena
     <canvas id="isOkToMqttChart"></canvas>
 </div>
 
-## Batteri
-Visar genomsnittlig batterinivå av de noder som rapporterat batteri nivå och inte har fast strömförsörjning.
-<div id="batteryContainer" class="stats-chart-container" style="min-height:300px;">
-    <canvas id="batteryChart"></canvas>
-</div>
-
 ## Batteri - Solnoder
 Graf över batterinivå för utvalda solnoder senaste 30 dagarna. Har du en solnod som levererar data stabilt, säg till på discord så kan vi lägga till den.
-<div id="solarBatteryContainer" class="stats-chart-container" style="min-height:320px;">
+<div id="solarBatteryContainer" class="stats-chart-container" style="min-height:420px;">
     <canvas id="solarBatteryChart"></canvas>
   </div>
 
