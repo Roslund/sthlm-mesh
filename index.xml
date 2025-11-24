@@ -52,7 +52,16 @@ Alternativt kan man sätta en &lt;em>fixed location&lt;/em> där man själv ange
 &lt;h2 id="position-precision">Position Precision&lt;a class="td-heading-self-link" href="#position-precision" aria-label="Heading self-link">&lt;/a>&lt;/h2>
 &lt;p>Som standard kommer din nod inte dela med sig av sin exakta position. Den kommer skicka en position och en noggrannhet. Detta visar sig som en cirkel runt noden på karta, där din nod är någonstans inom den cirkeln.&lt;/p></description></item><item><title>Meetup 26 November - The Bishops Arms - Gamla stan</title><link>https://sthlm-mesh.se/blog/2025/meetup-26-november-the-bishops-arms-gamla-stan/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/blog/2025/meetup-26-november-the-bishops-arms-gamla-stan/</guid><description>&lt;p>Meetup för Meshtastic-communityt i Stockholm. Kom och visa din senaste nod eller bygge. Byt tips och erfarenheter med trevligt sällskap. Alla välkomna, nybörjare som erfarna meshare!&lt;/p>
 &lt;p>Ta gärna med din nod, eller visa upp det senaste bygget.&lt;/p>
-&lt;p>&lt;strong>📍 Plats:&lt;/strong>&lt;a href="https://maps.app.goo.gl/ZomJVTtqZj7pKFrU8">The Bishops Arms, Gamla stan&lt;/a>&lt;br>
+
+
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">OBS! Platsen har ändrats&lt;/h4>
+
+ Meetupet hålls på The Bishops Arms, Bellmansgatan (Slussen)!
+
+&lt;/div>
+
+&lt;p>&lt;strong>📍 Plats:&lt;/strong>&lt;a href="https://maps.app.goo.gl/iwhy8nLKVA6Ewr8p6">The Bishops Arms, Bellmansgatan&lt;/a>&lt;br>
 &lt;strong>📅 Datum:&lt;/strong> Onsdag 26 november&lt;br>
 &lt;strong>⏰ Tid:&lt;/strong> 17:00&lt;/p>
 &lt;p>Om du inte kan komma exakt 17:00 är det helt okej att dyka upp senare. Skriv gärna ett meddelande på meshen eller Discord om du kommer!&lt;/p></description></item><item><title>Meetup 12 November - LoRa Mesh möte på Värmdö</title><link>https://sthlm-mesh.se/blog/2025/meetup-12-november-lora-mesh-m%C3%B6te-p%C3%A5-v%C3%A4rmd%C3%B6/</link><pubDate>Sat, 01 Nov 2025 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/blog/2025/meetup-12-november-lora-mesh-m%C3%B6te-p%C3%A5-v%C3%A4rmd%C3%B6/</guid><description>&lt;p>Stockholms Skärgårds Sändareamatörer anordnar LoRa Mesh möte den 12 november från kl 18:00 i Mölnvik Brandstation, Värmdö (SK0MM:s lokal) med drop in. Det vore kul om du som är intresserad av Meshtastic o MeshCore o annat LoRa Mesh relaterat kommer då.&lt;/p>
