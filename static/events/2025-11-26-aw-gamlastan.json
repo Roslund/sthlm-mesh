@@ -1,9 +1,125 @@
 {
   "messagePattern": "AW 26/11",
+  "archived": true,
   "description": "AW Gamla Stan",
+  "exportedAt": "2025-12-13T09:09:07.721Z",
   "attendees": {
-    "yes": [],
-    "maybe": [],
+    "yes": [
+      {
+        "nodeId": "3633204928",
+        "shortName": "CVJ1",
+        "longName": "SA0CVJ",
+        "response": "yes",
+        "timestamp": "2025-11-26T12:54:32.633Z"
+      },
+      {
+        "nodeId": "3025077625",
+        "shortName": "0579",
+        "longName": "Hundmannen",
+        "response": "yes",
+        "timestamp": "2025-11-25T21:22:01.985Z"
+      },
+      {
+        "nodeId": "329721520",
+        "shortName": "Raj",
+        "longName": "Rasmus J",
+        "response": "yes",
+        "timestamp": "2025-11-25T14:01:37.321Z"
+      },
+      {
+        "nodeId": "2882571286",
+        "shortName": "Luho",
+        "longName": "Lura home",
+        "response": "yes",
+        "timestamp": "2025-11-25T14:00:58.704Z"
+      },
+      {
+        "nodeId": "4059642829",
+        "shortName": "TPH2",
+        "longName": "TPH-2 Mobil ",
+        "response": "yes",
+        "timestamp": "2025-11-24T12:26:36.901Z"
+      },
+      {
+        "nodeId": "3087528628",
+        "shortName": "mTag",
+        "longName": "mariosTag",
+        "response": "yes",
+        "timestamp": "2025-11-21T10:37:19.531Z"
+      },
+      {
+        "nodeId": "2523286013",
+        "shortName": "vrg2",
+        "longName": "Mobile varg",
+        "response": "yes",
+        "timestamp": "2025-11-20T23:05:55.157Z"
+      },
+      {
+        "nodeId": "610439448",
+        "shortName": "MDG6",
+        "longName": "MDG6 /TAG",
+        "response": "yes",
+        "timestamp": "2025-11-20T00:28:16.777Z"
+      },
+      {
+        "nodeId": "1044962682",
+        "shortName": "Trkb",
+        "longName": "Trekblast",
+        "response": "yes",
+        "timestamp": "2025-11-19T21:23:41.195Z"
+      },
+      {
+        "nodeId": "1770352332",
+        "shortName": "6ecc",
+        "longName": "JwK Car",
+        "response": "yes",
+        "timestamp": "2025-11-19T21:10:33.678Z"
+      },
+      {
+        "nodeId": "2171230534",
+        "shortName": "Oct",
+        "longName": "BuntBand",
+        "response": "yes",
+        "timestamp": "2025-11-19T18:05:25.449Z"
+      },
+      {
+        "nodeId": "3663385928",
+        "shortName": "Ros1",
+        "longName": "Mariehäll Alprosen",
+        "response": "yes",
+        "timestamp": "2025-11-19T17:14:14.914Z"
+      }
+    ],
+    "maybe": [
+      {
+        "nodeId": "2102445703",
+        "shortName": "0174",
+        "longName": "Rhutsunda",
+        "response": "maybe",
+        "timestamp": "2025-11-27T01:31:48.208Z"
+      },
+      {
+        "nodeId": "2681582544",
+        "shortName": "RydT",
+        "longName": "RydboholmTracker 🛰️📡",
+        "response": "maybe",
+        "timestamp": "2025-11-26T16:11:00.942Z"
+      },
+      {
+        "nodeId": "2068295693",
+        "shortName": "🤳",
+        "longName": "q-biq mob",
+        "response": "maybe",
+        "timestamp": "2025-11-25T14:52:20.570Z"
+      },
+      {
+        "nodeId": "2658667716",
+        "shortName": "BMKA",
+        "longName": "Bromma Kyrka ",
+        "response": "maybe",
+        "timestamp": "2025-11-23T17:23:09.142Z"
+      }
+    ],
     "no": []
   }
 }
