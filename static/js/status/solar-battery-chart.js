@@ -76,6 +76,7 @@
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
+                spanGaps: 1000 * 60 * 60 * 48,
                 scales: {
                     x: {
                         type: 'time',
