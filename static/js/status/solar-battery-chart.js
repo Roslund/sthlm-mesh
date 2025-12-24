@@ -12,6 +12,7 @@
         3324004241, // Skårdal 1
         3328975709, // MDG Gränö
         235175901, // Hammarbyhöjden
+        3766261774, // L_Sol_3
     ];
 
     const DAYS = 30;
