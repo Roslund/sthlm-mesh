@@ -48,6 +48,16 @@ Kanalutnyttjande (Channel Utilization) visar hur mycket av radiokanalen som är 
     </div>
   </div>
 </div>
+<div class="btn-group btn-group-sm mb-1" role="group" aria-label="Channel utilization period">
+  <input type="radio" class="btn-check" name="chUtilPeriod" id="chUtil7" value="7" autocomplete="off" checked>
+  <label class="btn btn-outline-primary" for="chUtil7">7 dagar</label>
+  <input type="radio" class="btn-check" name="chUtilPeriod" id="chUtil14" value="14" autocomplete="off">
+  <label class="btn btn-outline-primary" for="chUtil14">14 dagar</label>
+  <input type="radio" class="btn-check" name="chUtilPeriod" id="chUtil30" value="30" autocomplete="off">
+  <label class="btn btn-outline-primary" for="chUtil30">30 dagar</label>
+  <input type="radio" class="btn-check" name="chUtilPeriod" id="chUtil60" value="60" autocomplete="off">
+  <label class="btn btn-outline-primary" for="chUtil60">60 dagar</label>
+</div>
 <div id="channelUtilizationContainer" class="stats-chart-container" style="min-height:300px;">
     <canvas id="channelUtilizationChart"></canvas>
 </div>

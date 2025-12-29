@@ -1,6 +1,14 @@
-async function channelUtilizationHourlyAverage() {
+let chUtilChart = null;
+
+async function channelUtilizationHourlyAverage(days = 7) {
   const canvas = document.getElementById('channelUtilizationChart');
   const ctx = canvas.getContext('2d');
+
+  // Destroy existing chart if any
+  if (chUtilChart) {
+    chUtilChart.destroy();
+    chUtilChart = null;
+  }
 
   // show loading
   ctx.font = '16px Arial';
@@ -9,8 +17,7 @@ async function channelUtilizationHourlyAverage() {
   ctx.fillText('Loading...', canvas.width/2, canvas.height/2);
 
   try {
-    // Fetch data for MediumFast over the last 7 days
-    const response = await fetch('https://map.sthlm-mesh.se/api/v1/stats/channel-utilization-stats?days=7&channel_id=MediumFast');
+    const response = await fetch(`https://map.sthlm-mesh.se/api/v1/stats/channel-utilization-stats?days=${days}&channel_id=MediumFast`);
     const allData = await response.json();
 
     // Single dataset containing all points
@@ -32,7 +39,7 @@ async function channelUtilizationHourlyAverage() {
       fill: false,
     });
 
-    new Chart(ctx, {
+    chUtilChart = new Chart(ctx, {
       type: 'line',
       data: {
         datasets: datasets
@@ -94,5 +101,9 @@ async function channelUtilizationHourlyAverage() {
   }
 
 }
+
+document.querySelectorAll('input[name="chUtilPeriod"]').forEach(radio => {
+  radio.addEventListener('change', e => channelUtilizationHourlyAverage(e.target.value));
+});
 
 channelUtilizationHourlyAverage();
