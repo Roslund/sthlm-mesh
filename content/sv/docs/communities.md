@@ -17,3 +17,4 @@ weight: 120
 ## Webbsidor
 - [meshat.se](https://meshat.se)
 - [sk0qo.se](https://www.sk0qo.se/index.php/3698-ny-meshtastic-router-pa-plats-i-brandbergen)
+- [jkpg-mesh](https://jkpg-mesh.se)
