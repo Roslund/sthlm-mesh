@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Meshtastic on STHLM-MESH</title><link>https://sthlm-mesh.se/docs/meshtastic/</link><description>Recent content in Meshtastic on STHLM-MESH</description><generator>Hugo</generator><language>sv</language><atom:link href="https://sthlm-mesh.se/docs/meshtastic/index.xml" rel="self" type="application/rss+xml"/><item><title>Rekommenderade Inställningar</title><link>https://sthlm-mesh.se/docs/meshtastic/settings/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/meshtastic/settings/</guid><description>&lt;p>Här listas rekommenderade inställningar för Stockholm. Inställningarna heter olika saker och konfigureras på olika sätt i de olika klienterna. För mer information och detaljer rekommenderas den &lt;a href="https://meshtastic.org/docs/configuration/">officiella dokumentationen&lt;/a>.&lt;/p>
+&lt;h2 id="lora-configuration">LoRa Configuration&lt;a class="td-heading-self-link" href="#lora-configuration" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Inställning&lt;/th>
+ &lt;th>Värde&lt;/th>
+ &lt;th>Beskrivning&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>Region&lt;/td>
+ &lt;td>EU_868&lt;/td>
+ &lt;td>Den som primärt används i Sverige och EU&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Modem Preset&lt;/td>
+ &lt;td>&lt;code>MEDIUM_FAST&lt;/code>&lt;/td>
+ &lt;td>Medium Range - Fast&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Max Hops&lt;/td>
+ &lt;td>4-5&lt;/td>
+ &lt;td>Försök hålla så lågt som möjligt&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Transmit Enabled&lt;/td>
+ &lt;td>true&lt;/td>
+ &lt;td>Kan stängas av vid byta antenn &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Ignore MQTT&lt;/td>
+ &lt;td>true&lt;/td>
+ &lt;td>Vidarebefordra inte meddelanden som kommer från MQTT&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>OK to MQTT&lt;/td>
+ &lt;td>true&lt;/td>
+ &lt;td>Kan stängas av för att inte synas på karttjänsterna &lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="max-hops">Max hops&lt;a class="td-heading-self-link" href="#max-hops" aria-label="Heading self-link">&lt;/a>&lt;/h3>
+&lt;p>Max hops anger i hur många led noder ska vidarebefordra ditt meddelande. Max hops sätts när paket sänds, en nod som vidarebefordrar ett paket minskar &lt;em>max hops&lt;/em> med ett. Vad noden som vidarebefordrar meddelandet har för max hops påverkar inte.&lt;/p></description></item><item><title>Enhetsroller i Meshtastic</title><link>https://sthlm-mesh.se/docs/meshtastic/device_role/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/meshtastic/device_role/</guid><description>&lt;p>Enhetsrollen i Meshtastic avgör hur en nod fungerar inom nätverket. Varje roll är optimerad för specifika användningsområden och påverkar hur meshnätverket fungerar.&lt;/p>
+&lt;p>Att välja rätt roll är avgörande för ett välfungerande meshnätverk. Om en enhet har fel roll märks det sällan för användaren själv, men det kan försämra nätverkets prestanda.&lt;/p>
+&lt;h2 id="client">Client&lt;a class="td-heading-self-link" href="#client" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>&lt;code>CLIENT&lt;/code> är &lt;em>standardrollen&lt;/em> för Meshtastic och fungerar bäst i de flesta fall. Det är först när nätverket blir större som det blir viktigt att noggrant välja rätt roller.&lt;/p></description></item><item><title>Position</title><link>https://sthlm-mesh.se/docs/meshtastic/position/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/meshtastic/position/</guid><description>&lt;p>En nod kan dela sin position till alla andra noder över meshet.
+Det gör det möjligt att se hur meshet sträcker sig geografiskt.&lt;/p>
+&lt;p>För att dela position behövs antingen en GPS-modul eller en ansluten smartphone.
+Alternativt kan man sätta en &lt;em>fixed location&lt;/em> där man själv anger koordinater eller använder telefonens nuvarande position.&lt;/p>
+&lt;h2 id="position-precision">Position Precision&lt;a class="td-heading-self-link" href="#position-precision" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>Som standard kommer din nod inte dela med sig av sin exakta position. Den kommer skicka en position och en noggrannhet. Detta visar sig som en cirkel runt noden på karta, där din nod är någonstans inom den cirkeln.&lt;/p></description></item><item><title>MQTT</title><link>https://sthlm-mesh.se/docs/meshtastic/mqtt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/meshtastic/mqtt/</guid><description>&lt;p>MQTT (Message Queuing Telemetry Transport) är ett protokoll för meddelandeöverföring som ofta används för IoT-kommunikation. Det är designat för att vara effektivt, även i nätverk med låg bandbredd eller hög latens.&lt;/p>
+&lt;p>Vi använder MQTT för att kunna analysera meshet. Detta gör vi genom att enbart ha &lt;em>uplink&lt;/em> igång. På så sätt kan vi tillhandahålla information om meshet som går att analysera med andra verktyg.&lt;/p>
+&lt;p>Meshtastic har stöd för att använda MQTT för att &lt;em>brygga&lt;/em> olika mesh-nätverk.
+I Stockholm har vi redan ett stort mesh, och MQTT-trafik skulle snabbt överbelasta meshet.
+Därför har vi &lt;em>downlink&lt;/em> avstängt samt &lt;code>lora.ignore_mqtt&lt;/code> aktiverat.&lt;/p></description></item><item><title>Neighbor Info</title><link>https://sthlm-mesh.se/docs/meshtastic/neighbor_info/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/meshtastic/neighbor_info/</guid><description>&lt;p>&lt;a href="https://meshtastic.org/docs/configuration/module/neighbor-info/">Neighbor Info-modulen&lt;/a> samlar information om en nods grannar som den har direktkontakt med (0-hopp). Denna information kan sedan skickas över MQTT eller LoRa.&lt;/p>
+&lt;p>Informationen kan sedan visualiseras på karttjänster. Liam Cottles karta visar information om varje förbindelse. Utöver SNR visas även en terränggraf från &lt;a href="https://www.heywhatsthat.com">HeyWhatsThat.com&lt;/a>.&lt;/p>
+
+&lt;figure>
+ &lt;img src="https://sthlm-mesh.se/images/docs/neighbors.png" width="400px" height="300px"/> 
+&lt;/figure>
+
+&lt;h2 id="neighbor-info-konfiguration">Neighbor Info Konfiguration&lt;a class="td-heading-self-link" href="#neighbor-info-konfiguration" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>Neighbor Info bör &lt;strong>endast&lt;/strong> konfigureras på &lt;strong>statiska noder&lt;/strong>, helst de som har kontakt med många andra noder.
+För portabla noder som flyttar sig blir Neighbor Info missvisande.&lt;/p></description></item><item><title>Kartor</title><link>https://sthlm-mesh.se/docs/meshtastic/kartor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/meshtastic/kartor/</guid><description>&lt;p>Det finns massvis med olika karttjänster, vi rekommenderar Liam Cottles karta:
+&lt;a href="https://meshtastic.liamcottle.net/">https://meshtastic.liamcottle.net/&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://meshtastic.liamcottle.net/">&lt;img src="https://sthlm-mesh.se/featured-background-map.png" width="50%">&lt;/a>&lt;/p>
+
+
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">Uppmärksamma&lt;/h4>
+
+ För att tillåta andra noder publicera din nod på kartan behöver &lt;code>lora.config_ok_to_mqtt&lt;/code> vara aktiverat.
+
+&lt;/div>
+
+&lt;p>Kartan är ett fantastik verktyg för att analysera meshen, man kan se vart olika noder finns. vilka noder som har vilken roll. Klickar man på en nod och visar detaljer så får man grafer över telemetri. Kartan kan visa vilka noder som har kontakt med vilka genom &lt;a href="https://sthlm-mesh.se/docs/meshtastic/neighbor_info/">neighbor info&lt;/a> modulen.&lt;/p></description></item></channel></rss>

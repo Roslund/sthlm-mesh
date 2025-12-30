@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hårdvara on STHLM-MESH</title><link>https://sthlm-mesh.se/docs/hardware/</link><description>Recent content in Hårdvara on STHLM-MESH</description><generator>Hugo</generator><language>sv</language><atom:link href="https://sthlm-mesh.se/docs/hardware/index.xml" rel="self" type="application/rss+xml"/><item><title>Enheter</title><link>https://sthlm-mesh.se/docs/hardware/devices/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/hardware/devices/</guid><description>&lt;p>Tips på lite enhter&lt;/p>
+&lt;h2 id="portabla-enheter">Portabla enheter&lt;a class="td-heading-self-link" href="#portabla-enheter" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>Färdiga enheter för att använda portabelt&lt;/p>
+&lt;h3 id="wismesh-tag">WisMesh Tag&lt;a class="td-heading-self-link" href="#wismesh-tag" aria-label="Heading self-link">&lt;/a>&lt;/h3>
+&lt;p>&lt;a href="https://pileupdx.com/product/wismesh-tag/">https://pileupdx.com/product/wismesh-tag/&lt;/a>&lt;/p>
+&lt;h3 id="meshpocket-qi2">MeshPocket Qi2&lt;a class="td-heading-self-link" href="#meshpocket-qi2" aria-label="Heading self-link">&lt;/a>&lt;/h3>
+&lt;p>&lt;a href="https://pileupdx.com/product/meshpocket-qi2/">https://pileupdx.com/product/meshpocket-qi2/&lt;/a>&lt;/p>
+&lt;h2 id="kompletta-infrastuktursnoder">Kompletta infrastuktursnoder&lt;a class="td-heading-self-link" href="#kompletta-infrastuktursnoder" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;h3 id="heltec-meshtower">Heltec MeshTower&lt;a class="td-heading-self-link" href="#heltec-meshtower" aria-label="Heading self-link">&lt;/a>&lt;/h3>
+&lt;p>&lt;a href="https://pileupdx.com/product/heltec-meshtower-solar-powered-lora-node/">https://pileupdx.com/product/heltec-meshtower-solar-powered-lora-node/&lt;/a>&lt;/p>
+&lt;h3 id="sensecap-solar-node-p1-pro-for-meshtastic">SenseCAP Solar Node P1-Pro for Meshtastic&lt;a class="td-heading-self-link" href="#sensecap-solar-node-p1-pro-for-meshtastic" aria-label="Heading self-link">&lt;/a>&lt;/h3>
+&lt;p>&lt;a href="https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html?srsltid=AfmBOooaumPzIiplHe-laLk59KNp1Bi0Qn0m9jetAZjH81ecUNJqztNA">https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html?srsltid=AfmBOooaumPzIiplHe-laLk59KNp1Bi0Qn0m9jetAZjH81ecUNJqztNA&lt;/a>&lt;/p></description></item><item><title>Antenner</title><link>https://sthlm-mesh.se/docs/hardware/antennas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/hardware/antennas/</guid><description>&lt;h3 id="alfa-network-aoa-868-5acm">Alfa Network AOA-868-5ACM&lt;a class="td-heading-self-link" href="#alfa-network-aoa-868-5acm" aria-label="Heading self-link">&lt;/a>&lt;/h3>
+&lt;p>&lt;a href="https://alfa-network.eu/antennas/lora-antennas/aoa-868-5acm">https://alfa-network.eu/antennas/lora-antennas/aoa-868-5acm&lt;/a>&lt;/p></description></item><item><title>Filter</title><link>https://sthlm-mesh.se/docs/hardware/filter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/hardware/filter/</guid><description>&lt;p>I större städer så är det problemeatisk med störningar från mobilmaster. verkar framförralt vara 5G som stör. Bor man inom 300m från en mobilmast (de som är monterade på hustak) kan man överväga att investera i ett filter.&lt;/p>
+&lt;h2 id="band-pass-filter">Band pass filter&lt;a class="td-heading-self-link" href="#band-pass-filter" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>Finns billiga, 100-300kr på Ali express. Dessa är av varierande kvalité. Kan dock vara värt att testa. Genomför ett antal (minst 10) traceroutes med och utan filer för att se om det gör någon skillnad.&lt;/p></description></item><item><title>Laddkretsar</title><link>https://sthlm-mesh.se/docs/hardware/laddkretsar/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/hardware/laddkretsar/</guid><description>&lt;h2 id="laddningskretsar">Laddningskretsar&lt;a class="td-heading-self-link" href="#laddningskretsar" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>För dig som tittar på att ladda dina noder effektivt så rekommenderar vi dig starkt att använda en extern laddningskrets för dina batterier.
+Oftast är mikrokontrollrarnas inbyggdna laddningskretsar extremt begränsade (50-100mA per timme), något som kan sätta spiken i kistan för en annars välfungerande solnod.&lt;/p>
+&lt;h3 id="tp4056">TP4056:&lt;a class="td-heading-self-link" href="#tp4056" aria-label="Heading self-link">&lt;/a>&lt;/h3>
+&lt;p>En alldeles utmärkt laddningskrets för både USB-laddning och Solcellsladdning. &lt;a href="https://www.digikey.in/htmldatasheets/production/2049110/0/0/1/TP4056.pdf">PDF&lt;/a>&lt;/p>
+&lt;ul>
+&lt;li>Inbyggd laddningskurva för Litiumbatterier, och trappar ner laddströmmen för att skydda cellerna rätt.&lt;/li>
+&lt;li>Laddström (0.5A - 1A)&lt;/li>
+&lt;/ul>
+&lt;h3 id="voltaicenclosures---mppt-solar-battery-charger">VoltaicEnclosures - &lt;a href="https://www.etsy.com/se-en/listing/1609406536/mppt-solar-battery-charger-for-iot">MPPT Solar Battery Charger&lt;/a>&lt;a class="td-heading-self-link" href="#voltaicenclosures---mppt-solar-battery-charger" aria-label="Heading self-link">&lt;/a>&lt;/h3>
+&lt;p>Designad för Meshtastic, perfekt för seriösa solcellsnoder. Men kanske lite väl dyr&amp;hellip;&lt;/p></description></item><item><title>Batterier</title><link>https://sthlm-mesh.se/docs/hardware/batterier/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/hardware/batterier/</guid><description>&lt;p>
+
+&lt;div class="alert alert-danger" role="alert">
+&lt;h4 class="alert-heading">Varning&lt;/h4>
+
+ Hantera LiPo och Li-Ion-celler med försiktighet! De är högst reaktiva och känsliga för punktering / kortslutning.
+
+&lt;/div>
+
+Precis som med en mikrokontroller så kommer man inte särskilt långt utan ström från ett batteri, såvida det inte är en fast inkopplad nod.&lt;/p>
+&lt;p>Det finns en hel uppsjö med alternativ att välja från, men för de flesta rekommenderas att man börjar med Litiumjon-celler (Li-Ion) eller Litiumpolymer (LiPo).&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Litiumpolymer (LiPo):
+En vanligt förekommande batterityp. Utformningen är nästan alltid en platt påse av metall som är väldigt lättpunkterad, så hanteras försiktigt!
+De har en dräglig energidensitet, men har primärt hög urladdningsström och kommer i olika behändiga former som passar väl i handhållna enheter.&lt;/p></description></item><item><title>Solceller</title><link>https://sthlm-mesh.se/docs/hardware/solceller/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/hardware/solceller/</guid><description>&lt;p>När det kommer till solcellsnoder så finns det en uppsjö med alternativ, men här rundar vi ner till de vanligaste typerna och mest förekommande spänningarna.&lt;/p>
+&lt;h3 id="monokristallina-solceller">Monokristallina Solceller:&lt;a class="td-heading-self-link" href="#monokristallina-solceller" aria-label="Heading self-link">&lt;/a>&lt;/h3>
+&lt;p>Det överlägset bästa alternativet för solcellsladdning&lt;/p>
+&lt;ul>
+&lt;li>Bättre laddning vid lågt ljus.&lt;/li>
+&lt;li>Längre livslängder.&lt;/li>
+&lt;li>Högre uteffekt per area.&lt;/li>
+&lt;/ul>
+&lt;h3 id="polykristallina-solceller">Polykristallina solceller:&lt;a class="td-heading-self-link" href="#polykristallina-solceller" aria-label="Heading self-link">&lt;/a>&lt;/h3>
+&lt;p>Billigare paneler än Monokristallina men fungerar ändå väl&lt;/p>
+&lt;ul>
+&lt;li>Sämre uteffekt&lt;/li>
+&lt;li>Aningen lägre livslängd&lt;/li>
+&lt;li>Lägre uteffekt per area.&lt;/li>
+&lt;/ul>
+&lt;h3 id="spänningsnivåer-på-solceller">Spänningsnivåer på Solceller&lt;a class="td-heading-self-link" href="#sp%c3%a4nningsniv%c3%a5er-p%c3%a5-solceller" aria-label="Heading self-link">&lt;/a>&lt;/h3>
+&lt;p>För de flesta mikrokontrollrarna med inbyggd laddning så är det solceller på 5/6-volt som du skall leta efter.
+På detta sätt behöver du färre ytterligare komponenter och de kostar även mindre.&lt;/p></description></item></channel></rss>
