@@ -3,9 +3,7 @@ title: Realtime Traceroutes på Kartan
 date: 2026-01-03
 ---
 <video autoplay loop muted playsinline style="width: 100%; max-width: 500px; height: auto; border-radius: 8px;">
-  <source src="/images/blog/2026-01-03-traceroute-demo.mp4" type="video/mp4">
-  Din webbläsare stödjer inte video-elementet.
-</video>
+  <source src="/images/blog/2026-01-03-traceroute-demo.mp4" type="video/mp4"></video>
 
 Kartan är nu uppdaterad med ny funktionalitet för att visa traceroutes i realtid. 
 
