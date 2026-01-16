@@ -232,8 +232,8 @@ Detta har gjort WisBlock RAK4631 det självklara valet vid bygget av en solnod.&
  &lt;input type="radio" class="btn-check" name="btnradio" id="1978245180" autocomplete="off">
  &lt;label class="btn btn-outline-primary" for="1978245180" data-bs-toggle="tooltip" data-bs-placement="top" title="SA0CVK 0 (Ny Router)">CVK&lt;/label>
 
- &lt;input type="radio" class="btn-check" name="btnradio" id="862351184" autocomplete="off">
- &lt;label class="btn btn-outline-primary" for="862351184" data-bs-toggle="tooltip" data-bs-placement="top" title="JwK Bas">JwK&lt;/label>
+ &lt;input type="radio" class="btn-check" name="btnradio" id="1770352332" autocomplete="off">
+ &lt;label class="btn btn-outline-primary" for="1770352332" data-bs-toggle="tooltip" data-bs-placement="top" title="JwK Bas">JwK&lt;/label>
 
  &lt;input type="radio" class="btn-check" name="btnradio" id="3663385928" autocomplete="off">
  &lt;label class="btn btn-outline-primary" for="3663385928" data-bs-toggle="tooltip" data-bs-placement="top" title="Mariehäll Alprosen">Ros1&lt;/label>
