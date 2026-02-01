@@ -1,0 +1,9 @@
+{
+  "messagePattern": "AW 4/2",
+  "description": "En kort beskrivning av meetupet",
+  "attendees": {
+    "yes": [],
+    "maybe": [],
+    "no": []
+  }
+}
