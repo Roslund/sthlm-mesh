@@ -25,3 +25,13 @@ Det finns en hel uppsjö med alternativ att välja från, men för de flesta rek
 - Litiumtitanat (LTO):
   Väldigt dyr celltyp enbart för de som ämnar att bygga de mest extrema noderna. Kan laddas i -40C, däremot kräver de speciella laddningskretsar, samt har lägre energidensitet.
   Dessa används militärt för bland annat arktiska syften.
+
+
+## Köpa batterier
+Det finns en hel del batterier på [Elektrokit](https://www.electrokit.com/search.php?keyword=batteri+jst-ph) som är en svensk återförsäljare. Dessa batterier passar direk på RAK Wireless noder. 
+
+{{% alert title="OBS!" color="danger" %}}
+Polareseringen är JST-PH kontakter är inte standardeserad. Verfifiera innan inkoppling. Om det skulle vara fel polaresering går det att själv byta ordningen på sladdarna in i kontakten, det är lite pilligt, men görbart. 
+{{% /alert %}}
+
+En annan svensk återförsäljare är [Batteridoktorn](https://batteridoktorn.se/) som dessutom har fysisk butik i Solna.

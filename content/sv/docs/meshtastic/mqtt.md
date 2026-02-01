@@ -15,22 +15,21 @@ För att andra ska kunna vidarebefordra dina meddelanden till MQTT måste du ha 
 {{% /alert %}}
 
 ## MQTT Konfiguration
-Vi rekommenderar att man uplinkar till Liam Cottle's MQTT-broker och karta.
+Det finns massvis med olika karttjänster.
+
+{{% alert title="Uppmärksamma" color="warning" %}}
+För att tillåta andra noder publicera din nod på kartor behöver `lora.config_ok_to_mqtt` vara aktiverat.
+{{% /alert %}}
+
+Vi rekommenderar att man uplinkar till [meshat.se](https://www.meshat.se/om/mqtt/), de skickar även infromationen vidare till Liam Cottle's MQTT-broker och [karta](https://meshtastic.liamcottle.net/
+).
 
 {{< card code=true lang="yml" >}}
-mqtt:
-    mqtt.enabled: True
-    mqtt.address: mqtt.meshtastic.liamcottle.net
-    mqtt.username: uplink
-    mqtt.password: uplink
-    mqtt.root: msh/EU_868/SE/Stockholm
-    mqtt.encryption_enabled: True
-    mqtt.json_enabled: False
-    mqtt.tls_enabled: False
-    mqtt.proxy_to_client_enabled: False
-    mqtt.map_reporting_enabled: True
-    mqtt.map_report_settings.publish_interval_secs: 900
-    mqtt.map_report_settings.position_precision: 32
+    Address: mqtt.meshat.se
+    Username: msh
+    Password: msh
+    Encryption Enabled: Yes
+    JSON Output: No
 {{< /card>}}
 
 {{% pageinfo %}}

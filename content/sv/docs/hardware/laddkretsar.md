@@ -13,6 +13,8 @@ En alldeles utmärkt laddningskrets för både USB-laddning och Solcellsladdning
 * Inbyggd laddningskurva för Litiumbatterier, och trappar ner laddströmmen för att skydda cellerna rätt.
 * Laddström (0.5A - 1A)
 
+Finns att köpa på [Electrokit](https://www.electrokit.com/batteriladdare-lipo-microusb)
+
 ### VoltaicEnclosures - [MPPT Solar Battery Charger](https://www.etsy.com/se-en/listing/1609406536/mppt-solar-battery-charger-for-iot)
 Designad för Meshtastic, perfekt för seriösa solcellsnoder. Men kanske lite väl dyr...
 
