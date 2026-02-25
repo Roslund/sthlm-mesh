@@ -2,8 +2,6 @@
 
 (function () {
     const SOLAR_NODE_IDS = [
-        //1186266851, // SOLoRa - Väsjö Router
-        //3189606141, // SOLoRa - Smidö Router
         1927973746, // Bredden
         2619482157, // Upplands Väsby 2.0
         350146207,  // Hagatoppen
@@ -12,7 +10,10 @@
         3324004241, // Skårdal 1
         3328975709, // MDG Gränö
         235175901, // Hammarbyhöjden
+        2762234179, // L_SOL-1
         3766261774, // L_Sol_3
+        3649611165, // L_Sol_5
+        3147411244, // None Solar
     ];
 
     const DAYS = 30;
