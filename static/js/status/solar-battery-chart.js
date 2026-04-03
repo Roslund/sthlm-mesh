@@ -14,6 +14,7 @@
         3766261774, // L_Sol_3
         3649611165, // L_Sol_5
         3147411244, // None Solar
+        1330226674 // Lura reapeter vega
     ];
 
     const DAYS = 30;
