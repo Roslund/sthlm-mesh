@@ -75,3 +75,9 @@ code {
     width: 100%;
     max-width: 1000px;
 }
+
+/* Gateway hop list tooltip (data-bs-custom-class on the badge trigger) */
+.tooltip.tooltip-gateway-list .tooltip-inner {
+    max-width: 500px;
+    text-align: left;
+}

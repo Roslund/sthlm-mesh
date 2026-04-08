@@ -199,7 +199,9 @@ document.addEventListener("DOMContentLoaded", async function () {
         if (!names) {
             return "";
         }
-        return `Gated by: ${names}`;
+        const titleEsc = document.createElement("span");
+        titleEsc.textContent = names;
+        return `Gated by: <span class="badge rounded-pill text-bg-light" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-container="body" data-bs-custom-class="tooltip-gateway-list" data-bs-trigger="hover focus" title="${titleEsc.innerHTML}">${sorted.length}</span>`;
     }
 
     await fetchMessages();
