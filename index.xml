@@ -70,7 +70,13 @@ Det gör det möjligt att se hur meshet sträcker sig geografiskt.&lt;/p>
 &lt;p>För att dela position behövs antingen en GPS-modul eller en ansluten smartphone.
 Alternativt kan man sätta en &lt;em>fixed location&lt;/em> där man själv anger koordinater eller använder telefonens nuvarande position.&lt;/p>
 &lt;h2 id="position-precision">Position Precision&lt;a class="td-heading-self-link" href="#position-precision" aria-label="Heading self-link">&lt;/a>&lt;/h2>
-&lt;p>Som standard kommer din nod inte dela med sig av sin exakta position. Den kommer skicka en position och en noggrannhet. Detta visar sig som en cirkel runt noden på karta, där din nod är någonstans inom den cirkeln.&lt;/p></description></item><item><title>Meetup 4 Februari - Mariatorget</title><link>https://sthlm-mesh.se/blog/2026/meetup-4-februari-mariatorget/</link><pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/blog/2026/meetup-4-februari-mariatorget/</guid><description>&lt;p>Nu är det dags för en Meshtastic AW i Stockholm igen!
+&lt;p>Som standard kommer din nod inte dela med sig av sin exakta position. Den kommer skicka en position och en noggrannhet. Detta visar sig som en cirkel runt noden på karta, där din nod är någonstans inom den cirkeln.&lt;/p></description></item><item><title>Meetup 13 Maj</title><link>https://sthlm-mesh.se/blog/2026/meetup-13-maj/</link><pubDate>Sun, 03 May 2026 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/blog/2026/meetup-13-maj/</guid><description>&lt;p>Nu är det dags för en Meshtastic-AW i Stockholm igen!
+Kom och träffa likasinnade, snacka LoRa och bygg ut nätverket i Stockholm!&lt;/p>
+&lt;p>Ta gärna med din nod, eller visa upp det senaste bygget.&lt;/p>
+&lt;p>&lt;strong>📍 Plats:&lt;/strong> TBD - centralt i stan
+&lt;strong>📅 Datum:&lt;/strong> Onsdag 13 Maj
+&lt;strong>⏰ Tid:&lt;/strong> 17:00&lt;/p>
+&lt;p>Om du inte kan komma exakt 17:00 är det helt okej att dyka upp senare. Skriv gärna ett meddelande på meshen eller Discord om du kommer!&lt;/p></description></item><item><title>Meetup 4 Februari - Mariatorget</title><link>https://sthlm-mesh.se/blog/2026/meetup-4-februari-mariatorget/</link><pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/blog/2026/meetup-4-februari-mariatorget/</guid><description>&lt;p>Nu är det dags för en Meshtastic AW i Stockholm igen!
 Kom och träffa likasinnade, snacka LoRa och bygg ut nätverket i Stockholm!&lt;/p>
 &lt;p>Ta gärna med din nod, eller visa upp det senaste bygget.&lt;/p>
 &lt;p>&lt;strong>📍 Plats:&lt;/strong>&lt;a href="https://maps.app.goo.gl/TgsoWWLXHHCv1JvK6">Pitchers, Mariatorget&lt;/a>&lt;br>
