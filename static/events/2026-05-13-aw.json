@@ -1,0 +1,9 @@
+{
+  "messagePattern": "AW 13/5",
+  "description": "Meshtastic AW Stockholm",
+  "attendees": {
+    "yes": [],
+    "maybe": [],
+    "no": []
+  }
+}
