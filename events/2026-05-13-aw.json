@@ -1,9 +1,126 @@
 {
   "messagePattern": "AW 13/5",
+  "archived": true,
   "description": "Meshtastic AW Stockholm",
+  "exportedAt": "2026-05-14T08:03:34.930Z",
   "attendees": {
-    "yes": [],
-    "maybe": [],
-    "no": []
+    "yes": [
+      {
+        "nodeId": "1978245180",
+        "shortName": "CVK",
+        "longName": "SA0CVK 0 (Ny Router)",
+        "response": "yes",
+        "timestamp": "2026-05-13T13:19:25.605Z"
+      },
+      {
+        "nodeId": "1589195560",
+        "shortName": "ELMQ",
+        "longName": "ELM Qi2 (voice 145.350MHZ)",
+        "response": "yes",
+        "timestamp": "2026-05-10T14:21:34.032Z"
+      },
+      {
+        "nodeId": "610439448",
+        "shortName": "MDG6",
+        "longName": "MDG6 /Tag",
+        "response": "yes",
+        "timestamp": "2026-05-10T12:43:12.735Z"
+      },
+      {
+        "nodeId": "3664098768",
+        "shortName": "pep",
+        "longName": "Älvsjö pep",
+        "response": "yes",
+        "timestamp": "2026-05-10T07:37:34.619Z"
+      },
+      {
+        "nodeId": "2780239655",
+        "shortName": "BN05",
+        "longName": "BN05 Mobile",
+        "response": "yes",
+        "timestamp": "2026-05-07T07:07:53.543Z"
+      },
+      {
+        "nodeId": "1770352332",
+        "shortName": "JwK0",
+        "longName": "JwK Bas",
+        "response": "yes",
+        "timestamp": "2026-05-03T13:16:23.140Z"
+      },
+      {
+        "nodeId": "1130122168",
+        "shortName": "MLZ0",
+        "longName": "MLZ0 Ruggen",
+        "response": "yes",
+        "timestamp": "2026-05-03T09:13:00.255Z"
+      },
+      {
+        "nodeId": "1730698186",
+        "shortName": "Ros1",
+        "longName": "Mariehäll Alprosen",
+        "response": "yes",
+        "timestamp": "2026-05-03T08:20:53.923Z"
+      }
+    ],
+    "maybe": [
+      {
+        "nodeId": "463583552",
+        "shortName": "RLWD",
+        "longName": "reveal.world",
+        "response": "maybe",
+        "timestamp": "2026-05-11T20:08:58.360Z"
+      },
+      {
+        "nodeId": "3303137747",
+        "shortName": "82ED",
+        "longName": "Brutebrew",
+        "response": "maybe",
+        "timestamp": "2026-05-06T16:45:46.693Z"
+      }
+    ],
+    "no": [
+      {
+        "nodeId": "574311152",
+        "shortName": "MS01",
+        "longName": "SA0STY Micke",
+        "response": "no",
+        "timestamp": "2026-05-13T13:37:40.319Z"
+      },
+      {
+        "nodeId": "2102445703",
+        "shortName": "0174",
+        "longName": "Rhutsunda",
+        "response": "no",
+        "timestamp": "2026-05-13T09:27:57.957Z"
+      },
+      {
+        "nodeId": "816985091",
+        "shortName": "VIND",
+        "longName": "Vindator",
+        "response": "no",
+        "timestamp": "2026-05-12T07:08:01.544Z"
+      },
+      {
+        "nodeId": "2523286013",
+        "shortName": "vrg2",
+        "longName": "Mobile varg",
+        "response": "no",
+        "timestamp": "2026-05-12T02:45:36.639Z"
+      },
+      {
+        "nodeId": "3680430400",
+        "shortName": "?",
+        "longName": "!db5ee940",
+        "response": "no",
+        "timestamp": "2026-05-07T09:43:38.509Z"
+      },
+      {
+        "nodeId": "2912280504",
+        "shortName": "dfb8",
+        "longName": "Null",
+        "response": "no",
+        "timestamp": "2026-05-06T19:13:24.158Z"
+      }
+    ]
   }
 }
