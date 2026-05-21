@@ -2,7 +2,7 @@
 title: MeshCore
 weight: 20
 ---
-Information om MeshCore finns här: https://meshcore.co.uk/ och här: https://github.com/meshcore-dev/
+Information om MeshCore finns här: https://meshcore.io/ och här: https://github.com/meshcore-dev/
 
 Den grundläggande tjänst som ett MeshCore-nät tillhandahåller är textkommunikation (tjatt/epost) och Telemetri
 
@@ -16,7 +16,7 @@ Varje nodtyp har sin egen firmware som flashas endera 1) via en web-applikation 
 
 ## 1) Flashning via webgui
 
-Via webgui (https://flasher.meshcore.co.uk/) kan man ange den LoRa-hårdvara man har och vilken nodtyp som skall skapas.
+Via webgui (https://flasher.meshcore.io/) kan man ange den LoRa-hårdvara man har och vilken nodtyp som skall skapas.
 
 - Companion (klient)
 - Repeater
