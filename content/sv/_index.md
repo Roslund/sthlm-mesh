@@ -170,7 +170,7 @@ För mer detaljer om enhetskonfiguration se vår sida: [Rekommenderade Inställn
                 <img src="/client_mute.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <p class="card-text">För portabla noder eller noder som används inomhus. <b>Notera</b>: En nod inställd på Client Mute kan fortfarande skicka och ta emot meddelanden.<p>
-                    <a href="/docs/device_role/#client-mute" class="btn btn-primary" style="color: #f9f9f9 !important;">Läs mer</a>
+                    <a href="/docs/meshtastic/device_role/#client-mute" class="btn btn-primary" style="color: #f9f9f9 !important;">Läs mer</a>
                 </div>
             </div>
         </div>
@@ -180,7 +180,7 @@ För mer detaljer om enhetskonfiguration se vår sida: [Rekommenderade Inställn
                 <img src="/client.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <p class="card-text">En statisk nod placerad på en bra plats, till exempel en nod monterad på en balkong eller ett hustak.<p>
-                    <a href="/docs/device_role/#client" class="btn btn-primary" style="color: #f9f9f9 !important;">Läs mer</a>
+                    <a href="/docs/meshtastic/device_role/#client" class="btn btn-primary" style="color: #f9f9f9 !important;">Läs mer</a>
                 </div>
             </div>
         </div>
@@ -190,7 +190,7 @@ För mer detaljer om enhetskonfiguration se vår sida: [Rekommenderade Inställn
                 <img src="/router.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <p class="card-text">En nod placerad högt upp med fri sikt åt alla håll. Använder en optimerad och väl-testad setup. Måste koordineras med övriga meshet.<p>
-                    <a href="/docs/device_role/#router" class="btn btn-primary" style="color: #f9f9f9 !important;">Läs mer</a>
+                    <a href="/docs/meshtastic/device_role/#router" class="btn btn-primary" style="color: #f9f9f9 !important;">Läs mer</a>
                 </div>
             </div>
         </div>
