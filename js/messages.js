@@ -21,6 +21,15 @@ document.addEventListener("DOMContentLoaded", async function () {
         nodesById: {},
     };
 
+    function escapeHtml(s) {
+        return String(s)
+            .replaceAll('&', '&amp;')
+            .replaceAll('<', '&lt;')
+            .replaceAll('>', '&gt;')
+            .replaceAll('"', '&quot;')
+            .replaceAll("'", '&#39;');
+    }
+
     radioButtons.forEach(radio => {
         radio.addEventListener("change", fetchMessages);
     });
@@ -116,13 +125,13 @@ document.addEventListener("DOMContentLoaded", async function () {
                     <div class="p-2 flex">
                         <div class="d-flex rounded-circle shadow text-white justify-content-center align-items-center"
                             style="width: 48px; height: 48px; background-color: ${getNodeColour(message.from)}; color: #ffffff;">
-                            ${getNodeShortName(message.from)}
+                            ${escapeHtml(getNodeShortName(message.from))}
                         </div>
                     </div>
                     <div class="flex">
                         <div class="small">
-                            <a target="_blank" href="https://map.sthlm-mesh.se/?node_id=${message.from}" style="color: grey; text-decoration: none;">${getNodeLongName(message.from)}</a>
-                            ${message.to !== "4294967295" ? ` → <a target="_blank" href="https://map.sthlm-mesh.se/?node_id=${message.to}" style="color: grey; text-decoration: none;">${getNodeLongName(message.to)}</a>` : ""}
+                            <a target="_blank" href="https://map.sthlm-mesh.se/?node_id=${message.from}" style="color: grey; text-decoration: none;">${escapeHtml(getNodeLongName(message.from))}</a>
+                            ${message.to !== "4294967295" ? ` → <a target="_blank" href="https://map.sthlm-mesh.se/?node_id=${message.to}" style="color: grey; text-decoration: none;">${escapeHtml(getNodeLongName(message.to))}</a>` : ""}
                         </div>
                         <div class="px-2 py-1 pb-1 border rounded shadow-sm" style="background-color: #efefef">
                             <div class="">${escapeMessageText(message.text)}</div>

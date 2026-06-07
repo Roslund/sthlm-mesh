@@ -1,3 +1,12 @@
+function escapeHtml(s) {
+    return String(s)
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;');
+}
+
 async function channelUtilizationGauges() {
     try {
         await fetchNodes();
@@ -171,9 +180,9 @@ function showTop10NodesLegend(channelName, top10Nodes) {
                 <span class="badge me-2" style="background-color: ${utilizationColor}; color: white; font-size: 0.7rem; min-width: 45px;">
                     ${node.utilizationValue.toFixed(1)}%
                 </span>
-                <span class="me-2" style="display:inline-block;width:7ch;font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 0.85rem; text-align:right; white-space:nowrap; overflow:hidden; text-overflow:clip;" title="${shortName}">[${shortName}]</span>
-                <span class="text-truncate" style="font-size: 0.85rem;" title="${longName || shortName}">
-                    ${longName}
+                <span class="me-2" style="display:inline-block;width:7ch;font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 0.85rem; text-align:right; white-space:nowrap; overflow:hidden; text-overflow:clip;" title="${escapeHtml(shortName)}">[${escapeHtml(shortName)}]</span>
+                <span class="text-truncate" style="font-size: 0.85rem;" title="${escapeHtml(longName || shortName)}">
+                    ${escapeHtml(longName)}
                 </span>
             </li>
         `;

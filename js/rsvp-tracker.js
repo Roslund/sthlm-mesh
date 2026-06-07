@@ -1,3 +1,12 @@
+function escapeHtml(s) {
+    return String(s)
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;');
+}
+
 // RSVP response patterns (order matters - check longer phrases first!)
 const RESPONSE_PATTERNS = {
     'no': ['kommer inte', 'no', 'nej', 'not attending', 'kan inte', 'cannot attend'],
@@ -88,13 +97,13 @@ function generateAttendeeList(attendees) {
         <div class="d-flex align-items-center mb-2">
             <div class="rounded-circle d-flex justify-content-center align-items-center me-2" 
                  style="width: 32px; height: 32px; background-color: ${getNodeColour(attendee.nodeId)}; color: white; font-size: 12px;">
-                ${attendee.shortName.substring(0, 4)}
+                ${escapeHtml(attendee.shortName.substring(0, 4))}
             </div>
             <div>
                 <div class="small">
                     <a href="https://map.sthlm-mesh.se/?node_id=${attendee.nodeId}" 
                        target="_blank" class="text-decoration-none">
-                        ${attendee.longName}
+                        ${escapeHtml(attendee.longName)}
                     </a>
                 </div>
                 <div class="small text-muted">
