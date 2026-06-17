@@ -26,17 +26,14 @@ Oftast är mikrokontrollrarnas inbyggdna laddningskretsar extremt begränsade (5
 &lt;div class="alert alert-danger" role="alert">
 &lt;h4 class="alert-heading">Varning&lt;/h4>
 
- Hantera LiPo och Li-Ion-celler med försiktighet! De är högst reaktiva och känsliga för punktering / kortslutning.
+ &lt;p>Hantera LiPo och Li-Ion-celler med försiktighet! De är högst reaktiva och känsliga för punktering / kortslutning.&lt;/p>
+&lt;p>Kom också ihåg: Litium betyder INTE laddningsbart. Kolla upp batterier innan ni laddar de för att säkerställa att de går att ladda.&lt;/p>
+
 
 &lt;/div>
 
 Precis som med en mikrokontroller så kommer man inte särskilt långt utan ström från ett batteri, såvida det inte är en fast inkopplad nod.&lt;/p>
-&lt;p>Det finns en hel uppsjö med alternativ att välja från, men för de flesta rekommenderas att man börjar med Litiumjon-celler (Li-Ion) eller Litiumpolymer (LiPo).&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>Litiumpolymer (LiPo):
-En vanligt förekommande batterityp. Utformningen är nästan alltid en platt påse av metall som är väldigt lättpunkterad, så hanteras försiktigt!
-De har en dräglig energidensitet, men har primärt hög urladdningsström och kommer i olika behändiga former som passar väl i handhållna enheter.&lt;/p></description></item><item><title>Solceller</title><link>https://sthlm-mesh.se/docs/hardware/solceller/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/hardware/solceller/</guid><description>&lt;p>När det kommer till solcellsnoder så finns det en uppsjö med alternativ, men här rundar vi ner till de vanligaste typerna och mest förekommande spänningarna.&lt;/p>
+&lt;p>Det finns en hel uppsjö med alternativ att välja från, men för de flesta rekommenderas att man börjar med Litiumjon-celler (Li-Ion) eller Litiumpolymer (LiPo).&lt;/p></description></item><item><title>Solceller</title><link>https://sthlm-mesh.se/docs/hardware/solceller/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/hardware/solceller/</guid><description>&lt;p>När det kommer till solcellsnoder så finns det en uppsjö med alternativ, men här rundar vi ner till de vanligaste typerna och mest förekommande spänningarna.&lt;/p>
 &lt;h3 id="monokristallina-solceller">Monokristallina Solceller:&lt;a class="td-heading-self-link" href="#monokristallina-solceller" aria-label="Heading self-link">&lt;/a>&lt;/h3>
 &lt;p>Det överlägset bästa alternativet för solcellsladdning&lt;/p>
 &lt;ul>

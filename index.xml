@@ -163,17 +163,14 @@ Därför har vi &lt;em>downlink&lt;/em> avstängt samt &lt;code>lora.ignore_mqtt
 &lt;div class="alert alert-danger" role="alert">
 &lt;h4 class="alert-heading">Varning&lt;/h4>
 
- Hantera LiPo och Li-Ion-celler med försiktighet! De är högst reaktiva och känsliga för punktering / kortslutning.
+ &lt;p>Hantera LiPo och Li-Ion-celler med försiktighet! De är högst reaktiva och känsliga för punktering / kortslutning.&lt;/p>
+&lt;p>Kom också ihåg: Litium betyder INTE laddningsbart. Kolla upp batterier innan ni laddar de för att säkerställa att de går att ladda.&lt;/p>
+
 
 &lt;/div>
 
 Precis som med en mikrokontroller så kommer man inte särskilt långt utan ström från ett batteri, såvida det inte är en fast inkopplad nod.&lt;/p>
-&lt;p>Det finns en hel uppsjö med alternativ att välja från, men för de flesta rekommenderas att man börjar med Litiumjon-celler (Li-Ion) eller Litiumpolymer (LiPo).&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>Litiumpolymer (LiPo):
-En vanligt förekommande batterityp. Utformningen är nästan alltid en platt påse av metall som är väldigt lättpunkterad, så hanteras försiktigt!
-De har en dräglig energidensitet, men har primärt hög urladdningsström och kommer i olika behändiga former som passar väl i handhållna enheter.&lt;/p></description></item><item><title>Neighbor Info</title><link>https://sthlm-mesh.se/docs/meshtastic/neighbor_info/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/meshtastic/neighbor_info/</guid><description>&lt;p>&lt;a href="https://meshtastic.org/docs/configuration/module/neighbor-info/">Neighbor Info-modulen&lt;/a> samlar information om en nods grannar som den har direktkontakt med (0-hopp). Denna information kan sedan skickas över MQTT eller LoRa.&lt;/p>
+&lt;p>Det finns en hel uppsjö med alternativ att välja från, men för de flesta rekommenderas att man börjar med Litiumjon-celler (Li-Ion) eller Litiumpolymer (LiPo).&lt;/p></description></item><item><title>Neighbor Info</title><link>https://sthlm-mesh.se/docs/meshtastic/neighbor_info/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sthlm-mesh.se/docs/meshtastic/neighbor_info/</guid><description>&lt;p>&lt;a href="https://meshtastic.org/docs/configuration/module/neighbor-info/">Neighbor Info-modulen&lt;/a> samlar information om en nods grannar som den har direktkontakt med (0-hopp). Denna information kan sedan skickas över MQTT eller LoRa.&lt;/p>
 &lt;p>Informationen kan sedan visualiseras på karttjänster. Liam Cottles karta visar information om varje förbindelse. Utöver SNR visas även en terränggraf från &lt;a href="https://www.heywhatsthat.com">HeyWhatsThat.com&lt;/a>.&lt;/p>
 
 &lt;figure>
