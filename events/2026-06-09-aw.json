@@ -1,6 +1,8 @@
 {
   "messagePattern": "AW 9/6",
+  "archived": true,
   "description": "Meshtastic AW Stockholm",
+  "exportedAt": "2026-10-03T15:16:09.000Z",
   "attendees": {
     "yes": [],
     "maybe": [],
