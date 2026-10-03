@@ -1,5 +1,6 @@
 async function batteryStatsGraph() {
     const canvas = document.getElementById('batteryChart');
+    if (!canvas) return;
     const ctx = canvas.getContext('2d');
 
     // Show "Loading..." message

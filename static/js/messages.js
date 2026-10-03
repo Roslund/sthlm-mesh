@@ -102,6 +102,8 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         try {
             const response = await fetch(`https://map.sthlm-mesh.se/api/v1/nodes/${nodeId}`);
+            if (!response.ok) return;
+
             const data = await response.json();
             const node = data.node;
             
