@@ -27,7 +27,7 @@ STHLM-MESH är en informell gemenskap som verkar för ett stabilt Meshtastic-nä
 {{% blocks/feature icon="fab fa-discord" title="Vi finns på Discord" %}}
 Anslut till vår <a href="https://discord.gg/gchSzHkPGG" target="_blank" rel="noopener noreferrer">Discord server</a>.
 Många av oss finns även i kanal `#Sweden` på den officiella 
-<a href="https://discord.gg/meshtastic-867578229534359593" target="_blank" rel="noopener noreferrer">Meshtastic Discord</a> servern.
+<a href="https://discord.gg/meshtastic" target="_blank" rel="noopener noreferrer">Meshtastic Discord</a> servern.
 {{% /blocks/feature %}}
 
 {{% blocks/feature icon="fa-solid fa-champagne-glasses" title="Låt oss träffas!" %}}
